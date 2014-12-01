@@ -1,6 +1,9 @@
 package gearapp.sstudio.com.gearapp;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -14,8 +17,11 @@ import android.widget.ImageView;
 
 public class LevelSelect extends Activity implements View.OnClickListener{
 
+    final Context Warn = this;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level_select);
 
@@ -23,7 +29,7 @@ public class LevelSelect extends Activity implements View.OnClickListener{
         blvl1.setOnClickListener(this);
         Button blvl2 = (Button) findViewById(R.id.button2);
         blvl2.setOnClickListener(this);
-        Button blvl3 = (Button) findViewById(R.id.button2);
+        Button blvl3 = (Button) findViewById(R.id.button3);
         blvl3.setOnClickListener(this);
 
         Animation gearanim = AnimationUtils.loadAnimation(LevelSelect.this, R.anim.rotateloop);
@@ -53,6 +59,29 @@ public class LevelSelect extends Activity implements View.OnClickListener{
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void onBackPressed(){
+        AlertDialog.Builder ExitWarningBuild = new AlertDialog.Builder(Warn);
+        ExitWarningBuild.setTitle("You rly want to close the app?");
+        ExitWarningBuild
+                .setMessage("Click yes to exit")
+                .setCancelable(false)
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                        System.exit(0);
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+        AlertDialog ExitWarning = ExitWarningBuild.create();
+        ExitWarning.show();
     }
 
     public void onClick(View v) {
@@ -97,5 +126,6 @@ public class LevelSelect extends Activity implements View.OnClickListener{
     public void Back(View view) {
         Intent  intent = new Intent (this, MainActivity.class);
         startActivity(intent);
+        finish();
     }
 }
