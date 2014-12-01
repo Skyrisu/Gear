@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 
 
 public class Level1 extends Activity {
@@ -69,5 +71,11 @@ public class Level1 extends Activity {
                 });
         AlertDialog ExitWarning = ExitWarningBuild.create();
         ExitWarning.show();
+    }
+
+    public void turnGear(View v){
+        Animation anim = AnimationUtils.loadAnimation(Level1.this, R.anim.rotate90);
+        v.startAnimation(anim);
+        anim.setFillAfter(true);
     }
 }
