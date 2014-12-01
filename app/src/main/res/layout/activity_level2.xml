@@ -7,23 +7,23 @@
     tools:context="gearapp.sstudio.com.gearapp.Level2">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Level2 Dikka"
+        android:text="Level 2"
         android:id="@+id/textView4"
-        android:layout_marginTop="181dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:gravity="center" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Back to LvlSelect"
         android:id="@+id/button4"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="46dp"
         android:nestedScrollingEnabled="false"
-        android:onClick="openLvlSelect" />
+        android:onClick="openLvlSelect"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>
