@@ -67,19 +67,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Turn Counter"
-        android:id="@+id/textView6"
-        android:layout_below="@+id/textView3"
-        android:layout_toRightOf="@+id/Gear3"
-        android:layout_toEndOf="@+id/Gear3"
-        android:layout_marginLeft="34dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
         android:id="@+id/TextViewCounter"
         android:layout_below="@+id/textView3"
-        android:layout_toRightOf="@+id/textView6"
-        android:layout_toEndOf="@+id/textView6" />
+        android:layout_toRightOf="@+id/Gear3" />
 </RelativeLayout>

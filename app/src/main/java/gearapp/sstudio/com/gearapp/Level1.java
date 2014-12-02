@@ -93,7 +93,7 @@ public class Level1 extends MainActivity {
         }
         final TextView viewCounter = (TextView) findViewById(R.id.TextViewCounter);
         turnCounter ++;
-        viewCounter.setText (String.valueOf(turnCounter));
+        viewCounter.setText ("Turns: " + String.valueOf(turnCounter));
         if (DegreesGear1 == 360) {
             DegreesGear1 = 0;
         } else if (DegreesGear2 == 360) {
