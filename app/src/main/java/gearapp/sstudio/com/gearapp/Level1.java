@@ -102,7 +102,7 @@ public class Level1 extends MainActivity {
             DegreesGear3 = 0;
         }
         if (DegreesGear1 == 180 && DegreesGear1 == DegreesGear2 && DegreesGear1 == DegreesGear3){
-            viewCounter.setText("gz bruder");
+            viewCounter.setText("gz brudi");
         }
     }
 }
