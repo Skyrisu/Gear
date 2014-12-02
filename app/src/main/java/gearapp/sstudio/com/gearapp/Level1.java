@@ -24,6 +24,7 @@ public class Level1 extends MainActivity {
         DegreesGear1 = 0;
         DegreesGear2 = 0;
         DegreesGear3 = 0;
+        currentLevel = 1;
     }
 
 
@@ -102,7 +103,8 @@ public class Level1 extends MainActivity {
             DegreesGear3 = 0;
         }
         if (DegreesGear1 == 180 && DegreesGear1 == DegreesGear2 && DegreesGear1 == DegreesGear3){
-            viewCounter.setText("gz brudi");
+            Intent EndScreen = new Intent (this, EndScreen.class);
+            startActivity(EndScreen);
         }
     }
 }

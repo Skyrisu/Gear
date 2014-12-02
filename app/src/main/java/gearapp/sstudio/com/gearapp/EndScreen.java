@@ -1,12 +1,13 @@
 package gearapp.sstudio.com.gearapp;
 
-import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
-public class EndScreen extends Activity {
+public class EndScreen extends MainActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,5 +36,30 @@ public class EndScreen extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+    public void EndScreenBack (View v){
+        Intent intent = new Intent (this, LevelSelect.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void NextLevel(View v){
+        switch(currentLevel){
+            case 1:
+                Intent nLvl1 = new Intent (this, Level2.class);
+                startActivity(nLvl1);
+                finish();
+                break;
+            case 2:
+                Intent nLvl2 = new Intent (this, Level3.class);
+                startActivity(nLvl2);
+                finish();
+                break;
+            case 3:
+                Intent nLvl3 = new Intent (this, LevelSelect.class);
+                startActivity(nLvl3);
+                finish();
+                break;
+        }
     }
 }

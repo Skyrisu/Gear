@@ -8,11 +8,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/EndScreenBack"
-        android:layout_gravity="left|bottom" />
+        android:layout_gravity="left|bottom"
+        android:onClick="EndScreenBack" />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageButton"
-        android:layout_gravity="right|bottom" />
+        android:id="@+id/NextLevel"
+        android:layout_gravity="right|bottom"
+        android:onClick="NextLevel" />
 </FrameLayout>

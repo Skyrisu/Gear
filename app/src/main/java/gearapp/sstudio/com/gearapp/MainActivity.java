@@ -17,6 +17,7 @@ public class MainActivity extends Activity {
     public float DegreesGear1;
     public float DegreesGear2;
     public float DegreesGear3;
+    public int currentLevel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,4 +87,5 @@ public class MainActivity extends Activity {
         rotate.setFillAfter(true);
         view.startAnimation(rotate);
     }
+
 }
