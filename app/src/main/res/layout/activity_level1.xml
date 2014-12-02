@@ -6,59 +6,45 @@
     android:background="#ffffffff">
 
     <TextView
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Level 1"
         android:id="@+id/textView3"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textColor="#fa000000" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Back to LvlSelect"
-        android:id="@+id/button6"
-        android:onClick="openLvlSelect"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:textColor="#fa000000"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/Gear1"
-        android:layout_toEndOf="@+id/button6"
         android:src="@drawable/gearlvl"
         android:background="@null"
         android:onClick="turnGear"
-        android:layout_toRightOf="@+id/button6"
-        android:layout_alignTop="@+id/Gear2" />
+        android:layout_marginRight="30dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/Gear2" />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/Gear2"
-        android:layout_toEndOf="@+id/Gear1"
         android:src="@drawable/gearlvl"
         android:background="@null"
         android:onClick="turnGear"
         android:layout_centerVertical="true"
-        android:layout_toRightOf="@+id/Gear1"
-        android:layout_marginLeft="29dp" />
+        android:layout_centerHorizontal="true" />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/Gear3"
-        android:layout_toEndOf="@+id/Gear2"
         android:src="@drawable/gearlvl"
         android:background="@null"
         android:onClick="turnGear"
-        android:layout_marginLeft="34dp"
         android:layout_centerVertical="true"
+        android:layout_marginLeft="30dp"
         android:layout_toRightOf="@+id/Gear2" />
 
     <TextView
@@ -67,10 +53,9 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Turn Counter"
         android:id="@+id/textView6"
-        android:layout_below="@+id/textView3"
-        android:layout_toRightOf="@+id/Gear3"
-        android:layout_toEndOf="@+id/Gear3"
-        android:layout_marginLeft="34dp" />
+        android:layout_marginTop="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -80,5 +65,16 @@
         android:layout_below="@+id/textView3"
         android:layout_toRightOf="@+id/textView6"
         android:layout_toEndOf="@+id/textView6" />
+
+    <ImageButton
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:id="@+id/backbutton"
+        android:background="@drawable/menusymbol"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_alignParentStart="false"
+        android:onClick="openLvlSelect" />
+
 
 </RelativeLayout>
