@@ -19,12 +19,12 @@
 
         <ImageView
             android:id="@+id/BackGear"
-            android:layout_width="250dp"
-            android:layout_height="250dp"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
             android:src="@drawable/gear3"
             android:layout_gravity="left|bottom"
-            android:layout_marginLeft="-55dp"
-            android:layout_marginBottom="-55dp" />
+            android:layout_marginLeft="-150dp"
+            android:layout_marginBottom="-150dp" />
 
         <Button
             android:layout_width="151dp"
