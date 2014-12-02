@@ -17,7 +17,7 @@ public class MainActivity extends Activity {
     public float DegreesGear1;
     public float DegreesGear2;
     public float DegreesGear3;
-    public int currentLevel;
+    public static int currentLevel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

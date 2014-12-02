@@ -79,15 +79,15 @@ public class Level3 extends MainActivity {
 
     public void turnGear(View v){
         switch (v.getId()){
-            case R.id.Gear1:
+            case R.id.Gear1_2:
                 turn1(v);
                 DegreesGear1 = DegreesGear1 + 90;
                 break;
-            case R.id.Gear2:
+            case R.id.Gear2_2:
                 turn2(v);
                 DegreesGear2 = DegreesGear2 + 90;
                 break;
-            case R.id.Gear3:
+            case R.id.Gear2_3:
                 turn3(v);
                 DegreesGear3 = DegreesGear3 + 90;
                 break;
