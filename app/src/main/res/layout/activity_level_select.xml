@@ -1,7 +1,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="fill_parent"
+    android:layout_weight="fill_parent"
     tools:context="gearapp.sstudio.com.gearapp.LevelSelect"
     android:clickable="false"
     android:background="#ffffffff">
@@ -19,8 +19,8 @@
 
         <ImageView
             android:id="@+id/BackGear"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
             android:src="@drawable/gear3"
             android:layout_gravity="left|bottom"
             android:layout_marginLeft="-55dp"
