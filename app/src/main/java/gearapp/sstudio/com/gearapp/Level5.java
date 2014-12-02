@@ -8,23 +8,30 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 
-public class EndScreen extends MainActivity {
+public class Level5 extends MainActivity {
 
     final Context Warn = this;
+    int turnCounter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_end_screen);
+        setContentView(R.layout.activity_level5);
+        turnCounter = 0;
+        DegreesGear1 = 0;
+        DegreesGear2 = 0;
+        DegreesGear3 = 0;
+        currentLevel = 2;
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_end_screen, menu);
+        getMenuInflater().inflate(R.menu.menu_level5, menu);
         return true;
     }
 
@@ -42,7 +49,11 @@ public class EndScreen extends MainActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
+    public void openLvlSelect(View view) {
+        Intent intent = new Intent (this, LevelSelect.class);
+        startActivity(intent);
+        finish();
+    }
     public void onBackPressed(){
         AlertDialog.Builder ExitWarningBuild = new AlertDialog.Builder(Warn);
         ExitWarningBuild.setTitle("You rly want to close the app?");
@@ -66,29 +77,34 @@ public class EndScreen extends MainActivity {
         ExitWarning.show();
     }
 
-    public void EndScreenBack (View v){
-        Intent intent = new Intent (this, LevelSelect.class);
-        startActivity(intent);
-        finish();
-    }
-
-    public void NextLevel(View v){
-        switch(currentLevel){
-            case 1:
-                Intent nLvl1 = new Intent (this, Level2.class);
-                startActivity(nLvl1);
-                finish();
+    public void turnGear(View v){
+        switch (v.getId()){
+            case R.id.Gear1:
+                turn1(v);
+                DegreesGear1 = DegreesGear1 + 90;
                 break;
-            case 2:
-                Intent nLvl2 = new Intent (this, Level3.class);
-                startActivity(nLvl2);
-                finish();
+            case R.id.Gear2:
+                turn2(v);
+                DegreesGear2 = DegreesGear2 + 90;
                 break;
-            case 3:
-                Intent nLvl3 = new Intent (this, LevelSelect.class);
-                startActivity(nLvl3);
-                finish();
+            case R.id.Gear3:
+                turn3(v);
+                DegreesGear3 = DegreesGear3 + 90;
                 break;
+        }
+        final TextView viewCounter = (TextView) findViewById(R.id.TextViewMoveNumber);
+        turnCounter ++;
+        viewCounter.setText (String.valueOf(turnCounter));
+        if (DegreesGear1 == 360) {
+            DegreesGear1 = 0;
+        } else if (DegreesGear2 == 360) {
+            DegreesGear2 = 0;
+        } else if (DegreesGear3 == 360) {
+            DegreesGear3 = 0;
+        }
+        if (DegreesGear1 == 180 && DegreesGear1 == DegreesGear2 && DegreesGear1 == DegreesGear3){
+            Intent EndScreen = new Intent (this, EndScreen.class);
+            startActivity(EndScreen);
         }
     }
 }
