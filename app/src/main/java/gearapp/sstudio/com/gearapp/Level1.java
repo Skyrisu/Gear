@@ -1,6 +1,5 @@
 package gearapp.sstudio.com.gearapp;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -9,12 +8,10 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
 
-public class Level1 extends Activity {
+public class Level1 extends MainActivity {
 
     final Context Warn = this;
     int turnCounter;
@@ -24,6 +21,9 @@ public class Level1 extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level1);
         turnCounter = 0;
+        DegreesGear1 = 0;
+        DegreesGear2 = 0;
+        DegreesGear3 = 0;
     }
 
 
@@ -77,11 +77,32 @@ public class Level1 extends Activity {
     }
 
     public void turnGear(View v){
+        switch (v.getId()){
+            case R.id.Gear1:
+                turn1(v);
+                DegreesGear1 = DegreesGear1 + 90;
+                break;
+            case R.id.Gear2:
+                turn2(v);
+                DegreesGear2 = DegreesGear2 + 90;
+                break;
+            case R.id.Gear3:
+                turn3(v);
+                DegreesGear3 = DegreesGear3 + 90;
+                break;
+        }
         final TextView viewCounter = (TextView) findViewById(R.id.TextViewCounter);
-        Animation anim = AnimationUtils.loadAnimation(Level1.this, R.anim.rotate90);
-        v.startAnimation(anim);
-        anim.setFillAfter(true);
         turnCounter ++;
         viewCounter.setText (String.valueOf(turnCounter));
+        if (DegreesGear1 == 360) {
+            DegreesGear1 = 0;
+        } else if (DegreesGear2 == 360) {
+            DegreesGear2 = 0;
+        } else if (DegreesGear3 == 360) {
+            DegreesGear3 = 0;
+        }
+        if (DegreesGear1 == 180 && DegreesGear1 == DegreesGear2 && DegreesGear1 == DegreesGear3){
+            viewCounter.setText("gz bruder");
+        }
     }
 }

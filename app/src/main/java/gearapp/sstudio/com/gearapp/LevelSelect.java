@@ -1,6 +1,5 @@
 package gearapp.sstudio.com.gearapp;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -15,7 +14,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 
-public class LevelSelect extends Activity implements View.OnClickListener{
+public class LevelSelect extends MainActivity implements View.OnClickListener{
 
     final Context Warn = this;
 
