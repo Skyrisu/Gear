@@ -22,30 +22,8 @@
         android:src="@drawable/gearlvl"
         android:background="@null"
         android:onClick="turnGear"
-        android:layout_marginRight="30dp"
-        android:layout_centerVertical="true"
-        android:layout_toLeftOf="@+id/Gear2" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Gear2"
-        android:src="@drawable/gearlvl"
-        android:background="@null"
-        android:onClick="turnGear"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Gear3"
-        android:src="@drawable/gearlvl"
-        android:background="@null"
-        android:onClick="turnGear"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="30dp"
-        android:layout_toRightOf="@+id/Gear2" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -55,7 +33,9 @@
         android:id="@+id/MoveText"
         android:textIsSelectable="true"
         android:layout_alignParentStart="false"
+        android:layout_alignParentLeft="false"
         android:layout_alignParentEnd="false"
+        android:layout_alignParentRight="false"
         android:layout_marginLeft="450dp"
         android:layout_marginTop="20dp"
         android:textColor="#fa000000" />
@@ -63,7 +43,7 @@
     <ImageButton
         android:layout_width="45dp"
         android:layout_height="45dp"
-        android:id="@+id/backbutton"
+        android:id="@+id/BackButton"
         android:background="@drawable/menusymbol"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
@@ -74,19 +54,21 @@
     <ImageButton
         android:layout_width="45dp"
         android:layout_height="45dp"
-        android:id="@+id/reloadbutton"
+        android:id="@+id/ReloadButton"
         android:background="@drawable/refresh"
-        android:layout_toRightOf="@+id/backbutton"
+        android:layout_toRightOf="@+id/BackButton"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="20dp"
+        android:onClick="reload" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="0"
-        android:id="@+id/textviewmovenumber"
+        android:id="@+id/TextViewMoveNumber"
         android:layout_toEndOf="@+id/MoveText"
+        android:layout_toRightOf="@+id/MoveText"
         android:layout_marginLeft="10dp"
         android:textColor="#fa000000"
         android:layout_alignBaseline="@+id/MoveText" />

@@ -19,7 +19,7 @@ public class Level3 extends MainActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_level1);
+        setContentView(R.layout.activity_level3);
         turnCounter = 0;
         DegreesGear1 = 0;
         DegreesGear2 = 0;
@@ -31,7 +31,7 @@ public class Level3 extends MainActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_level1, menu);
+        getMenuInflater().inflate(R.menu.menu_level3, menu);
         return true;
     }
 
@@ -79,22 +79,22 @@ public class Level3 extends MainActivity {
 
     public void turnGear(View v){
         switch (v.getId()){
-            case R.id.Gear1_2:
+            case R.id.Gear1:
                 turn1(v);
                 DegreesGear1 = DegreesGear1 + 90;
                 break;
-            case R.id.Gear2_2:
+            case R.id.Gear2:
                 turn2(v);
                 DegreesGear2 = DegreesGear2 + 90;
                 break;
-            case R.id.Gear2_3:
+            case R.id.Gear3:
                 turn3(v);
                 DegreesGear3 = DegreesGear3 + 90;
                 break;
         }
-        final TextView viewCounter = (TextView) findViewById(R.id.TextViewCounter);
+        final TextView viewCounter = (TextView) findViewById(R.id.TextViewMoveNumber);
         turnCounter ++;
-        viewCounter.setText ("Turns: " + String.valueOf(turnCounter));
+        viewCounter.setText (String.valueOf(turnCounter));
         if (DegreesGear1 == 360) {
             DegreesGear1 = 0;
         } else if (DegreesGear2 == 360) {

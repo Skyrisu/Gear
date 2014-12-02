@@ -39,7 +39,17 @@
             android:layout_gravity="right|center_vertical" />
 
     <Button
-            android:id="@+id/backbutton"
+        android:layout_width="133dp"
+        android:layout_height="wrap_content"
+        android:text="2"
+        android:id="@+id/button2"
+        android:onClick="onClick"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="left|center_vertical" />
+
+    <Button
+            android:id="@+id/BackButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/back"
@@ -49,15 +59,5 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
             android:layout_gravity="center_horizontal|bottom" />
-
-    <Button
-        android:layout_width="133dp"
-        android:layout_height="wrap_content"
-        android:text="2"
-        android:id="@+id/button2"
-        android:onClick="onClick"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="left|center_vertical" />
 
 </FrameLayout>
