@@ -11,5 +11,6 @@
     <string name="title_activity_level1">Level1</string>
     <string name="title_activity_level2">Level2</string>
     <string name="title_activity_level3">Level3</string>
+    <string name="title_activity_end_screen">EndScreen</string>
 
 </resources>

@@ -34,8 +34,8 @@
         android:src="@drawable/gearlvl"
         android:background="@null"
         android:onClick="turnGear"
-        android:layout_centerVertical="true"
-        android:layout_toRightOf="@+id/button6" />
+        android:layout_toRightOf="@+id/button6"
+        android:layout_alignTop="@+id/Gear2" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -80,4 +80,5 @@
         android:layout_below="@+id/textView3"
         android:layout_toRightOf="@+id/textView6"
         android:layout_toEndOf="@+id/textView6" />
+
 </RelativeLayout>

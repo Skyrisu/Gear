@@ -9,9 +9,9 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="gearapp.sstudio.com.gearapp.MainActivity"
-            android:screenOrientation="landscape"
             android:label="@string/app_name"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,38 +19,43 @@
             </intent-filter>
         </activity>
         <activity
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
             android:name="gearapp.sstudio.com.gearapp.Credits"
-            android:label="@string/title_activity_credits" >
+            android:label="@string/title_activity_credits"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
         </activity>
         <activity
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
             android:name="gearapp.sstudio.com.gearapp.Highscores"
-            android:label="@string/title_activity_highscores" >
+            android:label="@string/title_activity_highscores"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
         </activity>
         <activity
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
             android:name="gearapp.sstudio.com.gearapp.LevelSelect"
+            android:label="@string/title_activity_level_select"
             android:screenOrientation="landscape"
-            android:label="@string/title_activity_level_select" >
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
         </activity>
         <activity
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
             android:name="gearapp.sstudio.com.gearapp.Level1"
+            android:label="@string/title_activity_level1"
             android:screenOrientation="landscape"
-            android:label="@string/title_activity_level1" >
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
         </activity>
         <activity
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
             android:name="gearapp.sstudio.com.gearapp.Level2"
+            android:label="@string/title_activity_level2"
             android:screenOrientation="landscape"
-            android:label="@string/title_activity_level2" >
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
         </activity>
         <activity
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
             android:name="gearapp.sstudio.com.gearapp.Level3"
+            android:label="@string/title_activity_level3"
             android:screenOrientation="landscape"
-            android:label="@string/title_activity_level3" >
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name="gearapp.sstudio.com.gearapp.EndScreen"
+            android:label="@string/title_activity_end_screen"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" >
         </activity>
     </application>
 
