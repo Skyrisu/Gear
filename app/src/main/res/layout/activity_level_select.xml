@@ -8,56 +8,66 @@
     android:clickable="false"
     android:background="#ffffffff">
 
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="1"
-        android:id="@+id/button"
-        android:onClick="onClick"
-        android:layout_above="@+id/button2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="26dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="2"
-        android:id="@+id/button2"
-        android:onClick="onClick"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="3"
-        android:id="@+id/button3"
-        android:onClick="onClick"
-        android:layout_toEndOf="@+id/button2"
-        android:layout_alignTop="@+id/button2"
-        android:layout_toRightOf="@+id/button2"
-        android:layout_marginLeft="55dp" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/BackGear"
-        android:src="@drawable/gear3"
-        android:layout_alignParentBottom="true"
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true">
 
-    <Button
-        android:id="@+id/backbutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/back"
-        android:layout_marginTop="36dp"
-        android:onClick="Back"
-        android:layout_alignTop="@+id/BackGear"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/BackGear"
-        android:layout_alignEnd="@+id/BackGear" />
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="105dp"
+            android:text="1"
+            android:id="@+id/button"
+            android:onClick="onClick"
+            android:layout_above="@+id/button2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="26dp"
+            android:layout_gravity="center_horizontal|top" />
+
+        <ImageView
+            android:id="@+id/BackGear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/gear3"
+            android:layout_gravity="left|bottom"
+            android:layout_marginLeft="-55dp"
+            android:layout_marginBottom="-55dp" />
+
+        <Button
+            android:layout_width="151dp"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:id="@+id/button3"
+            android:onClick="onClick"
+            android:layout_toEndOf="@+id/button2"
+            android:layout_alignTop="@+id/button2"
+            android:layout_toRightOf="@+id/button2"
+            android:layout_marginLeft="55dp"
+            android:layout_gravity="right|center_vertical" />
+
+        <Button
+            android:layout_width="133dp"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:id="@+id/button2"
+            android:onClick="onClick"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="left|center_vertical" />
+
+        <Button
+            android:id="@+id/backbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back"
+            android:onClick="Back"
+            android:layout_toStartOf="@+id/button2"
+            android:layout_below="@+id/BackGear"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center_horizontal|bottom" />
+    </FrameLayout>
 
 </RelativeLayout>
