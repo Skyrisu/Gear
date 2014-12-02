@@ -11,16 +11,19 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.TextView;
 
 
 public class Level1 extends Activity {
 
     final Context Warn = this;
+    int turnCounter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level1);
+        turnCounter = 0;
     }
 
 
@@ -74,8 +77,11 @@ public class Level1 extends Activity {
     }
 
     public void turnGear(View v){
+        final TextView viewCounter = (TextView) findViewById(R.id.TextViewCounter);
         Animation anim = AnimationUtils.loadAnimation(Level1.this, R.anim.rotate90);
         v.startAnimation(anim);
         anim.setFillAfter(true);
+        turnCounter ++;
+        viewCounter.setText (String.valueOf(turnCounter));
     }
 }
