@@ -7,9 +7,16 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.LinearInterpolator;
+import android.view.animation.RotateAnimation;
 
 
 public class MainActivity extends Activity {
+
+    public float DegreesGear1;
+    public float DegreesGear2;
+    public float DegreesGear3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,5 +61,29 @@ public class MainActivity extends Activity {
         Intent  intent = new Intent (this, LevelSelect.class);
         finish();
         startActivity(intent);
+    }
+    public void turn1(View view){
+        RotateAnimation rotate = new RotateAnimation(DegreesGear1 ,DegreesGear1 + 90 , Animation.RELATIVE_TO_SELF, 0.5f ,Animation.RELATIVE_TO_SELF, 0.5f);
+        rotate.setInterpolator(new LinearInterpolator());
+        rotate.setDuration(400);
+        rotate.setFillEnabled(true);
+        rotate.setFillAfter(true);
+        view.startAnimation(rotate);
+    }
+    public void turn2(View view){
+        RotateAnimation rotate = new RotateAnimation(DegreesGear2 ,DegreesGear2 + 90 , Animation.RELATIVE_TO_SELF, 0.5f ,Animation.RELATIVE_TO_SELF, 0.5f);
+        rotate.setInterpolator(new LinearInterpolator());
+        rotate.setDuration(400);
+        rotate.setFillEnabled(true);
+        rotate.setFillAfter(true);
+        view.startAnimation(rotate);
+    }
+    public void turn3(View view){
+        RotateAnimation rotate = new RotateAnimation(DegreesGear3 ,DegreesGear3 + 90 , Animation.RELATIVE_TO_SELF, 0.5f ,Animation.RELATIVE_TO_SELF, 0.5f);
+        rotate.setInterpolator(new LinearInterpolator());
+        rotate.setDuration(400);
+        rotate.setFillEnabled(true);
+        rotate.setFillAfter(true);
+        view.startAnimation(rotate);
     }
 }
