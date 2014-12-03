@@ -18,9 +18,9 @@ import android.view.animation.RotateAnimation;
 public class MainActivity extends Activity {
 
     final Context Warn = this;
-    public float DegreesGear1;
-    public float DegreesGear2;
-    public float DegreesGear3;
+    public static int DegreesGear1;
+    public static int DegreesGear2;
+    public static int DegreesGear3;
     public static int currentLevel;
 
     @Override
@@ -90,29 +90,162 @@ public class MainActivity extends Activity {
         finish();
         startActivity(intent);
     }
-    public void turn1(View view){
-        RotateAnimation rotate = new RotateAnimation(DegreesGear1 ,DegreesGear1 + 90 , Animation.RELATIVE_TO_SELF, 0.5f ,Animation.RELATIVE_TO_SELF, 0.5f);
+
+    public void turn90(View startBtn){
+        RotateAnimation rotate = new RotateAnimation(0 ,90 , Animation.RELATIVE_TO_SELF, 0.5f ,Animation.RELATIVE_TO_SELF, 0.5f);
+        rotate.setInterpolator(new LinearInterpolator());
+        rotate.setDuration(0);
+        rotate.setFillEnabled(true);
+        rotate.setFillAfter(true);
+        startBtn.startAnimation(rotate);
+        switch(startBtn.getId()){
+            case R.id.Gear1:
+                DegreesGear1 = 90;
+                break;
+            case R.id.Gear2:
+                DegreesGear2 = 90;
+                break;
+            case R.id.Gear3:
+                DegreesGear3 = 90;
+                break;
+        }
+
+    }
+
+    public void turn180(View startBtn){
+        RotateAnimation rotate = new RotateAnimation(0 ,180 , Animation.RELATIVE_TO_SELF, 0.5f ,Animation.RELATIVE_TO_SELF, 0.5f);
+        rotate.setInterpolator(new LinearInterpolator());
+        rotate.setDuration(0);
+        rotate.setFillEnabled(true);
+        rotate.setFillAfter(true);
+        startBtn.startAnimation(rotate);
+        switch(startBtn.getId()){
+            case R.id.Gear1:
+                DegreesGear1 = 180;
+                break;
+            case R.id.Gear2:
+                DegreesGear2 = 180;
+                break;
+            case R.id.Gear3:
+                DegreesGear3 = 180;
+                break;
+        }
+
+    }
+
+    public void turn270(View startBtn){
+        RotateAnimation rotate = new RotateAnimation(0 ,270 , Animation.RELATIVE_TO_SELF, 0.5f ,Animation.RELATIVE_TO_SELF, 0.5f);
+        rotate.setInterpolator(new LinearInterpolator());
+        rotate.setDuration(0);
+        rotate.setFillEnabled(true);
+        rotate.setFillAfter(true);
+        startBtn.startAnimation(rotate);
+        switch(startBtn.getId()){
+            case R.id.Gear1:
+                DegreesGear1 = 270;
+                break;
+            case R.id.Gear2:
+                DegreesGear2 = 270;
+                break;
+            case R.id.Gear3:
+                DegreesGear3 = 270;
+                break;
+        }
+
+    }
+
+    public void turn(View v,int gearCount){
+        int DegreesGear= 0;
+        switch(v.getId()){
+            case R.id.Gear1:
+                DegreesGear = DegreesGear1;
+                DegreesGear1 = DegreesGear1 +90;
+                break;
+            case R.id.Gear2:
+                DegreesGear = DegreesGear2;
+                DegreesGear2 = DegreesGear2 +90;
+                break;
+            case R.id.Gear3:
+                DegreesGear = DegreesGear3;
+                DegreesGear3 = DegreesGear3 +90;
+                break;
+        }
+        RotateAnimation rotate = new RotateAnimation(DegreesGear, DegreesGear + 90, Animation.RELATIVE_TO_SELF, 0.5f ,Animation.RELATIVE_TO_SELF, 0.5f);
         rotate.setInterpolator(new LinearInterpolator());
         rotate.setDuration(400);
         rotate.setFillEnabled(true);
         rotate.setFillAfter(true);
-        view.startAnimation(rotate);
+        v.startAnimation(rotate);
+
+        switch(gearCount){
+            case 1:
+                rotate.setAnimationListener(new Animation.AnimationListener() {
+                    @Override
+                    public void onAnimationStart(Animation animation) {
+
+                    }
+
+                    @Override
+                    public void onAnimationEnd(Animation animation) {
+                        if (DegreesGear1 == 180) {
+                            Intent EndScreen = new Intent (MainActivity.this, EndScreen.class);
+                            startActivity(EndScreen);
+                            finish();
+                        }
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(Animation animation) {
+
+                    }
+                });
+                break;
+            case 2:
+                rotate.setAnimationListener(new Animation.AnimationListener() {
+                    @Override
+                    public void onAnimationStart(Animation animation) {
+
+                    }
+
+                    @Override
+                    public void onAnimationEnd(Animation animation) {
+                        if (DegreesGear1 == 180 && DegreesGear1 == DegreesGear2) {
+                            Intent EndScreen = new Intent (MainActivity.this, EndScreen.class);
+                            startActivity(EndScreen);
+                            finish();
+                        }
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(Animation animation) {
+
+                    }
+                });
+                break;
+            case 3:
+                rotate.setAnimationListener(new Animation.AnimationListener() {
+                    @Override
+                    public void onAnimationStart(Animation animation) {
+
+                    }
+
+                    @Override
+                    public void onAnimationEnd(Animation animation) {
+                        if (DegreesGear1 == 180 && DegreesGear1 == DegreesGear2 && DegreesGear1 == DegreesGear3) {
+                            Intent EndScreen = new Intent (MainActivity.this, EndScreen.class);
+                            startActivity(EndScreen);
+                            finish();
+                        }
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(Animation animation) {
+
+                    }
+                });
+                break;
+        }
     }
-    public void turn2(View view){
-        RotateAnimation rotate = new RotateAnimation(DegreesGear2 ,DegreesGear2 + 90 , Animation.RELATIVE_TO_SELF, 0.5f ,Animation.RELATIVE_TO_SELF, 0.5f);
-        rotate.setInterpolator(new LinearInterpolator());
-        rotate.setDuration(400);
-        rotate.setFillEnabled(true);
-        rotate.setFillAfter(true);
-        view.startAnimation(rotate);
-    }
-    public void turn3(View view){
-        RotateAnimation rotate = new RotateAnimation(DegreesGear3 ,DegreesGear3 + 90 , Animation.RELATIVE_TO_SELF, 0.5f ,Animation.RELATIVE_TO_SELF, 0.5f);
-        rotate.setInterpolator(new LinearInterpolator());
-        rotate.setDuration(400);
-        rotate.setFillEnabled(true);
-        rotate.setFillAfter(true);
-        view.startAnimation(rotate);
-    }
+
 
 }

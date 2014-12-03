@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="fill_parent"
     android:layout_width="fill_parent"
-    tools:context="gearapp.sstudio.com.gearapp.Level1"
+    tools:context="gearapp.sstudio.com.gearapp.Level2"
     android:background="#ffffffff">
 
     <TextView
@@ -22,9 +22,9 @@
         android:src="@drawable/gearlvl"
         android:background="@null"
         android:onClick="turnGear"
-        android:layout_marginRight="30dp"
         android:layout_centerVertical="true"
-        android:layout_toLeftOf="@+id/Gear2" />
+        android:layout_toLeftOf="@+id/Level2Text"
+        android:layout_toStartOf="@+id/Level2Text" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -33,19 +33,9 @@
         android:src="@drawable/gearlvl"
         android:background="@null"
         android:onClick="turnGear"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Gear3"
-        android:src="@drawable/gearlvl"
-        android:background="@null"
-        android:onClick="turnGear"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="30dp"
-        android:layout_toRightOf="@+id/Gear2" />
+        android:layout_toEndOf="@+id/Level2Text"
+        android:layout_alignTop="@+id/Gear1"
+        android:layout_toRightOf="@+id/Level2Text" />
 
     <TextView
         android:layout_width="wrap_content"

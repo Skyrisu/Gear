@@ -8,23 +8,37 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
 
-public class EndScreen extends MainActivity {
+public class Level9 extends MainActivity {
 
     final Context Warn = this;
+    int turnCounter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_end_screen);
+        setContentView(R.layout.activity_level9);
+        turnCounter = 0;
+        DegreesGear1 = 0;
+        DegreesGear2 = 0;
+        DegreesGear3 = 0;
+        currentLevel = 6;
+        ImageButton gStart1 = (ImageButton) findViewById(R.id.Gear1);
+        turn180(gStart1);
+        ImageButton gStart2 = (ImageButton) findViewById(R.id.Gear2);
+        turn270(gStart2);
+        ImageButton gStart3 = (ImageButton) findViewById(R.id.Gear3);
+        turn270(gStart3);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_end_screen, menu);
+        getMenuInflater().inflate(R.menu.menu_level9, menu);
         return true;
     }
 
@@ -42,7 +56,11 @@ public class EndScreen extends MainActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
+    public void openLvlSelect(View view) {
+        Intent intent = new Intent (this, LevelSelect.class);
+        startActivity(intent);
+        finish();
+    }
     public void onBackPressed(){
         AlertDialog.Builder ExitWarningBuild = new AlertDialog.Builder(Warn);
         ExitWarningBuild.setTitle("You rly want to close the app?");
@@ -66,44 +84,40 @@ public class EndScreen extends MainActivity {
         ExitWarning.show();
     }
 
-    public void EndScreenBack (View v){
-        Intent intent = new Intent (this, LevelSelect.class);
-        startActivity(intent);
-        finish();
-    }
-
-    public void NextLevel(View v){
-        switch(currentLevel){
-            case 1:
-                Intent nLvl1 = new Intent (this, Level2.class);
-                startActivity(nLvl1);
-                finish();
+    public void turnGear(View v){
+        ImageButton gear1 = (ImageButton) findViewById(R.id.Gear1);
+        ImageButton gear2 = (ImageButton) findViewById(R.id.Gear2);
+        ImageButton gear3 = (ImageButton) findViewById(R.id.Gear3);
+        if (DegreesGear1 == 360) {
+            DegreesGear1 = 0;
+        } else if (DegreesGear2 == 360) {
+            DegreesGear2 = 0;
+        } else if (DegreesGear3 == 360) {
+            DegreesGear3 = 0;
+        }
+        switch (v.getId()){
+            case R.id.Gear1:
+                turn(gear1, 3);
+                turn(gear2, 3);
+                turn(gear3, 3);
                 break;
-            case 2:
-                Intent nLvl2 = new Intent (this, Level3.class);
-                startActivity(nLvl2);
-                finish();
+            case R.id.Gear2:
+                turn(gear1, 3);
+                turn(gear2, 3);
                 break;
-            case 3:
-                Intent nLvl3 = new Intent (this, Level4.class);
-                startActivity(nLvl3);
-                finish();
-                break;
-            case 4:
-                Intent nLvl4 = new Intent (this, Level5.class);
-                startActivity(nLvl4);
-                finish();
-                break;
-            case 5:
-                Intent nLvl5 = new Intent (this, Level6.class);
-                startActivity(nLvl5);
-                finish();
-                break;
-            case 6:
-                Intent nLvl6 = new Intent (this, LevelSelect.class);
-                startActivity(nLvl6);
-                finish();
+            case R.id.Gear3:
+                turn(gear1, 3);
+                turn(gear3, 3);
                 break;
         }
+        final TextView viewCounter = (TextView) findViewById(R.id.TextViewMoveNumber);
+        turnCounter ++;
+        viewCounter.setText (String.valueOf(turnCounter));
+    }
+
+    public void reload(View v){
+        Intent reload = new Intent (this, Level1.class);
+        finish();
+        startActivity(reload);
     }
 }

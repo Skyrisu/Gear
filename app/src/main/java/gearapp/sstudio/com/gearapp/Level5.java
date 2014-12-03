@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 
@@ -24,7 +25,7 @@ public class Level5 extends MainActivity {
         DegreesGear1 = 0;
         DegreesGear2 = 0;
         DegreesGear3 = 0;
-        currentLevel = 2;
+        currentLevel = 5;
     }
 
 
@@ -78,23 +79,9 @@ public class Level5 extends MainActivity {
     }
 
     public void turnGear(View v){
-        switch (v.getId()){
-            case R.id.Gear1:
-                turn1(v);
-                DegreesGear1 = DegreesGear1 + 90;
-                break;
-            case R.id.Gear2:
-                turn2(v);
-                DegreesGear2 = DegreesGear2 + 90;
-                break;
-            case R.id.Gear3:
-                turn3(v);
-                DegreesGear3 = DegreesGear3 + 90;
-                break;
-        }
-        final TextView viewCounter = (TextView) findViewById(R.id.TextViewMoveNumber);
-        turnCounter ++;
-        viewCounter.setText (String.valueOf(turnCounter));
+        ImageButton gear1 = (ImageButton) findViewById(R.id.Gear1);
+        ImageButton gear2 = (ImageButton) findViewById(R.id.Gear2);
+        ImageButton gear3 = (ImageButton) findViewById(R.id.Gear3);
         if (DegreesGear1 == 360) {
             DegreesGear1 = 0;
         } else if (DegreesGear2 == 360) {
@@ -102,9 +89,28 @@ public class Level5 extends MainActivity {
         } else if (DegreesGear3 == 360) {
             DegreesGear3 = 0;
         }
-        if (DegreesGear1 == 180 && DegreesGear1 == DegreesGear2 && DegreesGear1 == DegreesGear3){
-            Intent EndScreen = new Intent (this, EndScreen.class);
-            startActivity(EndScreen);
+        switch (v.getId()){
+            case R.id.Gear1:
+                turn(gear1, 3);
+                turn(gear3, 3);
+                break;
+            case R.id.Gear2:
+                turn(gear1, 3);
+                turn(gear2, 3);
+                break;
+            case R.id.Gear3:
+                turn(gear2, 3);
+                turn(gear3, 3);
+                break;
         }
+        final TextView viewCounter = (TextView) findViewById(R.id.TextViewMoveNumber);
+        turnCounter ++;
+        viewCounter.setText (String.valueOf(turnCounter));
+    }
+
+    public void reload(View v){
+        Intent reload = new Intent (this, Level1.class);
+        finish();
+        startActivity(reload);
     }
 }

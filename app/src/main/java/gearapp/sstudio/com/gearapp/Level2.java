@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 
@@ -25,6 +26,8 @@ public class Level2 extends MainActivity {
         DegreesGear2 = 0;
         DegreesGear3 = 0;
         currentLevel = 2;
+        ImageButton gStart2 = (ImageButton) findViewById(R.id.Gear2);
+        turn270(gStart2);
     }
 
 
@@ -78,33 +81,29 @@ public class Level2 extends MainActivity {
     }
 
     public void turnGear(View v){
+        ImageButton gear1 = (ImageButton) findViewById(R.id.Gear1);
+        ImageButton gear2 = (ImageButton) findViewById(R.id.Gear2);
+        if (DegreesGear1 == 360) {
+            DegreesGear1 = 0;
+        } else if (DegreesGear2 == 360) {
+            DegreesGear2 = 0;
+        }
         switch (v.getId()){
             case R.id.Gear1:
-                turn1(v);
-                DegreesGear1 = DegreesGear1 + 90;
+                turn(gear1, 2);
                 break;
             case R.id.Gear2:
-                turn2(v);
-                DegreesGear2 = DegreesGear2 + 90;
-                break;
-            case R.id.Gear3:
-                turn3(v);
-                DegreesGear3 = DegreesGear3 + 90;
+                turn(gear2, 2);
                 break;
         }
         final TextView viewCounter = (TextView) findViewById(R.id.TextViewMoveNumber);
         turnCounter ++;
         viewCounter.setText (String.valueOf(turnCounter));
-        if (DegreesGear1 == 360) {
-            DegreesGear1 = 0;
-        } else if (DegreesGear2 == 360) {
-            DegreesGear2 = 0;
-        } else if (DegreesGear3 == 360) {
-            DegreesGear3 = 0;
-        }
-        if (DegreesGear1 == 180 && DegreesGear1 == DegreesGear2 && DegreesGear1 == DegreesGear3){
-            Intent EndScreen = new Intent (this, EndScreen.class);
-            startActivity(EndScreen);
-        }
+    }
+
+    public void reload(View v){
+        Intent reload = new Intent (this, Level1.class);
+        finish();
+        startActivity(reload);
     }
 }

@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 
@@ -21,8 +22,9 @@ public class Level1 extends MainActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level1);
         turnCounter = 0;
-        DegreesGear1 = 0;
         currentLevel = 1;
+        ImageButton gear1 = (ImageButton) findViewById(R.id.Gear1);
+        turn270(gear1);
     }
 
 
@@ -76,15 +78,14 @@ public class Level1 extends MainActivity {
     }
 
     public void turnGear(View v){
-        turn1(v);
-        DegreesGear1 = DegreesGear1 + 90;
+        ImageButton gear1 = (ImageButton) findViewById(R.id.Gear1);
+        if (DegreesGear1 == 360) {
+            DegreesGear1 = 0;
+        }
+        turn(gear1, 1);
         final TextView viewCounter = (TextView) findViewById(R.id.TextViewMoveNumber);
         turnCounter ++;
         viewCounter.setText (String.valueOf(turnCounter));
-        if (DegreesGear1 == 180) {
-            Intent EndScreen = new Intent (this, EndScreen.class);
-            startActivity(EndScreen);
-        }
     }
 
     public void reload(View v){
