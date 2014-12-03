@@ -22,9 +22,12 @@ public class Level1 extends MainActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level1);
         turnCounter = 0;
+        DegreesGear1 = 0;
+        DegreesGear2 = 0;
+        DegreesGear3 = 0;
         currentLevel = 1;
-        ImageButton gear1 = (ImageButton) findViewById(R.id.Gear1);
-        turn270(gear1);
+        ImageButton gStart1 = (ImageButton) findViewById(R.id.Gear1);
+        turn270(gStart1);
     }
 
 

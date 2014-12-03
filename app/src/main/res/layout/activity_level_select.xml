@@ -126,7 +126,7 @@
         android:onClick="Back"
         android:nestedScrollingEnabled="false"
         android:layout_gravity="left|bottom"
-        android:adjustViewBounds="false"
-        android:background="@drawable/backarrow" />
+        android:background="@drawable/backarrow"
+        android:adjustViewBounds="false" />
 
 </FrameLayout>

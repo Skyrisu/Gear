@@ -24,6 +24,7 @@ public class MainActivity extends Activity {
     public static int DegreesGear2;
     public static int DegreesGear3;
     public static int currentLevel;
+    public static int DegreesGear =0;
 
 
     @Override
@@ -34,6 +35,7 @@ public class MainActivity extends Activity {
         Animation gearanim = AnimationUtils.loadAnimation(MainActivity.this, R.anim.rotateloop);
         final ImageView gear = (ImageView) findViewById(R.id.NonFunctionGear);
         gear.startAnimation(gearanim);
+
         if(android.os.Build.VERSION.SDK_INT >= 19) {
             getWindow().getDecorView()
                     .setSystemUiVisibility(
@@ -110,8 +112,7 @@ public class MainActivity extends Activity {
     }
 
     public void turn90(View startBtn){
-        RotateAnimation rotate = new RotateAnimation(0 ,90 , Animation.RELATIVE_TO_SELF, 0.5f ,Animation.RELATIVE_TO_SELF, 0.5f);
-        rotate.setInterpolator(new LinearInterpolator());
+        RotateAnimation rotate = new RotateAnimation(0 , 90, Animation.RELATIVE_TO_SELF, 0.5f ,Animation.RELATIVE_TO_SELF, 0.5f);
         rotate.setDuration(0);
         rotate.setFillEnabled(true);
         rotate.setFillAfter(true);
@@ -131,8 +132,7 @@ public class MainActivity extends Activity {
     }
 
     public void turn180(View startBtn){
-        RotateAnimation rotate = new RotateAnimation(0 ,180 , Animation.RELATIVE_TO_SELF, 0.5f ,Animation.RELATIVE_TO_SELF, 0.5f);
-        rotate.setInterpolator(new LinearInterpolator());
+        RotateAnimation rotate = new RotateAnimation(0 , 180, Animation.RELATIVE_TO_SELF, 0.5f ,Animation.RELATIVE_TO_SELF, 0.5f);
         rotate.setDuration(0);
         rotate.setFillEnabled(true);
         rotate.setFillAfter(true);
@@ -152,8 +152,7 @@ public class MainActivity extends Activity {
     }
 
     public void turn270(View startBtn){
-        RotateAnimation rotate = new RotateAnimation(0 ,270 , Animation.RELATIVE_TO_SELF, 0.5f ,Animation.RELATIVE_TO_SELF, 0.5f);
-        rotate.setInterpolator(new LinearInterpolator());
+        RotateAnimation rotate = new RotateAnimation(0 , 270, Animation.RELATIVE_TO_SELF, 0.5f ,Animation.RELATIVE_TO_SELF, 0.5f);
         rotate.setDuration(0);
         rotate.setFillEnabled(true);
         rotate.setFillAfter(true);
@@ -182,8 +181,7 @@ public class MainActivity extends Activity {
         } else if (DegreesGear3 == 360) {
             DegreesGear3 = 0;
         }
-        int DegreesGear= 0;
-        switch(v.getId()){
+        switch(getGear.getId()){
             case R.id.Gear1:
                 DegreesGear = DegreesGear1;
                 DegreesGear1 = DegreesGear1 +90;
@@ -197,7 +195,7 @@ public class MainActivity extends Activity {
                 DegreesGear3 = DegreesGear3 +90;
                 break;
         }
-        RotateAnimation rotate = new RotateAnimation(DegreesGear, DegreesGear + 90, Animation.RELATIVE_TO_SELF, 0.5f ,Animation.RELATIVE_TO_SELF, 0.5f);
+        RotateAnimation rotate = new RotateAnimation(DegreesGear , DegreesGear + 90, Animation.RELATIVE_TO_SELF, 0.5f ,Animation.RELATIVE_TO_SELF, 0.5f);
         rotate.setInterpolator(new LinearInterpolator());
         rotate.setDuration(400);
         rotate.setFillEnabled(true);
