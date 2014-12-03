@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -14,12 +15,19 @@ import android.widget.TextView;
 
 public class Level1 extends MainActivity {
 
+    TextView t;
+
     final Context Warn = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level1);
+
+        t= (TextView) findViewById(R.id.Level1Text);
+        Typeface myCustomFont=Typeface.createFromAsset(getAssets(),"fonts/Mastoc_PersonalUseOnly.ttf");
+        t.setTypeface(myCustomFont);
+
 
         turnCounter = 0;
         DegreesGear1 = 0;
