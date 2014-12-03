@@ -11,8 +11,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.RotateAnimation;
+import android.widget.ImageView;
 
 
 public class MainActivity extends Activity {
@@ -27,6 +29,11 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Animation gearanim = AnimationUtils.loadAnimation(MainActivity.this, R.anim.rotateloop);
+        final ImageView gear = (ImageView) findViewById(R.id.NonFunctionGear);
+        gear.startAnimation(gearanim);
+
     }
 
 
@@ -155,6 +162,8 @@ public class MainActivity extends Activity {
     }
 
     public void turn(View v,int gearCount){
+        final View getGear = v;
+        getGear.setEnabled(false);
         if (DegreesGear1 == 360) {
             DegreesGear1 = 0;
         } else if (DegreesGear2 == 360) {
@@ -198,7 +207,10 @@ public class MainActivity extends Activity {
                             Intent EndScreen = new Intent (MainActivity.this, EndScreen.class);
                             startActivity(EndScreen);
                             finish();
+                        } else {
+                            getGear.setEnabled(true);
                         }
+
                     }
 
                     @Override
@@ -220,6 +232,8 @@ public class MainActivity extends Activity {
                             Intent EndScreen = new Intent (MainActivity.this, EndScreen.class);
                             startActivity(EndScreen);
                             finish();
+                        } else {
+                            getGear.setEnabled(true);
                         }
                     }
 
@@ -242,6 +256,8 @@ public class MainActivity extends Activity {
                             Intent EndScreen = new Intent (MainActivity.this, EndScreen.class);
                             startActivity(EndScreen);
                             finish();
+                        } else {
+                            getGear.setEnabled(true);
                         }
                     }
 
