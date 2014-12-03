@@ -83,5 +83,24 @@
         android:layout_alignTop="@+id/MoveText"
         android:layout_toRightOf="@+id/Level1Text" />
 
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:id="@+id/imageView17"
+        android:background="@drawable/levelonetipmenu"
+        android:layout_below="@+id/BackButton"
+        android:layout_alignLeft="@+id/BackButton"
+        android:layout_alignStart="@+id/BackButton" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/imageView18"
+        android:layout_toStartOf="@+id/Gear1"
+        android:layout_toEndOf="@+id/imageView17"
+        android:background="@drawable/levelonetipreload"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/Gear1" />
+
 
 </RelativeLayout>
