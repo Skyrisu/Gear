@@ -35,4 +35,5 @@ public class Highscores extends MainActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
 }

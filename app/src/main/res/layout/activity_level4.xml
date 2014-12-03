@@ -45,7 +45,9 @@
         android:onClick="turnGear"
         android:layout_centerVertical="true"
         android:layout_marginLeft="30dp"
-        android:layout_toRightOf="@+id/Gear2" />
+        android:layout_toRightOf="@+id/Gear2"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentStart="false" />
 
     <TextView
         android:layout_width="wrap_content"

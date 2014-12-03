@@ -210,48 +210,6 @@
             android:textColor="#ff0cff34" />
 
 
-        <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:id="@+id/imageView10"
-            android:layout_gravity="left|center_vertical"
-            android:background="@drawable/lock" />
-
-        <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:id="@+id/imageView11"
-            android:layout_gravity="center"
-            android:background="@drawable/lock" />
-
-        <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:id="@+id/imageView12"
-            android:layout_gravity="right|center_vertical"
-            android:background="@drawable/lock" />
-
-        <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:id="@+id/imageView13"
-            android:layout_gravity="left|bottom"
-            android:background="@drawable/lock" />
-
-        <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:id="@+id/imageView14"
-            android:layout_gravity="center_horizontal|bottom"
-            android:background="@drawable/lock" />
-
-        <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:id="@+id/imageView15"
-            android:layout_gravity="right|bottom"
-            android:background="@drawable/lock" />
-
     </FrameLayout>
 
 </FrameLayout>

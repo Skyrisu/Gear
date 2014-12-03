@@ -21,11 +21,16 @@ public class Level4 extends MainActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level4);
+
         turnCounter = 0;
         DegreesGear1 = 0;
         DegreesGear2 = 0;
         DegreesGear3 = 0;
         currentLevel = 4;
+
+        final TextView viewBest = (TextView) findViewById(R.id.TextViewBestNumber);
+        viewBest.setText(String.valueOf(LvlBest[currentLevel-1]));
+
         ImageButton gStart1 = (ImageButton) findViewById(R.id.Gear1);
         turn270(gStart1);
         ImageButton gStart3 = (ImageButton) findViewById(R.id.Gear3);

@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.LinearInterpolator;
@@ -20,17 +21,21 @@ import android.widget.ImageView;
 public class MainActivity extends Activity {
 
     final Context Warn = this;
+    public static int turnCounter;
     public static int DegreesGear1;
     public static int DegreesGear2;
     public static int DegreesGear3;
     public static int currentLevel;
     public static int DegreesGear =0;
+    public static int LvlDone;
+    public static int[] LvlBest = new int[8];
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         Animation gearanim = AnimationUtils.loadAnimation(MainActivity.this, R.anim.rotateloop);
         final ImageView gear = (ImageView) findViewById(R.id.NonFunctionGear);
@@ -94,6 +99,7 @@ public class MainActivity extends Activity {
         AlertDialog ExitWarning = ExitWarningBuild.create();
         ExitWarning.show();
     }
+
 
     public void openCredits(View view) {
         Intent intent = new Intent (this, Credits.class);

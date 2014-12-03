@@ -18,8 +18,10 @@ public class EndScreen extends MainActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_end_screen);
+        if (currentLevel > LvlDone){
+            LvlDone = currentLevel;
+        }
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

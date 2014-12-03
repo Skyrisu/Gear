@@ -10,18 +10,52 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ImageView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class LevelSelect extends MainActivity implements View.OnClickListener{
 
     final Context Warn = this;
+    private List<Button> buttons;
+    private static final int[] BUTTON_IDS = {
+            R.id.Lvl1Btn,
+            R.id.Lvl2Btn,
+            R.id.Lvl3Btn,
+            R.id.Lvl4Btn,
+            R.id.Lvl5Btn,
+            R.id.Lvl6Btn,
+            R.id.Lvl7Btn,
+            R.id.Lvl8Btn,
+            R.id.Lvl9Btn,
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level_select);
+
+        LvlDone = 4;
+        buttons = new ArrayList<Button>(BUTTON_IDS.length);
+        for(int id : BUTTON_IDS) {
+            Button button = (Button)findViewById(id);
+            buttons.add(button);
+        }
+
+        for (int i = 0 ; i < buttons.size() ; i++) {
+            if (i < LvlDone+1) {
+                buttons.get(i).setEnabled(true);
+                buttons.get(i).setBackgroundResource(R.drawable.levelgear);
+                buttons.get(i).setText("" +(i+1));
+            } else {
+                buttons.get(i).setEnabled(false);
+                buttons.get(i).setBackgroundResource(R.drawable.lock);
+                buttons.get(i).setText(" ");
+            }
+        }
 
         Animation gearanim = AnimationUtils.loadAnimation(LevelSelect.this, R.anim.rotateloop);
         final ImageView gear = (ImageView) findViewById(R.id.BackGear);

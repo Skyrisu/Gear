@@ -15,17 +15,21 @@ import android.widget.TextView;
 public class Level2 extends MainActivity {
 
     final Context Warn = this;
-    int turnCounter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level2);
+
         turnCounter = 0;
         DegreesGear1 = 0;
         DegreesGear2 = 0;
         DegreesGear3 = 0;
         currentLevel = 2;
+
+        final TextView viewBest = (TextView) findViewById(R.id.TextViewBestNumber);
+        viewBest.setText(String.valueOf(LvlBest[currentLevel-1]));
+
         ImageButton gStart2 = (ImageButton) findViewById(R.id.Gear2);
         turn270(gStart2);
     }
