@@ -2,21 +2,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    tools:context="gearapp.sstudio.com.gearapp.EndScreen">
+    tools:context="gearapp.sstudio.com.gearapp.EndScreen"
+    android:background="@drawable/backgroundv2">
 
     <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
         android:id="@+id/EndScreenBack"
         android:layout_gravity="left|bottom"
-        android:onClick="EndScreenBack" />
+        android:onClick="EndScreenBack"
+        android:background="@drawable/backtomenu"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="20dp" />
 
     <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
         android:id="@+id/NextLevel"
         android:layout_gravity="right|bottom"
-        android:onClick="NextLevel" />
+        android:onClick="NextLevel"
+        android:background="@drawable/next"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Good Job, Faggot"
+        android:id="@+id/textView3"
+        android:layout_gravity="center_horizontal|top"
+        android:singleLine="false"
+        android:textSize="60dp"
+        android:textColor="#ff000000"
+        android:layout_marginTop="20dp" />
 
     <TextView
         android:layout_width="wrap_content"
