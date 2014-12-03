@@ -98,7 +98,7 @@ public class Level3 extends MainActivity {
     }
 
     public void reload(View v){
-        Intent reload = new Intent (this, Level1.class);
+        Intent reload = new Intent (this, Level3.class);
         finish();
         startActivity(reload);
     }

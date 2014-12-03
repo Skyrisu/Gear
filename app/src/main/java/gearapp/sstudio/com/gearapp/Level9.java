@@ -109,7 +109,7 @@ public class Level9 extends MainActivity {
     }
 
     public void reload(View v){
-        Intent reload = new Intent (this, Level1.class);
+        Intent reload = new Intent (this, Level9.class);
         finish();
         startActivity(reload);
     }
