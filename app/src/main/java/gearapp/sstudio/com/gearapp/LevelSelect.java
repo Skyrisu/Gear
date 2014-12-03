@@ -30,6 +30,22 @@ public class LevelSelect extends MainActivity implements View.OnClickListener{
         blvl2.setOnClickListener(this);
         Button blvl3 = (Button) findViewById(R.id.button3);
         blvl3.setOnClickListener(this);
+// TEST
+        Button blvl4 = (Button) findViewById(R.id.button4);
+        blvl4.setOnClickListener(this);
+        Button blvl5 = (Button) findViewById(R.id.button5);
+        blvl5.setOnClickListener(this);
+        Button blvl6 = (Button) findViewById(R.id.button6);
+        blvl6.setOnClickListener(this);
+        Button blvl7 = (Button) findViewById(R.id.button7);
+        blvl7.setOnClickListener(this);
+        Button blvl8 = (Button) findViewById(R.id.button8);
+        blvl8.setOnClickListener(this);
+        Button blvl9 = (Button) findViewById(R.id.button9);
+        blvl9.setOnClickListener(this);
+
+
+
 
         Animation gearanim = AnimationUtils.loadAnimation(LevelSelect.this, R.anim.rotateloop);
         final ImageView gear = (ImageView) findViewById(R.id.BackGear);

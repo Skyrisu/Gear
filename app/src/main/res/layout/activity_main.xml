@@ -1,8 +1,30 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/totalbackground">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Highscores"
+        android:id="@+id/HighscoresButton"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="openHighscores"
+        android:layout_gravity="right|center_vertical" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Credits"
+        android:id="@+id/CreditsButton"
+        android:onClick="openCredits"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:longClickable="true"
+        android:layout_gravity="center" />
 
     <Button
         android:layout_width="wrap_content"
@@ -13,24 +35,15 @@
         android:layout_alignParentTop="true"
         android:layout_alignLeft="@+id/CreditsButton"
         android:layout_alignStart="@+id/CreditsButton"
-        android:onClick="openPlay" />
+        android:onClick="openPlay"
+        android:layout_gravity="left|center_vertical" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Highscores"
-        android:id="@+id/HighscoresButton"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="openHighscores" />
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:id="@+id/nonfunctionalgear"
+        android:layout_gravity="center_horizontal|bottom"
+        android:background="@drawable/gear"
+        android:layout_marginBottom="-150dp" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Credits"
-        android:id="@+id/CreditsButton"
-        android:onClick="openCredits"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:longClickable="true" />
-</RelativeLayout>
+</FrameLayout>

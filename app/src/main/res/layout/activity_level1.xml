@@ -59,7 +59,8 @@
         android:layout_toRightOf="@+id/BackButton"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
-        android:onClick="reload" />
+        android:onClick="reload"
+        android:rotation="40" />
 
     <TextView
         android:layout_width="wrap_content"
