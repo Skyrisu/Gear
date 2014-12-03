@@ -1,12 +1,11 @@
 package gearapp.sstudio.com.gearapp;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class Highscores extends Activity {
+public class Highscores extends MainActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

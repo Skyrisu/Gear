@@ -25,6 +25,7 @@ public class MainActivity extends Activity {
     public static int DegreesGear3;
     public static int currentLevel;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +35,15 @@ public class MainActivity extends Activity {
         final ImageView gear = (ImageView) findViewById(R.id.NonFunctionGear);
         gear.startAnimation(gearanim);
 
+        getWindow().getDecorView()
+                .setSystemUiVisibility(
+                        View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                                | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                                | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                                | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                                | View.SYSTEM_UI_FLAG_FULLSCREEN
+                                | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+                                | View.INVISIBLE);
     }
 
 
