@@ -30,7 +30,7 @@ public class Level2 extends MainActivity {
         currentLevel = 2;
 
         final TextView viewBest = (TextView) findViewById(R.id.TextViewBestNumber);
-        viewBest.setText(String.valueOf(LvlBest[currentLevel-1]));
+        viewBest.setText(String.valueOf(LvlBest[currentLevel]));
 
         ImageButton gStart2 = (ImageButton) findViewById(R.id.Gear2);
         turn270(gStart2);

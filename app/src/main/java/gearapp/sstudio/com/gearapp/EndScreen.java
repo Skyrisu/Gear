@@ -19,13 +19,15 @@ public class EndScreen extends MainActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_end_screen);
+        LvlBest[currentLevel] = turnCounter;
         if (currentLevel > LvlDone){
             LvlDone = currentLevel;
         }
 
-        SharedPreferences LevelDone = getSharedPreferences(MyPreferences, MODE_PRIVATE);
-        SharedPreferences.Editor editor = LevelDone.edit();
+        SharedPreferences LevelSave = getSharedPreferences(MyPreferences, MODE_PRIVATE);
+        SharedPreferences.Editor editor = LevelSave.edit();
         editor.putInt ("LevelDone", LvlDone);
+        editor.putInt ("LevelBest"+currentLevel, LvlBest[currentLevel]);
         editor.commit();
     }
 

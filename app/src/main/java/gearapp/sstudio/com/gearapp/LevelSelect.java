@@ -41,8 +41,11 @@ public class LevelSelect extends MainActivity implements View.OnClickListener{
         setContentView(R.layout.activity_level_select);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
-        SharedPreferences LevelDone = getSharedPreferences(MyPreferences, MODE_PRIVATE);
-        LvlDone = LevelDone.getInt("LevelDone", 0);
+        SharedPreferences LevelSave = getSharedPreferences(MyPreferences, MODE_PRIVATE);
+        LvlDone = LevelSave.getInt("LevelDone", 0);
+        for (int i=0; i < LvlBest.length; i++){
+            LvlBest[i]= LevelSave.getInt("LevelBest"+i, 0);
+        }
 
         buttons = new ArrayList<Button>(BUTTON_IDS.length);
         for(int id : BUTTON_IDS) {

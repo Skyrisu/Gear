@@ -28,6 +28,10 @@ public class Level7 extends MainActivity {
         DegreesGear2 = 0;
         DegreesGear3 = 0;
         currentLevel = 7;
+
+        final TextView viewBest = (TextView) findViewById(R.id.TextViewBestNumber);
+        viewBest.setText(String.valueOf(LvlBest[currentLevel]));
+
         ImageButton gStart1 = (ImageButton) findViewById(R.id.Gear1);
         turn180(gStart1);
         ImageButton gStart2 = (ImageButton) findViewById(R.id.Gear2);
