@@ -209,6 +209,7 @@
             android:background="@drawable/levelgear"
             android:textColor="#ff0cff34" />
 
+
         <ImageView
             android:layout_width="60dp"
             android:layout_height="60dp"
