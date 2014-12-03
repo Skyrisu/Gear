@@ -3,7 +3,7 @@
     android:layout_height="fill_parent"
     android:layout_width="fill_parent"
     tools:context="gearapp.sstudio.com.gearapp.Level9"
-    android:background="#ffffffff">
+    android:background="@drawable/backgroundv2">
 
     <TextView
         android:layout_width="wrap_content"

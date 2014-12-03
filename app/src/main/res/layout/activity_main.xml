@@ -3,7 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     tools:context=".MainActivity"
-    android:background="@drawable/totalbackground">
+    android:background="@drawable/backgroundv2">
 
     <Button
         android:layout_width="wrap_content"

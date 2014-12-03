@@ -4,7 +4,7 @@
     android:layout_height="fill_parent"
     tools:context="gearapp.sstudio.com.gearapp.LevelSelect"
     android:clickable="false"
-    android:background="@drawable/totalbackground">
+    android:background="@drawable/backgroundv2">
 
     <ImageView
             android:id="@+id/BackGear"
