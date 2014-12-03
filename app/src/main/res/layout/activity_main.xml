@@ -14,9 +14,9 @@
         android:longClickable="true"
         android:layout_gravity="center"
         android:background="@drawable/credits"
-        android:layout_toRightOf="@+id/HighscoresButton"
-        android:layout_alignBottom="@+id/HighscoresButton"
-        android:layout_marginLeft="20dp" />
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/PlayButton"
+        android:layout_alignBottom="@+id/PlayButton" />
 
     <ImageButton
         android:layout_width="100dp"
@@ -24,23 +24,22 @@
         android:text="Play"
         android:id="@+id/PlayButton"
         android:onClick="openPlay"
-        android:layout_toLeftOf="@+id/HighscoresButton"
         android:background="@drawable/play"
         android:adjustViewBounds="false"
         android:layout_gravity="left|center_vertical"
-        android:layout_alignBottom="@+id/HighscoresButton"
-        android:layout_marginRight="20dp" />
+        android:layout_centerInParent="true" />
 
     <ImageButton
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:text="Highscores"
         android:id="@+id/HighscoresButton"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
         android:onClick="openHighscores"
         android:background="@drawable/highscores"
-        android:layout_gravity="right|center_vertical" />
+        android:layout_gravity="right|center_vertical"
+        android:layout_toLeftOf="@+id/PlayButton"
+        android:layout_alignBottom="@+id/PlayButton"
+        android:layout_marginRight="20dp" />
 
     <FrameLayout
         android:layout_width="300dp"
