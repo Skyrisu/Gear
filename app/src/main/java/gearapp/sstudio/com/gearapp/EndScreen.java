@@ -87,47 +87,56 @@ public class EndScreen extends MainActivity {
             case 1:
                 Intent nLvl1 = new Intent (this, Level2.class);
                 startActivity(nLvl1);
-                finish();
+                nLvl1.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                finish ();
                 break;
             case 2:
                 Intent nLvl2 = new Intent (this, Level3.class);
                 startActivity(nLvl2);
-                finish();
+                nLvl2.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                finish ();
                 break;
             case 3:
                 Intent nLvl3 = new Intent (this, Level4.class);
                 startActivity(nLvl3);
-                finish();
+                nLvl3.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                finish ();
                 break;
             case 4:
                 Intent nLvl4 = new Intent (this, Level5.class);
                 startActivity(nLvl4);
-                finish();
+                nLvl4.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                finish ();
                 break;
             case 5:
                 Intent nLvl5 = new Intent (this, Level6.class);
                 startActivity(nLvl5);
-                finish();
+                nLvl5.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                finish ();
                 break;
             case 6:
                 Intent nLvl6 = new Intent (this, Level7.class);
                 startActivity(nLvl6);
-                finish();
+                nLvl6.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                finish ();
                 break;
             case 7:
                 Intent nLvl7 = new Intent (this, Level8.class);
                 startActivity(nLvl7);
-                finish();
+                nLvl7.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                finish ();
                 break;
             case 8:
                 Intent nLvl8 = new Intent (this, Level9.class);
                 startActivity(nLvl8);
-                finish();
+                nLvl8.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                finish ();
                 break;
             case 9:
                 Intent nLvl9 = new Intent (this, LevelSelect.class);
                 startActivity(nLvl9);
-                finish();
+                nLvl9.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                finish ();
                 break;
         }
     }

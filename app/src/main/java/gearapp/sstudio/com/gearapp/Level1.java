@@ -16,8 +16,6 @@ import android.widget.TextView;
 
 public class Level1 extends MainActivity {
 
-    TextView t;
-
     final Context Warn = this;
 
     @Override
@@ -26,9 +24,9 @@ public class Level1 extends MainActivity {
         setContentView(R.layout.activity_level1);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
-        t= (TextView) findViewById(R.id.Level1Text);
+        TextView t1 = (TextView) findViewById(R.id.Level1Text);
         Typeface myCustomFont=Typeface.createFromAsset(getAssets(),"fonts/fbsbltc.ttf");
-        t.setTypeface(myCustomFont);
+        t1.setTypeface(myCustomFont);
 
 
         turnCounter = 0;
