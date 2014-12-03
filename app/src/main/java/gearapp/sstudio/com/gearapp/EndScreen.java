@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -21,6 +22,11 @@ public class EndScreen extends MainActivity {
         if (currentLevel > LvlDone){
             LvlDone = currentLevel;
         }
+
+        SharedPreferences LevelDone = getSharedPreferences(MyPreferences, MODE_PRIVATE);
+        SharedPreferences.Editor editor = LevelDone.edit();
+        editor.putInt ("LevelDone", LvlDone);
+        editor.commit();
     }
 
     @Override
