@@ -74,5 +74,14 @@
         android:textColor="#fa000000"
         android:layout_alignBaseline="@+id/MoveText" />
 
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/imageView16"
+        android:background="@drawable/levelonetip"
+        android:layout_toEndOf="@+id/Level1Text"
+        android:layout_alignTop="@+id/MoveText"
+        android:layout_toRightOf="@+id/Level1Text" />
+
 
 </RelativeLayout>
