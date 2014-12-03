@@ -2,8 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    tools:context=".MainActivity"
-    android:background="@drawable/totalbackground">
+    tools:context=".MainActivity">
 
     <Button
         android:layout_width="wrap_content"
@@ -41,7 +40,7 @@
     <ImageView
         android:layout_width="300dp"
         android:layout_height="300dp"
-        android:id="@+id/nonfunctionalgear"
+        android:id="@+id/NonFunctionGear"
         android:layout_gravity="center_horizontal|bottom"
         android:background="@drawable/gear"
         android:layout_marginBottom="-150dp" />

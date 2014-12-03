@@ -10,7 +10,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.Button;
 import android.widget.ImageView;
 
 
@@ -23,29 +22,6 @@ public class LevelSelect extends MainActivity implements View.OnClickListener{
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level_select);
-
-        Button blvl1 = (Button) findViewById(R.id.button);
-        blvl1.setOnClickListener(this);
-        Button blvl2 = (Button) findViewById(R.id.button2);
-        blvl2.setOnClickListener(this);
-        Button blvl3 = (Button) findViewById(R.id.button3);
-        blvl3.setOnClickListener(this);
-// TEST
-        Button blvl4 = (Button) findViewById(R.id.button4);
-        blvl4.setOnClickListener(this);
-        Button blvl5 = (Button) findViewById(R.id.button5);
-        blvl5.setOnClickListener(this);
-        Button blvl6 = (Button) findViewById(R.id.button6);
-        blvl6.setOnClickListener(this);
-        Button blvl7 = (Button) findViewById(R.id.button7);
-        blvl7.setOnClickListener(this);
-        Button blvl8 = (Button) findViewById(R.id.button8);
-        blvl8.setOnClickListener(this);
-        Button blvl9 = (Button) findViewById(R.id.button9);
-        blvl9.setOnClickListener(this);
-
-
-
 
         Animation gearanim = AnimationUtils.loadAnimation(LevelSelect.this, R.anim.rotateloop);
         final ImageView gear = (ImageView) findViewById(R.id.BackGear);
@@ -113,19 +89,49 @@ public class LevelSelect extends MainActivity implements View.OnClickListener{
             @Override
             public void onAnimationEnd(Animation animation) {
                 switch(btid.getId()){
-                    case R.id.button:
+                    case R.id.Lvl1Btn:
                         Intent lvl1 = new Intent (LevelSelect.this, Level1.class);
                         startActivity(lvl1);
                         finish();
                         break;
-                    case R.id.button2:
+                    case R.id.Lvl2Btn:
                         Intent lvl2 = new Intent (LevelSelect.this, Level2.class);
                         startActivity(lvl2);
                         finish();
                         break;
-                    case R.id.button3:
+                    case R.id.Lvl3Btn:
                         Intent lvl3 = new Intent (LevelSelect.this, Level3.class);
                         startActivity(lvl3);
+                        finish();
+                        break;
+                    case R.id.Lvl4Btn:
+                        Intent lvl4 = new Intent (LevelSelect.this, Level4.class);
+                        startActivity(lvl4);
+                        finish();
+                        break;
+                    case R.id.Lvl5Btn:
+                        Intent lvl5 = new Intent (LevelSelect.this, Level5.class);
+                        startActivity(lvl5);
+                        finish();
+                        break;
+                    case R.id.Lvl6Btn:
+                        Intent lvl6 = new Intent (LevelSelect.this, Level6.class);
+                        startActivity(lvl6);
+                        finish();
+                        break;
+                    case R.id.Lvl7Btn:
+                        Intent lvl7 = new Intent (LevelSelect.this, Level7.class);
+                        startActivity(lvl7);
+                        finish();
+                        break;
+                    case R.id.Lvl8Btn:
+                        Intent lvl8 = new Intent (LevelSelect.this, Level8.class);
+                        startActivity(lvl8);
+                        finish();
+                        break;
+                    case R.id.Lvl9Btn:
+                        Intent lvl9 = new Intent (LevelSelect.this, Level9.class);
+                        startActivity(lvl9);
                         finish();
                         break;
                 }
