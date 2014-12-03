@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -40,7 +41,8 @@ public class LevelSelect extends MainActivity implements View.OnClickListener{
         setContentView(R.layout.activity_level_select);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
-        LvlDone = 4;
+        SharedPreferences LevelDone = getSharedPreferences(MyPreferences, MODE_PRIVATE);
+        LvlDone = LevelDone.getInt("LevelDone", 0);
 
         buttons = new ArrayList<Button>(BUTTON_IDS.length);
         for(int id : BUTTON_IDS) {

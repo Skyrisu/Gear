@@ -29,6 +29,7 @@ public class MainActivity extends Activity {
     public static int DegreesGear =0;
     public static int LvlDone;
     public static int[] LvlBest = new int[8];
+    public static final String MyPreferences = "LevelDone" ;
 
 
     @Override
