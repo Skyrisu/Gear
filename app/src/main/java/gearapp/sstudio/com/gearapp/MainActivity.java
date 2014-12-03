@@ -155,6 +155,13 @@ public class MainActivity extends Activity {
     }
 
     public void turn(View v,int gearCount){
+        if (DegreesGear1 == 360) {
+            DegreesGear1 = 0;
+        } else if (DegreesGear2 == 360) {
+            DegreesGear2 = 0;
+        } else if (DegreesGear3 == 360) {
+            DegreesGear3 = 0;
+        }
         int DegreesGear= 0;
         switch(v.getId()){
             case R.id.Gear1:

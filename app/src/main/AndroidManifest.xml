@@ -77,15 +77,21 @@
         </activity>
         <activity
             android:name="gearapp.sstudio.com.gearapp.Level7"
-            android:label="@string/title_activity_level7" >
+            android:label="@string/title_activity_level7"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
         </activity>
         <activity
             android:name="gearapp.sstudio.com.gearapp.Level8"
-            android:label="@string/title_activity_level8" >
+            android:label="@string/title_activity_level8"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
         </activity>
         <activity
             android:name="gearapp.sstudio.com.gearapp.Level9"
-            android:label="@string/title_activity_level9" >
+            android:label="@string/title_activity_level9"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
         </activity>
     </application>
 

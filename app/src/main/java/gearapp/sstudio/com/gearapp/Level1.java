@@ -79,9 +79,6 @@ public class Level1 extends MainActivity {
 
     public void turnGear(View v){
         ImageButton gear1 = (ImageButton) findViewById(R.id.Gear1);
-        if (DegreesGear1 == 360) {
-            DegreesGear1 = 0;
-        }
         turn(gear1, 1);
         final TextView viewCounter = (TextView) findViewById(R.id.TextViewMoveNumber);
         turnCounter ++;

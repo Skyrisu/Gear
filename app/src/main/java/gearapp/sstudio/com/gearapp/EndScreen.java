@@ -100,8 +100,23 @@ public class EndScreen extends MainActivity {
                 finish();
                 break;
             case 6:
-                Intent nLvl6 = new Intent (this, LevelSelect.class);
+                Intent nLvl6 = new Intent (this, Level7.class);
                 startActivity(nLvl6);
+                finish();
+                break;
+            case 7:
+                Intent nLvl7 = new Intent (this, Level8.class);
+                startActivity(nLvl7);
+                finish();
+                break;
+            case 8:
+                Intent nLvl8 = new Intent (this, Level9.class);
+                startActivity(nLvl8);
+                finish();
+                break;
+            case 9:
+                Intent nLvl9 = new Intent (this, LevelSelect.class);
+                startActivity(nLvl9);
                 finish();
                 break;
         }

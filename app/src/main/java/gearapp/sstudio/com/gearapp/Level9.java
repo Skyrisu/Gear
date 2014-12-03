@@ -25,7 +25,7 @@ public class Level9 extends MainActivity {
         DegreesGear1 = 0;
         DegreesGear2 = 0;
         DegreesGear3 = 0;
-        currentLevel = 6;
+        currentLevel = 9;
         ImageButton gStart1 = (ImageButton) findViewById(R.id.Gear1);
         turn180(gStart1);
         ImageButton gStart2 = (ImageButton) findViewById(R.id.Gear2);
@@ -88,13 +88,6 @@ public class Level9 extends MainActivity {
         ImageButton gear1 = (ImageButton) findViewById(R.id.Gear1);
         ImageButton gear2 = (ImageButton) findViewById(R.id.Gear2);
         ImageButton gear3 = (ImageButton) findViewById(R.id.Gear3);
-        if (DegreesGear1 == 360) {
-            DegreesGear1 = 0;
-        } else if (DegreesGear2 == 360) {
-            DegreesGear2 = 0;
-        } else if (DegreesGear3 == 360) {
-            DegreesGear3 = 0;
-        }
         switch (v.getId()){
             case R.id.Gear1:
                 turn(gear1, 3);

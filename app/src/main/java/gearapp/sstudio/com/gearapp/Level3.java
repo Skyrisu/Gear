@@ -83,13 +83,6 @@ public class Level3 extends MainActivity {
     public void turnGear(View v){
         ImageButton gear1 = (ImageButton) findViewById(R.id.Gear1);
         ImageButton gear2 = (ImageButton) findViewById(R.id.Gear2);
-        if (DegreesGear1 == 360) {
-            DegreesGear1 = 0;
-        } else if (DegreesGear2 == 360) {
-            DegreesGear2 = 0;
-        } else if (DegreesGear3 == 360) {
-            DegreesGear3 = 0;
-        }
         switch (v.getId()){
             case R.id.Gear1:
                 turn(gear1, 2);
