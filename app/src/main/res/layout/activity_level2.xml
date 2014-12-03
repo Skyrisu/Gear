@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Level 2"
-        android:id="@+id/Level2Text"
+        android:id="@+id/Level5Text"
         android:textColor="#fa000000"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp" />
@@ -23,8 +23,8 @@
         android:background="@null"
         android:onClick="turnGear"
         android:layout_centerVertical="true"
-        android:layout_toLeftOf="@+id/Level2Text"
-        android:layout_toStartOf="@+id/Level2Text" />
+        android:layout_toLeftOf="@+id/Level5Text"
+        android:layout_toStartOf="@+id/Level5Text" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -33,9 +33,9 @@
         android:src="@drawable/gearlvl"
         android:background="@null"
         android:onClick="turnGear"
-        android:layout_toEndOf="@+id/Level2Text"
+        android:layout_toEndOf="@+id/Level5Text"
         android:layout_alignTop="@+id/Gear1"
-        android:layout_toRightOf="@+id/Level2Text" />
+        android:layout_toRightOf="@+id/Level5Text" />
 
     <TextView
         android:layout_width="wrap_content"

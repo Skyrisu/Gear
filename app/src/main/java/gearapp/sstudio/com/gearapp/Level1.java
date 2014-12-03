@@ -27,7 +27,7 @@ public class Level1 extends MainActivity {
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         t= (TextView) findViewById(R.id.Level1Text);
-        Typeface myCustomFont=Typeface.createFromAsset(getAssets(),"fonts/Mastoc_PersonalUseOnly.ttf");
+        Typeface myCustomFont=Typeface.createFromAsset(getAssets(),"fonts/fbsbltc.ttf");
         t.setTypeface(myCustomFont);
 
 
