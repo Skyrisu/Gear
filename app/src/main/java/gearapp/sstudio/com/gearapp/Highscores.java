@@ -1,8 +1,10 @@
 package gearapp.sstudio.com.gearapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.WindowManager;
 
 
@@ -36,6 +38,12 @@ public class Highscores extends MainActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void Back(View view) {
+        Intent intent = new Intent (this, MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 
 }
