@@ -5,7 +5,7 @@
     android:background="@drawable/backgroundv2">
 
     <ImageView
-        android:id="@+id/imageView10"
+        android:id="@+id/BackGear"
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:src="@drawable/gear"
@@ -19,7 +19,7 @@
     <ImageButton
         android:layout_width="75dp"
         android:layout_height="75dp"
-        android:id="@+id/imageButton"
+        android:id="@+id/BackButton"
         android:onClick="Back"
         android:nestedScrollingEnabled="false"
         android:layout_gravity="left|bottom"

@@ -23,14 +23,14 @@ import android.widget.TextView;
 public class MainActivity extends Activity {
 
     final Context Warn = this;
+    public static int currentLevel;
     public static int turnCounter;
     public static int DegreesGear1;
     public static int DegreesGear2;
     public static int DegreesGear3;
-    public static int currentLevel;
     public static int DegreesGear =0;
     public static int LvlDone;
-    public static int[] LvlBest = new int[8];
+    public static int[] LvlBest = new int[10];
     public static final String MyPreferences = "LevelDone" ;
 
 

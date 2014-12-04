@@ -17,7 +17,6 @@ import android.widget.TextView;
 public class Level8 extends MainActivity {
 
     final Context Warn = this;
-    int turnCounter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +45,6 @@ public class Level8 extends MainActivity {
 
         final TextView viewBest = (TextView) findViewById(R.id.TextViewBestNumber);
         viewBest.setText(String.valueOf(LvlBest[currentLevel]));
-
         ImageButton gStart1 = (ImageButton) findViewById(R.id.Gear1);
         turn180(gStart1);
         ImageButton gStart2 = (ImageButton) findViewById(R.id.Gear2);

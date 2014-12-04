@@ -6,6 +6,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 
 
 public class Highscores extends MainActivity {
@@ -15,6 +18,10 @@ public class Highscores extends MainActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_highscores);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
+        Animation gearanim = AnimationUtils.loadAnimation(Highscores.this, R.anim.rotateloop);
+        final ImageView gear = (ImageView) findViewById(R.id.BackGear);
+        gear.startAnimation(gearanim);
     }
 
 

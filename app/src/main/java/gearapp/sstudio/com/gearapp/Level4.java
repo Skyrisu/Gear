@@ -17,7 +17,6 @@ import android.widget.TextView;
 public class Level4 extends MainActivity {
 
     final Context Warn = this;
-    int turnCounter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

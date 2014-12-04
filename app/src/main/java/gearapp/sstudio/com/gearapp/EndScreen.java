@@ -10,6 +10,9 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 
@@ -20,10 +23,21 @@ public class EndScreen extends MainActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_end_screen);
-        if (LvlBest[currentLevel] > turnCounter){
+        ImageView scoreusual  = (ImageView) findViewById(R.id.imagescoreusual);
+        ImageView scorehigh = (ImageView) findViewById(R.id.imagescorehigh);
+        TextView score = (TextView) findViewById(R.id.textviewscore);
+
+        if (LvlBest[currentLevel] > turnCounter || LvlBest[currentLevel] == 0){
             LvlBest[currentLevel] = turnCounter;
+            Animation pulse = AnimationUtils.loadAnimation(this, R.anim.pulse);
+            pulse.setRepeatCount(Animation.INFINITE);
+            scorehigh.startAnimation(pulse);
+            scoreusual.setVisibility(ImageView.INVISIBLE);
+            score.setText(String.valueOf(turnCounter));
+        } else {
+            scorehigh.setVisibility(ImageView.INVISIBLE);
+            score.setText(String.valueOf(turnCounter));
         }
 
         if (currentLevel > LvlDone){
@@ -75,8 +89,7 @@ public class EndScreen extends MainActivity {
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        finish();
-                        System.exit(0);
+                        android.os.Process.killProcess(android.os.Process.myPid());
                     }
                 })
                 .setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -91,6 +104,7 @@ public class EndScreen extends MainActivity {
 
     public void EndScreenBack (View v){
         Intent intent = new Intent (this, LevelSelect.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
         finish();
     }
@@ -101,31 +115,31 @@ public class EndScreen extends MainActivity {
                 Intent nLvl1 = new Intent (this, Level2.class);
                 nLvl1.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(nLvl1);
-                finish ();
+                this.finish();
                 break;
             case 2:
                 Intent nLvl2 = new Intent (this, Level3.class);
                 nLvl2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(nLvl2);
-                finish ();
+                this.finish();
                 break;
             case 3:
                 Intent nLvl3 = new Intent (this, Level4.class);
                 nLvl3.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(nLvl3);
-                finish ();
+                this.finish();
                 break;
             case 4:
                 Intent nLvl4 = new Intent (this, Level5.class);
                 nLvl4.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(nLvl4);
-                finish ();
+                this.finish();
                 break;
             case 5:
                 Intent nLvl5 = new Intent (this, Level6.class);
                 nLvl5.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(nLvl5);
-                finish ();
+                this.finish();
                 break;
             case 6:
                 Intent nLvl6 = new Intent (this, Level7.class);

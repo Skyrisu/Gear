@@ -153,7 +153,7 @@ public class LevelSelect extends MainActivity implements View.OnClickListener{
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         finish();
-                        System.exit(0);
+                        android.os.Process.killProcess(android.os.Process.myPid());
                     }
                 })
                 .setNegativeButton("No", new DialogInterface.OnClickListener() {

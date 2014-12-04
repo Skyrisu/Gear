@@ -17,7 +17,6 @@ import android.widget.TextView;
 public class Level5 extends MainActivity {
 
     final Context Warn = this;
-    int turnCounter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,11 +36,12 @@ public class Level5 extends MainActivity {
         t1.setTypeface(myCustomFont);
 
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
         turnCounter = 0;
         DegreesGear1 = 0;
         DegreesGear2 = 0;
         DegreesGear3 = 0;
-        currentLevel = 5;
+        currentLevel = 4;
 
         final TextView viewBest = (TextView) findViewById(R.id.TextViewBestNumber);
         viewBest.setText(String.valueOf(LvlBest[currentLevel]));
