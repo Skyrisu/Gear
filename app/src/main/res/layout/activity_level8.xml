@@ -3,7 +3,8 @@
     android:layout_height="fill_parent"
     android:layout_width="fill_parent"
     tools:context="gearapp.sstudio.com.gearapp.Level8"
-    android:background="@drawable/backgroundv2">
+    android:background="@drawable/backgroundv2"
+    android:onClick="reload">
 
     <TextView
         android:layout_width="wrap_content"
