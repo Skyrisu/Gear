@@ -8,6 +8,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
@@ -123,6 +124,14 @@ public class MainActivity extends Activity {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("twitter://user?screen_name=AuroraAeternum")));
         }catch (Exception e) {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://twitter.com/#!/AuroraAeternum")));
+        }
+    }
+
+    public void facebook(View view){
+        try {
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("fb://pages/Aurora-Aeternum/314500878744848")));
+        }catch (Exception e) {
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/pages/Aurora-Aeternum/314500878744848")));
         }
     }
 
@@ -265,6 +274,8 @@ public class MainActivity extends Activity {
                 DegreesGear4 = DegreesGear4 + 90;
                 break;
         }
+        final MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.gearsound);
+        mp.start();
         RotateAnimation rotate = new RotateAnimation(DegreesGear , DegreesGear + 90, Animation.RELATIVE_TO_SELF, 0.5f ,Animation.RELATIVE_TO_SELF, 0.5f);
         rotate.setInterpolator(new LinearInterpolator());
         rotate.setDuration(400);
@@ -282,6 +293,7 @@ public class MainActivity extends Activity {
 
                     @Override
                     public void onAnimationEnd(Animation animation) {
+                        mp.stop();
                         if (DegreesGear1 == 180) {
                             Intent EndScreen = new Intent (MainActivity.this, EndScreen.class);
                             startActivity(EndScreen);
@@ -307,6 +319,7 @@ public class MainActivity extends Activity {
 
                     @Override
                     public void onAnimationEnd(Animation animation) {
+                        mp.stop();
                         if (DegreesGear1 == 180 && DegreesGear1 == DegreesGear2) {
                             Intent EndScreen = new Intent (MainActivity.this, EndScreen.class);
                             startActivity(EndScreen);
@@ -331,6 +344,7 @@ public class MainActivity extends Activity {
 
                     @Override
                     public void onAnimationEnd(Animation animation) {
+                        mp.stop();
                         if (DegreesGear1 == 180 && DegreesGear1 == DegreesGear2 && DegreesGear1 == DegreesGear3) {
                             Intent EndScreen = new Intent (MainActivity.this, EndScreen.class);
                             startActivity(EndScreen);
@@ -355,6 +369,7 @@ public class MainActivity extends Activity {
 
                     @Override
                     public void onAnimationEnd(Animation animation) {
+                        mp.stop();
                         if (DegreesGear1 == 180 && DegreesGear1 == DegreesGear2 && DegreesGear1 == DegreesGear3 && DegreesGear1 == DegreesGear4) {
                             Intent EndScreen = new Intent (MainActivity.this, EndScreen.class);
                             startActivity(EndScreen);
