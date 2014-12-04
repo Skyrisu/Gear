@@ -244,6 +244,8 @@ public class MainActivity extends Activity {
             DegreesGear2 = 0;
         } else if (DegreesGear3 == 360) {
             DegreesGear3 = 0;
+        } else if (DegreesGear4 == 360) {
+            DegreesGear4 = 0;
         }
         switch(getGear.getId()){
             case R.id.Gear1:
