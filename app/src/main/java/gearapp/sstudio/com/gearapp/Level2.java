@@ -37,6 +37,8 @@ public class Level2 extends MainActivity {
         t1.setTypeface(myCustomFont);
         t1 = (TextView) findViewById(R.id.TextViewBestNumber);
         t1.setTypeface(myCustomFont);
+        t1 = (TextView) findViewById(R.id.hinttext);
+        t1.setTypeface(myCustomFont);
         
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
