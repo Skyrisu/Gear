@@ -1,12 +1,13 @@
 package gearapp.sstudio.com.gearapp;
 
-import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
-public class Settings extends Activity {
+public class Settings extends MainActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,5 +36,11 @@ public class Settings extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void Back(View view) {
+        Intent intent = new Intent (this, MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

@@ -188,6 +188,7 @@
         android:layout_alignParentEnd="true"
         android:background="@drawable/settings"
         android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp" />
+        android:layout_marginBottom="10dp"
+        android:onClick="openSettings" />
 
 </RelativeLayout>

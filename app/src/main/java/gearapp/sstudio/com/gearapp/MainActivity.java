@@ -158,15 +158,22 @@ public class MainActivity extends Activity {
         ExitWarning.show();
     }
 
+    public void openSettings(View view) {
+        Intent intent = new Intent (this, Settings.class);
+        startActivity(intent);
+        finish();
+    }
 
     public void openCredits(View view) {
         Intent intent = new Intent (this, Credits.class);
         startActivity(intent);
+        finish();
     }
 
     public void openHighscores(View view) {
         Intent intent = new Intent (this, Highscores.class);
         startActivity(intent);
+        finish();
     }
 
     public void openPlay(View view) {
