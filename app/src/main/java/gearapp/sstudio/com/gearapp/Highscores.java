@@ -40,6 +40,24 @@ public class Highscores extends MainActivity {
         t1.setTypeface(myCustomFont);
         t1 = (TextView) findViewById(R.id.textView9);
         t1.setTypeface(myCustomFont);
+        t1 = (TextView) findViewById(R.id.score1);
+        t1.setTypeface(myCustomFont);
+        t1 = (TextView) findViewById(R.id.score2);
+        t1.setTypeface(myCustomFont);
+        t1 = (TextView) findViewById(R.id.score3);
+        t1.setTypeface(myCustomFont);
+        t1 = (TextView) findViewById(R.id.score4);
+        t1.setTypeface(myCustomFont);
+        t1 = (TextView) findViewById(R.id.score5);
+        t1.setTypeface(myCustomFont);
+        t1 = (TextView) findViewById(R.id.score6);
+        t1.setTypeface(myCustomFont);
+        t1 = (TextView) findViewById(R.id.score7);
+        t1.setTypeface(myCustomFont);
+        t1 = (TextView) findViewById(R.id.score8);
+        t1.setTypeface(myCustomFont);
+        t1 = (TextView) findViewById(R.id.score9);
+        t1.setTypeface(myCustomFont);
 
 
         Animation gearanim = AnimationUtils.loadAnimation(Highscores.this, R.anim.rotateloop);
