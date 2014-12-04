@@ -3,7 +3,9 @@
     android:layout_height="fill_parent"
     android:layout_width="fill_parent"
     tools:context="gearapp.sstudio.com.gearapp.Level6"
-    android:background="@drawable/backgroundv2">
+    android:background="@drawable/backgroundv2"
+    android:nestedScrollingEnabled="false"
+    android:onClick="reload">
 
     <TextView
         android:layout_width="wrap_content"
