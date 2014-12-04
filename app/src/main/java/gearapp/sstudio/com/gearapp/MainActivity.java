@@ -30,9 +30,10 @@ public class MainActivity extends Activity {
     public static int DegreesGear1;
     public static int DegreesGear2;
     public static int DegreesGear3;
+    public static int DegreesGear4;
     public static int DegreesGear =0;
     public static int LvlDone;
-    public static int[] LvlBest = new int[10];
+    public static int[] LvlBest = new int[19];
     public static final String MyPreferences = "LevelDone" ;
 
 
@@ -181,6 +182,9 @@ public class MainActivity extends Activity {
             case R.id.Gear3:
                 DegreesGear3 = 90;
                 break;
+            case R.id.Gear4:
+                DegreesGear4 = 90;
+                break;
         }
 
     }
@@ -201,6 +205,9 @@ public class MainActivity extends Activity {
             case R.id.Gear3:
                 DegreesGear3 = 180;
                 break;
+            case R.id.Gear4:
+                DegreesGear4 = 180;
+                break;
         }
 
     }
@@ -220,6 +227,9 @@ public class MainActivity extends Activity {
                 break;
             case R.id.Gear3:
                 DegreesGear3 = 270;
+                break;
+            case R.id.Gear4:
+                DegreesGear4 = 270;
                 break;
         }
 
@@ -247,6 +257,10 @@ public class MainActivity extends Activity {
             case R.id.Gear3:
                 DegreesGear = DegreesGear3;
                 DegreesGear3 = DegreesGear3 +90;
+                break;
+            case R.id.Gear4:
+                DegreesGear = DegreesGear4;
+                DegreesGear4 = DegreesGear4 + 90;
                 break;
         }
         RotateAnimation rotate = new RotateAnimation(DegreesGear , DegreesGear + 90, Animation.RELATIVE_TO_SELF, 0.5f ,Animation.RELATIVE_TO_SELF, 0.5f);
@@ -316,6 +330,30 @@ public class MainActivity extends Activity {
                     @Override
                     public void onAnimationEnd(Animation animation) {
                         if (DegreesGear1 == 180 && DegreesGear1 == DegreesGear2 && DegreesGear1 == DegreesGear3) {
+                            Intent EndScreen = new Intent (MainActivity.this, EndScreen.class);
+                            startActivity(EndScreen);
+                            finish();
+                        } else {
+                            getGear.setEnabled(true);
+                        }
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(Animation animation) {
+
+                    }
+                });
+                break;
+            case 4:
+                rotate.setAnimationListener(new Animation.AnimationListener() {
+                    @Override
+                    public void onAnimationStart(Animation animation) {
+
+                    }
+
+                    @Override
+                    public void onAnimationEnd(Animation animation) {
+                        if (DegreesGear1 == 180 && DegreesGear1 == DegreesGear2 && DegreesGear1 == DegreesGear3 && DegreesGear1 == DegreesGear4) {
                             Intent EndScreen = new Intent (MainActivity.this, EndScreen.class);
                             startActivity(EndScreen);
                             finish();
