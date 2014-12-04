@@ -41,7 +41,7 @@ public class Level5 extends MainActivity {
         DegreesGear1 = 0;
         DegreesGear2 = 0;
         DegreesGear3 = 0;
-        currentLevel = 4;
+        currentLevel = 5;
 
         final TextView viewBest = (TextView) findViewById(R.id.TextViewBestNumber);
         viewBest.setText(String.valueOf(LvlBest[currentLevel]));
