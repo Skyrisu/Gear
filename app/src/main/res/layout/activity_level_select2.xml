@@ -186,8 +186,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="1"
-                android:id="@+id/Lvl1Text"
+                android:text="10"
+                android:id="@+id/Lvl10Text"
                 android:layout_centerInParent="true" />
         </RelativeLayout>
 
@@ -201,8 +201,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="2"
-                android:id="@+id/Lvl2Text"
+                android:text="11"
+                android:id="@+id/Lvl11Text"
                 android:layout_centerInParent="true" />
         </RelativeLayout>
 
@@ -216,8 +216,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="3"
-                android:id="@+id/Lvl3Text"
+                android:text="12"
+                android:id="@+id/Lvl12Text"
                 android:layout_centerInParent="true" />
         </RelativeLayout>
 
@@ -231,8 +231,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="4"
-                android:id="@+id/Lvl4Text"
+                android:text="13"
+                android:id="@+id/Lvl13Text"
                 android:layout_centerInParent="true" />
         </RelativeLayout>
 
@@ -246,8 +246,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="5"
-                android:id="@+id/Lvl5Text"
+                android:text="14"
+                android:id="@+id/Lvl14Text"
                 android:layout_centerInParent="true" />
         </RelativeLayout>
 
@@ -261,8 +261,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="6"
-                android:id="@+id/Lvl6Text"
+                android:text="15"
+                android:id="@+id/Lvl15Text"
                 android:layout_centerInParent="true" />
         </RelativeLayout>
 
@@ -276,8 +276,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="7"
-                android:id="@+id/Lvl7Text"
+                android:text="16"
+                android:id="@+id/Lvl16Text"
                 android:layout_centerInParent="true" />
         </RelativeLayout>
 
@@ -291,8 +291,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="8"
-                android:id="@+id/Lvl8Text"
+                android:text="17"
+                android:id="@+id/Lvl17Text"
                 android:layout_centerInParent="true" />
         </RelativeLayout>
 
@@ -306,8 +306,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="9"
-                android:id="@+id/Lvl9Text"
+                android:text="18"
+                android:id="@+id/Lvl18Text"
                 android:layout_centerInParent="true" />
         </RelativeLayout>
 
