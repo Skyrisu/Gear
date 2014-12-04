@@ -314,5 +314,13 @@
 
     </FrameLayout>
 
+    <ImageButton
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/morelevels"
+        android:layout_gravity="right|center_vertical"
+        android:background="@drawable/arrow"
+        android:layout_marginRight="20dp" />
+
 </FrameLayout>
 
