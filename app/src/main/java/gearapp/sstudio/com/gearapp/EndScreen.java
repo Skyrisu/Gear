@@ -56,6 +56,9 @@ public class EndScreen extends MainActivity {
         t1.setTypeface(myCustomFont);
         t1 = (TextView) findViewById(R.id.nexttext);
         t1.setTypeface(myCustomFont);
+        t1 = (TextView) findViewById(R.id.textviewscore);
+        t1.setTypeface(myCustomFont);
+
     }
 
     @Override

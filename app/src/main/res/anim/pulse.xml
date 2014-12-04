@@ -1,5 +1,5 @@
 <set xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shareInterpolator="false" >
+    android:shareInterpolator="false">
     <scale
         android:duration="700"
         android:fromXScale="1"
@@ -7,7 +7,7 @@
         android:pivotX="50%"
         android:pivotY="50%"
         android:toXScale="0.5"
-        android:toYScale="0.5" />
+        android:toYScale="0.5"/>
     <scale
         android:duration="700"
         android:fromXScale="1"
@@ -16,5 +16,5 @@
         android:pivotY="50%"
         android:startOffset="700"
         android:toXScale="2"
-        android:toYScale="2" />
+        android:toYScale="2"/>
 </set>

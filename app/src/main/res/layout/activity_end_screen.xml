@@ -64,7 +64,9 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/textviewscore"
-        android:layout_gravity="center" />
+        android:layout_gravity="center"
+        android:textSize="75dp"
+        android:textColor="#ff000000" />
 
     <FrameLayout
         android:layout_width="fill_parent"

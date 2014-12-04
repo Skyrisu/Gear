@@ -6,7 +6,9 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -93,11 +95,34 @@ public class MainActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
+    public void highreset(View view){
+        SharedPreferences LevelSave = getSharedPreferences(MyPreferences, MODE_PRIVATE);
+        SharedPreferences.Editor editor = LevelSave.edit();
+        for (int i=0; i < LvlBest.length; i++){
+            editor.putInt ("LevelBest"+(i+1), 0);
+            editor.commit();
+        }
+    }
+    public void lvldonereset(View view){
+        SharedPreferences LevelSave = getSharedPreferences(MyPreferences, MODE_PRIVATE);
+        SharedPreferences.Editor editor = LevelSave.edit();
+            editor.putInt ("LevelDone", 0);
+            editor.commit();
+    }
+
     public void exit(View view){
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         intent.putExtra("LOGOUT", true);
         startActivity(intent);
+    }
+
+    public void twitter(View view){
+        try {
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("twitter://user?screen_name=AuroraAeternum")));
+        }catch (Exception e) {
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://twitter.com/#!/AuroraAeternum")));
+        }
     }
 
     public void onBackPressed(){
