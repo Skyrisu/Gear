@@ -6,6 +6,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -16,6 +17,7 @@ import android.view.animation.AnimationUtils;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 
 public class MainActivity extends Activity {
@@ -36,6 +38,15 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        TextView t1 = (TextView) findViewById(R.id.highscoretext);
+        TextView t2 = (TextView) findViewById(R.id.creditstext);
+        TextView t3 = (TextView) findViewById(R.id.playtext);
+        Typeface myCustomFont=Typeface.createFromAsset(getAssets(),"fonts/fbsbltc.ttf");
+        t1.setTypeface(myCustomFont);
+        t2.setTypeface(myCustomFont);
+        t3.setTypeface(myCustomFont);
+
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         Animation gearanim = AnimationUtils.loadAnimation(MainActivity.this, R.anim.rotateloop);
