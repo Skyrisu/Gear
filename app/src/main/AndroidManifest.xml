@@ -82,6 +82,46 @@
             android:label="@string/title_activity_level9"
             android:screenOrientation="landscape" >
         </activity>
+        <activity
+            android:name="gearapp.sstudio.com.gearapp.LevelSelect2"
+            android:label="@string/title_activity_level_select2" >
+        </activity>
+        <activity
+            android:name="gearapp.sstudio.com.gearapp.Level10"
+            android:label="@string/title_activity_level10" >
+        </activity>
+        <activity
+            android:name="gearapp.sstudio.com.gearapp.Level11"
+            android:label="@string/title_activity_level11" >
+        </activity>
+        <activity
+            android:name="gearapp.sstudio.com.gearapp.Level12"
+            android:label="@string/title_activity_level12" >
+        </activity>
+        <activity
+            android:name="gearapp.sstudio.com.gearapp.Level13"
+            android:label="@string/title_activity_level13" >
+        </activity>
+        <activity
+            android:name="gearapp.sstudio.com.gearapp.Level14"
+            android:label="@string/title_activity_level14" >
+        </activity>
+        <activity
+            android:name="gearapp.sstudio.com.gearapp.Level15"
+            android:label="@string/title_activity_level15" >
+        </activity>
+        <activity
+            android:name="gearapp.sstudio.com.gearapp.Level16"
+            android:label="@string/title_activity_level16" >
+        </activity>
+        <activity
+            android:name="gearapp.sstudio.com.gearapp.Level17"
+            android:label="@string/title_activity_level17" >
+        </activity>
+        <activity
+            android:name="gearapp.sstudio.com.gearapp.Level18"
+            android:label="@string/title_activity_level18" >
+        </activity>
     </application>
 
 </manifest>

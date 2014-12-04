@@ -19,5 +19,15 @@
     <string name="title_activity_level8">Level8</string>
     <string name="title_activity_level9">Level9</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_level_select2">LevelSelect2</string>
+    <string name="title_activity_level10">Level10</string>
+    <string name="title_activity_level11">Level11</string>
+    <string name="title_activity_level12">Level12</string>
+    <string name="title_activity_level13">Level13</string>
+    <string name="title_activity_level14">Level14</string>
+    <string name="title_activity_level15">Level15</string>
+    <string name="title_activity_level16">Level16</string>
+    <string name="title_activity_level17">Level17</string>
+    <string name="title_activity_level18">Level18</string>
 
 </resources>
