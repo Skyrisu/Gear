@@ -128,21 +128,32 @@
         android:layout_alignParentEnd="false">
 
         <ImageButton
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:id="@+id/facebookbutton"
+            android:layout_gravity="bottom|right"
+            android:background="@drawable/facebook"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="40dp" />
+
+        <ImageButton
+            android:layout_width="45dp"
+            android:layout_height="45dp"
             android:id="@+id/twitterbutton"
             android:layout_gravity="left|bottom"
             android:background="@drawable/twitter"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="5dp"
             android:layout_marginBottom="10dp" />
 
         <ImageButton
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
             android:id="@+id/googlebutton"
             android:layout_gravity="center_horizontal|bottom"
             android:background="@drawable/googleplus"
-            android:layout_marginBottom="10dp" />
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="-20dp" />
+
     </FrameLayout>
 
     <Button
