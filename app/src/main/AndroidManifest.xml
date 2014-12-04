@@ -35,8 +35,7 @@
         <activity
             android:name="gearapp.sstudio.com.gearapp.Level1"
             android:label="@string/title_activity_level1"
-            android:screenOrientation="landscape"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            android:screenOrientation="landscape" >
         </activity>
         <activity
             android:name="gearapp.sstudio.com.gearapp.Level2"
