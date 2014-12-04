@@ -10,7 +10,7 @@
             android:id="@+id/BackGear"
             android:layout_width="300dp"
             android:layout_height="300dp"
-            android:src="@drawable/gear3"
+            android:src="@drawable/gear"
             android:layout_gravity="left|bottom"
             android:layout_marginLeft="-150dp"
             android:layout_marginBottom="-150dp" />
