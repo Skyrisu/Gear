@@ -28,6 +28,17 @@ public class Level1 extends MainActivity {
         Typeface myCustomFont=Typeface.createFromAsset(getAssets(),"fonts/fbsbltc.ttf");
         t1.setTypeface(myCustomFont);
 
+        t1.setTypeface(myCustomFont);
+        t1 = (TextView) findViewById(R.id.MoveText);
+        t1.setTypeface(myCustomFont);
+        t1 = (TextView) findViewById(R.id.TextViewMoveNumber);
+        t1.setTypeface(myCustomFont);
+        t1 = (TextView) findViewById(R.id.BestText);
+        t1.setTypeface(myCustomFont);
+        t1 = (TextView) findViewById(R.id.TextViewBestNumber);
+        t1.setTypeface(myCustomFont);
+
+
 
         turnCounter = 0;
         DegreesGear1 = 0;
