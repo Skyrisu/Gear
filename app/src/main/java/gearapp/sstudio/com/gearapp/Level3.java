@@ -27,6 +27,16 @@ public class Level3 extends MainActivity {
         Typeface myCustomFont=Typeface.createFromAsset(getAssets(),"fonts/fbsbltc.ttf");
         t1.setTypeface(myCustomFont);
 
+        t1.setTypeface(myCustomFont);
+        t1 = (TextView) findViewById(R.id.MoveText);
+        t1.setTypeface(myCustomFont);
+        t1 = (TextView) findViewById(R.id.TextViewMoveNumber);
+        t1.setTypeface(myCustomFont);
+        t1 = (TextView) findViewById(R.id.BestText);
+        t1.setTypeface(myCustomFont);
+        t1 = (TextView) findViewById(R.id.TextViewBestNumber);
+        t1.setTypeface(myCustomFont);
+
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         turnCounter = 0;
