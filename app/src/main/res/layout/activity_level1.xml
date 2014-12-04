@@ -98,5 +98,15 @@
         android:layout_alignParentStart="false"
         android:layout_alignLeft="@+id/TextViewMoveNumber" />
 
+    <ImageView
+        android:layout_width="175dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageView10"
+        android:background="@drawable/tip"
+        android:layout_toEndOf="@+id/BackButton"
+        android:layout_alignTop="@+id/Gear1"
+        android:layout_alignLeft="@+id/ReloadButton"
+        android:layout_alignStart="@+id/ReloadButton" />
+
 
 </RelativeLayout>
