@@ -24,7 +24,8 @@
         android:background="@null"
         android:onClick="turnGear"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:soundEffectsEnabled="false" />
 
     <TextView
         android:layout_width="wrap_content"
