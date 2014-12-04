@@ -5,10 +5,12 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 
 public class EndScreen extends MainActivity {
@@ -18,6 +20,7 @@ public class EndScreen extends MainActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_end_screen);
         LvlBest[currentLevel] = turnCounter;
         if (currentLevel > LvlDone){
@@ -29,6 +32,13 @@ public class EndScreen extends MainActivity {
         editor.putInt ("LevelDone", LvlDone);
         editor.putInt ("LevelBest"+currentLevel, LvlBest[currentLevel]);
         editor.commit();
+
+
+        TextView t1 = (TextView) findViewById(R.id.backtext);
+        Typeface myCustomFont=Typeface.createFromAsset(getAssets(),"fonts/fbsbltc.ttf");
+        t1.setTypeface(myCustomFont);
+        t1 = (TextView) findViewById(R.id.nexttext);
+        t1.setTypeface(myCustomFont);
     }
 
     @Override
