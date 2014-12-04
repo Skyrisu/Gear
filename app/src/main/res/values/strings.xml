@@ -29,5 +29,6 @@
     <string name="title_activity_level16">Level16</string>
     <string name="title_activity_level17">Level17</string>
     <string name="title_activity_level18">Level18</string>
+    <string name="title_activity_settings">Settings</string>
 
 </resources>
