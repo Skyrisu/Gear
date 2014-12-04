@@ -1,6 +1,7 @@
 package gearapp.sstudio.com.gearapp;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -9,6 +10,7 @@ import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 
 public class Highscores extends MainActivity {
@@ -18,6 +20,27 @@ public class Highscores extends MainActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_highscores);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
+        TextView t1 = (TextView) findViewById(R.id.textView);
+        Typeface myCustomFont=Typeface.createFromAsset(getAssets(),"fonts/fbsbltc.ttf");
+        t1.setTypeface(myCustomFont);
+        t1 = (TextView) findViewById(R.id.textView2);
+        t1.setTypeface(myCustomFont);
+        t1 = (TextView) findViewById(R.id.textView3);
+        t1.setTypeface(myCustomFont);
+        t1 = (TextView) findViewById(R.id.textView4);
+        t1.setTypeface(myCustomFont);
+        t1 = (TextView) findViewById(R.id.textView5);
+        t1.setTypeface(myCustomFont);
+        t1 = (TextView) findViewById(R.id.textView6);
+        t1.setTypeface(myCustomFont);
+        t1 = (TextView) findViewById(R.id.textView7);
+        t1.setTypeface(myCustomFont);
+        t1 = (TextView) findViewById(R.id.textView8);
+        t1.setTypeface(myCustomFont);
+        t1 = (TextView) findViewById(R.id.textView9);
+        t1.setTypeface(myCustomFont);
+
 
         Animation gearanim = AnimationUtils.loadAnimation(Highscores.this, R.anim.rotateloop);
         final ImageView gear = (ImageView) findViewById(R.id.BackGear);

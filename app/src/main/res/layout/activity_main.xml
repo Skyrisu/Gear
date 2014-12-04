@@ -142,7 +142,7 @@
             android:id="@+id/twitterbutton"
             android:layout_gravity="left|bottom"
             android:background="@drawable/twitter"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginBottom="10dp" />
 
         <ImageButton
