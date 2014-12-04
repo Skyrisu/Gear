@@ -136,8 +136,8 @@ public class MainActivity extends Activity {
 
     public void openPlay(View view) {
         Intent  intent = new Intent (this, LevelSelect.class);
-        finish();
         startActivity(intent);
+        finish();
     }
 
     public void turn90(View startBtn){
