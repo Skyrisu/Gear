@@ -27,8 +27,6 @@ public class Level9 extends MainActivity {
         TextView t1 = (TextView) findViewById(R.id.Level9Text);
         Typeface myCustomFont=Typeface.createFromAsset(getAssets(),"fonts/fbsbltc.ttf");
         t1.setTypeface(myCustomFont);
-
-        t1.setTypeface(myCustomFont);
         t1 = (TextView) findViewById(R.id.MoveText);
         t1.setTypeface(myCustomFont);
         t1 = (TextView) findViewById(R.id.TextViewMoveNumber);

@@ -293,7 +293,7 @@ public class MainActivity extends Activity {
                         if (DegreesGear1 == 180 && DegreesGear1 == DegreesGear2 && DegreesGear1 == DegreesGear3) {
                             Intent EndScreen = new Intent (MainActivity.this, EndScreen.class);
                             startActivity(EndScreen);
-                            finish ();
+                            finish();
                         } else {
                             getGear.setEnabled(true);
                         }
