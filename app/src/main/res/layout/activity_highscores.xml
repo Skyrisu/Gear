@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView4"
+        android:id="@+id/Lvl4Text"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:text="yolo"
@@ -22,7 +22,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Large Text"
         android:id="@+id/textView5"
-        android:layout_below="@+id/textView4"
+        android:layout_below="@+id/Lvl4Text"
         android:layout_centerHorizontal="true"
         android:textColor="#ff000000" />
 

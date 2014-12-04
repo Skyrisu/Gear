@@ -22,7 +22,10 @@ public class EndScreen extends MainActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_end_screen);
-        LvlBest[currentLevel] = turnCounter;
+        if (LvlBest[currentLevel] > turnCounter){
+            LvlBest[currentLevel] = turnCounter;
+        }
+
         if (currentLevel > LvlDone){
             LvlDone = currentLevel;
         }

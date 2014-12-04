@@ -24,6 +24,7 @@ import java.util.List;
 public class LevelSelect extends MainActivity implements View.OnClickListener{
 
     final Context Warn = this;
+
     private List<Button> buttons;
     private static final int[] BUTTON_IDS = {
             R.id.Lvl1Btn,
@@ -37,6 +38,19 @@ public class LevelSelect extends MainActivity implements View.OnClickListener{
             R.id.Lvl9Btn,
     };
 
+    private List<TextView> textviews;
+    private static final int[] TEXTVIEW_IDS = {
+            R.id.Lvl1Text,
+            R.id.Lvl2Text,
+            R.id.Lvl3Text,
+            R.id.Lvl4Text,
+            R.id.Lvl5Text,
+            R.id.Lvl6Text,
+            R.id.Lvl7Text,
+            R.id.Lvl8Text,
+            R.id.Lvl9Text,
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,23 +61,23 @@ public class LevelSelect extends MainActivity implements View.OnClickListener{
 
         Typeface myCustomFont=Typeface.createFromAsset(getAssets(),"fonts/fbsbltc.ttf");
 
-        TextView t1 = (TextView) findViewById(R.id.textView);
+        TextView t1 = (TextView) findViewById(R.id.Lvl1Text);
         t1.setTypeface(myCustomFont);
-        t1 = (TextView) findViewById(R.id.textView2);
+        t1 = (TextView) findViewById(R.id.Lvl2Text);
         t1.setTypeface(myCustomFont);
-        t1 = (TextView) findViewById(R.id.textView3);
+        t1 = (TextView) findViewById(R.id.Lvl3Text);
         t1.setTypeface(myCustomFont);
-        t1 = (TextView) findViewById(R.id.textView4);
+        t1 = (TextView) findViewById(R.id.Lvl4Text);
         t1.setTypeface(myCustomFont);
-        t1 = (TextView) findViewById(R.id.textView5);
+        t1 = (TextView) findViewById(R.id.Lvl5Text);
         t1.setTypeface(myCustomFont);
-        t1 = (TextView) findViewById(R.id.textView6);
+        t1 = (TextView) findViewById(R.id.Lvl6Text);
         t1.setTypeface(myCustomFont);
-        t1 = (TextView) findViewById(R.id.textView7);
+        t1 = (TextView) findViewById(R.id.Lvl7Text);
         t1.setTypeface(myCustomFont);
-        t1 = (TextView) findViewById(R.id.textView8);
+        t1 = (TextView) findViewById(R.id.Lvl8Text);
         t1.setTypeface(myCustomFont);
-        t1 = (TextView) findViewById(R.id.textView9);
+        t1 = (TextView) findViewById(R.id.Lvl9Text);
         t1.setTypeface(myCustomFont);
 
 
@@ -80,15 +94,23 @@ public class LevelSelect extends MainActivity implements View.OnClickListener{
             buttons.add(button);
         }
 
+        textviews = new ArrayList<TextView>(TEXTVIEW_IDS.length);
+        for(int id : TEXTVIEW_IDS) {
+            TextView textview = (TextView)findViewById(id);
+            textviews.add(textview);
+        }
+
         for (int i = 0 ; i < buttons.size() ; i++) {
             if (i < LvlDone+1) {
                 buttons.get(i).setEnabled(true);
                 buttons.get(i).setBackgroundResource(R.drawable.levelgear);
-                buttons.get(i).setText("" +(i+1));
+                buttons.get(i).setText(" ");
+                textviews.get(i).setVisibility(View.VISIBLE);
             } else {
                 buttons.get(i).setEnabled(false);
                 buttons.get(i).setBackgroundResource(R.drawable.lock);
                 buttons.get(i).setText(" ");
+                textviews.get(i).setVisibility(View.INVISIBLE);
             }
         }
 
