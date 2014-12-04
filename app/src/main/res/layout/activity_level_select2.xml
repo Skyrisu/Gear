@@ -97,7 +97,7 @@
         <Button
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:id="@+id/Lvl1Btn"
+            android:id="@+id/Lvl10Btn"
             android:onClick="onClick"
             android:layout_gravity="left"
             android:background="@drawable/levelgear"
@@ -106,7 +106,7 @@
         <Button
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:id="@+id/Lvl2Btn"
+            android:id="@+id/Lvl11Btn"
             android:onClick="onClick"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/levelgear"
@@ -115,7 +115,7 @@
         <Button
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:id="@+id/Lvl3Btn"
+            android:id="@+id/Lvl12Btn"
             android:onClick="onClick"
             android:layout_marginLeft="55dp"
             android:layout_gravity="right"
@@ -125,7 +125,7 @@
         <Button
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:id="@+id/Lvl4Btn"
+            android:id="@+id/Lvl13Btn"
             android:onClick="onClick"
             android:layout_gravity="left|center_vertical"
             android:background="@drawable/levelgear"
@@ -134,7 +134,7 @@
         <Button
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:id="@+id/Lvl5Btn"
+            android:id="@+id/Lvl14Btn"
             android:onClick="onClick"
             android:layout_gravity="center"
             android:background="@drawable/levelgear"
@@ -143,7 +143,7 @@
         <Button
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:id="@+id/Lvl6Btn"
+            android:id="@+id/Lvl15Btn"
             android:onClick="onClick"
             android:layout_gravity="center_vertical|right"
             android:background="@drawable/levelgear"
@@ -152,7 +152,7 @@
         <Button
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:id="@+id/Lvl7Btn"
+            android:id="@+id/Lvl16Btn"
             android:onClick="onClick"
             android:layout_gravity="left|bottom"
             android:background="@drawable/levelgear"
@@ -161,7 +161,7 @@
         <Button
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:id="@+id/Lvl8Btn"
+            android:id="@+id/Lvl17Btn"
             android:onClick="onClick"
             android:layout_gravity="bottom|center_horizontal"
             android:background="@drawable/levelgear"
@@ -170,7 +170,7 @@
         <Button
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:id="@+id/Lvl9Btn"
+            android:id="@+id/Lvl18Btn"
             android:onClick="onClick"
             android:layout_gravity="bottom|right"
             android:background="@drawable/levelgear"
@@ -332,4 +332,3 @@
         android:longClickable="false" />
 
 </FrameLayout>
-
