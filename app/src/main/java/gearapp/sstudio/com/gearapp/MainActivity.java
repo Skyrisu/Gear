@@ -48,6 +48,10 @@ public class MainActivity extends Activity {
         t3.setTypeface(myCustomFont);
 
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        if (getIntent().getBooleanExtra("LOGOUT", false))
+        {
+            finish();
+        }
 
         Animation gearanim = AnimationUtils.loadAnimation(MainActivity.this, R.anim.rotateloop);
         final ImageView gear = (ImageView) findViewById(R.id.NonFunctionGear);
@@ -87,6 +91,13 @@ public class MainActivity extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void exit(View view){
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.putExtra("LOGOUT", true);
+        startActivity(intent);
     }
 
     public void onBackPressed(){

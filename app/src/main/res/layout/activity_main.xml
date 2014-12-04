@@ -41,6 +41,15 @@
         android:layout_alignBottom="@+id/PlayButton"
         android:layout_marginRight="20dp" />
 
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ExitButton"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/HighscoresButton"
+        android:layout_toStartOf="@+id/HighscoresButton"
+        android:onClick="exit" />
+
     <FrameLayout
         android:layout_width="100dp"
         android:layout_height="50dp"
@@ -90,7 +99,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Highscores"
+            android:text="Highscore"
             android:id="@+id/highscoretext"
             android:autoText="false"
             android:layout_gravity="center"
