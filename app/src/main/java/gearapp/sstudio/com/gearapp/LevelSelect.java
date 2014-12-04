@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -14,6 +15,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,6 +42,31 @@ public class LevelSelect extends MainActivity implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level_select);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
+
+
+        Typeface myCustomFont=Typeface.createFromAsset(getAssets(),"fonts/fbsbltc.ttf");
+
+        TextView t1 = (TextView) findViewById(R.id.textView);
+        t1.setTypeface(myCustomFont);
+        t1 = (TextView) findViewById(R.id.textView2);
+        t1.setTypeface(myCustomFont);
+        t1 = (TextView) findViewById(R.id.textView3);
+        t1.setTypeface(myCustomFont);
+        t1 = (TextView) findViewById(R.id.textView4);
+        t1.setTypeface(myCustomFont);
+        t1 = (TextView) findViewById(R.id.textView5);
+        t1.setTypeface(myCustomFont);
+        t1 = (TextView) findViewById(R.id.textView6);
+        t1.setTypeface(myCustomFont);
+        t1 = (TextView) findViewById(R.id.textView7);
+        t1.setTypeface(myCustomFont);
+        t1 = (TextView) findViewById(R.id.textView8);
+        t1.setTypeface(myCustomFont);
+        t1 = (TextView) findViewById(R.id.textView9);
+        t1.setTypeface(myCustomFont);
+
+
 
         SharedPreferences LevelSave = getSharedPreferences(MyPreferences, MODE_PRIVATE);
         LvlDone = LevelSave.getInt("LevelDone", 0);

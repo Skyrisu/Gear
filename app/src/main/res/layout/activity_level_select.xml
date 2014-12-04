@@ -96,118 +96,219 @@
         <Button
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:text="1"
             android:id="@+id/Lvl1Btn"
             android:onClick="onClick"
-            android:layout_above="@+id/Lvl2Btn"
-            android:layout_centerHorizontal="true"
             android:layout_gravity="left"
             android:background="@drawable/levelgear"
-            android:textColor="#ff0cff34" />
+            android:singleLine="false" />
 
         <Button
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:text="2"
             android:id="@+id/Lvl2Btn"
             android:onClick="onClick"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/levelgear"
-            android:textColor="#ff0cff34" />
+            android:singleLine="false" />
 
         <Button
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:text="3"
             android:id="@+id/Lvl3Btn"
             android:onClick="onClick"
-            android:layout_toEndOf="@+id/Lvl2Btn"
-            android:layout_alignTop="@+id/Lvl2Btn"
-            android:layout_toRightOf="@+id/Lvl2Btn"
             android:layout_marginLeft="55dp"
             android:layout_gravity="right"
             android:background="@drawable/levelgear"
-            android:textColor="#ff0cff34" />
+            android:singleLine="false" />
 
         <Button
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:text="4"
             android:id="@+id/Lvl4Btn"
             android:onClick="onClick"
-            android:layout_toEndOf="@+id/Lvl2Btn"
-            android:layout_alignTop="@+id/Lvl2Btn"
-            android:layout_toRightOf="@+id/Lvl2Btn"
             android:layout_gravity="left|center_vertical"
             android:background="@drawable/levelgear"
-            android:textColor="#ff0cff34" />
+            android:singleLine="false" />
 
         <Button
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:text="5"
             android:id="@+id/Lvl5Btn"
             android:onClick="onClick"
-            android:layout_toEndOf="@+id/Lvl2Btn"
-            android:layout_alignTop="@+id/Lvl2Btn"
-            android:layout_toRightOf="@+id/Lvl2Btn"
             android:layout_gravity="center"
             android:background="@drawable/levelgear"
-            android:textColor="#ff0cff34" />
+            android:singleLine="false" />
 
         <Button
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:text="6"
             android:id="@+id/Lvl6Btn"
             android:onClick="onClick"
-            android:layout_toEndOf="@+id/Lvl2Btn"
-            android:layout_alignTop="@+id/Lvl2Btn"
-            android:layout_toRightOf="@+id/Lvl2Btn"
             android:layout_gravity="center_vertical|right"
             android:background="@drawable/levelgear"
-            android:textColor="#ff0cff34" />
+            android:singleLine="false" />
 
         <Button
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:text="7"
             android:id="@+id/Lvl7Btn"
             android:onClick="onClick"
-            android:layout_toEndOf="@+id/Lvl2Btn"
-            android:layout_alignTop="@+id/Lvl2Btn"
-            android:layout_toRightOf="@+id/Lvl2Btn"
             android:layout_gravity="left|bottom"
             android:background="@drawable/levelgear"
-            android:textColor="#ff0cff34" />
+            android:singleLine="false" />
 
         <Button
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:text="8"
             android:id="@+id/Lvl8Btn"
             android:onClick="onClick"
-            android:layout_toEndOf="@+id/Lvl2Btn"
-            android:layout_alignTop="@+id/Lvl2Btn"
-            android:layout_toRightOf="@+id/Lvl2Btn"
             android:layout_gravity="bottom|center_horizontal"
             android:background="@drawable/levelgear"
-            android:textColor="#ff0cff34" />
+            android:singleLine="false" />
 
         <Button
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:text="9"
             android:id="@+id/Lvl9Btn"
             android:onClick="onClick"
-            android:layout_toEndOf="@+id/Lvl2Btn"
-            android:layout_alignTop="@+id/Lvl2Btn"
-            android:layout_toRightOf="@+id/Lvl2Btn"
             android:layout_gravity="bottom|right"
             android:background="@drawable/levelgear"
-            android:textColor="#ff0cff34" />
+            android:singleLine="false" />
+
+        <RelativeLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="top|left"
+            android:id="@+id/frame1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="1"
+                android:id="@+id/textView"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal|top"
+            android:id="@+id/frame2" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="2"
+                android:id="@+id/textView2"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="right|top"
+            android:id="@+id/frame3" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="3"
+                android:id="@+id/textView3"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="left|center_vertical"
+            android:id="@+id/frame4" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="4"
+                android:id="@+id/textView4"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:id="@+id/frame5" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="5"
+                android:id="@+id/textView5"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="right|center_vertical"
+            android:id="@+id/frame6" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="6"
+                android:id="@+id/textView6"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="left|bottom"
+            android:id="@+id/frame7" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="7"
+                android:id="@+id/textView7"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:id="@+id/frame8" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="8"
+                android:id="@+id/textView8"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="right|bottom"
+            android:id="@+id/frame9" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="9"
+                android:id="@+id/textView9"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
 
 
     </FrameLayout>
