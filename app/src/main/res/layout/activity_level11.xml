@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Level 11"
-        android:id="@+id/Level9Text"
+        android:id="@+id/Level11Text"
         android:textColor="#fa000000"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp" />
