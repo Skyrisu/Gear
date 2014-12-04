@@ -100,8 +100,8 @@ public class LevelSelect2 extends MainActivity implements View.OnClickListener{
         }
 
         for (int i = 0 ; i < buttons.size() ; i++) {
-            if (i < LvlDone+1) {
-                buttons.get(i).setEnabled(true);
+            if ((i+9) < LvlDone+1) {
+                buttons.get((i)).setEnabled(true);
                 buttons.get(i).setBackgroundResource(R.drawable.levelgear);
                 buttons.get(i).setText(" ");
                 textviews.get(i).setVisibility(View.VISIBLE);
