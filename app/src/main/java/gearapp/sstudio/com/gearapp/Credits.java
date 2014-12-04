@@ -1,9 +1,11 @@
 package gearapp.sstudio.com.gearapp;
 
 import android.app.Activity;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 
 public class Credits extends Activity {
@@ -12,6 +14,18 @@ public class Credits extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_credits);
+
+        // GELBE RATING BAR, EVTL LÖSCHEN
+        // RatingBar ratingBar = (RatingBar) findViewById(R.id.ratingBar);
+        // LayerDrawable stars = (LayerDrawable) ratingBar.getProgressDrawable();
+        // stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_ATOP);
+
+        TextView t1 = (TextView) findViewById(R.id.creditsmarvin);
+        Typeface myCustomFont=Typeface.createFromAsset(getAssets(),"fonts/fbsbltc.ttf");
+        t1.setTypeface(myCustomFont);
+        t1 = (TextView) findViewById(R.id.creditsdion);
+        t1.setTypeface(myCustomFont);
+
     }
 
 

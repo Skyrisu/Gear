@@ -126,4 +126,30 @@
             android:layout_marginBottom="-150dp" />
     </FrameLayout>
 
+    <FrameLayout
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_alignBottom="@+id/frameLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentEnd="false">
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/twitterbutton"
+            android:layout_gravity="left|bottom"
+            android:background="@drawable/twitter"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp" />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/googlebutton"
+            android:layout_gravity="center_horizontal|bottom"
+            android:background="@drawable/googleplus"
+            android:layout_marginBottom="10dp" />
+    </FrameLayout>
+
 </RelativeLayout>
