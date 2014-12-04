@@ -1,3 +1,5 @@
+
+
 package gearapp.sstudio.com.gearapp;
 
 import android.app.AlertDialog;
@@ -115,3 +117,4 @@ public class Level1 extends MainActivity {
         startActivity(reload);
     }
 }
+
