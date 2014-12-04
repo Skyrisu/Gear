@@ -47,11 +47,12 @@ public class Level11 extends MainActivity {
         viewBest.setText(String.valueOf(LvlBest[currentLevel]));
 
         ImageButton gStart1 = (ImageButton) findViewById(R.id.Gear1);
-        turn180(gStart1);
-        ImageButton gStart2 = (ImageButton) findViewById(R.id.Gear2);
-        turn270(gStart2);
+        turn270(gStart1);
         ImageButton gStart3 = (ImageButton) findViewById(R.id.Gear3);
         turn270(gStart3);
+        ImageButton gStart4 = (ImageButton) findViewById(R.id.Gear4);
+        turn90(gStart4);
+
     }
 
 
@@ -111,21 +112,16 @@ public class Level11 extends MainActivity {
         ImageButton gear4 = (ImageButton) findViewById(R.id.Gear4);
         switch (v.getId()){
             case R.id.Gear1:
-                turn(gear1, 3);
-                turn(gear2, 3);
-                turn(gear3, 3);
+                turn(gear1, 4);
                 break;
             case R.id.Gear2:
-                turn(gear1, 3);
-                turn(gear2, 3);
+                turn(gear2, 4);
                 break;
             case R.id.Gear3:
-                turn(gear1, 3);
-                turn(gear3, 3);
+                turn(gear3, 4);
                 break;
             case R.id.Gear4:
-                turn(gear1, 3);
-                turn(gear3, 3);
+                turn(gear4, 4);
                 break;
         }
         final TextView viewCounter = (TextView) findViewById(R.id.TextViewMoveNumber);
