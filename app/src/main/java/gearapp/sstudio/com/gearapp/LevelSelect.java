@@ -142,6 +142,12 @@ public class LevelSelect extends MainActivity implements View.OnClickListener{
         return super.onOptionsItemSelected(item);
     }
 
+    public void openLvlSelect2(View v){
+        Intent  intent = new Intent (this, LevelSelect2.class);
+        startActivity(intent);
+        finish();
+    }
+
     public void onBackPressed(){
         AlertDialog.Builder ExitWarningBuild = new AlertDialog.Builder(Warn);
         ExitWarningBuild.setTitle("You rly want to close the app?");
