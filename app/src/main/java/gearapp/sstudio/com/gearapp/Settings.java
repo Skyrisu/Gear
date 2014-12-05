@@ -3,7 +3,6 @@ package gearapp.sstudio.com.gearapp;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -70,8 +69,8 @@ public class Settings extends MainActivity {
     }
 
     public void turnReset(View view) {
-        final MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.gearsound);
-        mp.start();
+
+        playSound(view);
         final TextView lvlreset = (TextView) findViewById(R.id.LevelResetView);
         final TextView highreset = (TextView) findViewById(R.id.HighResetView);
         switch(view.getId()){
@@ -90,14 +89,6 @@ public class Settings extends MainActivity {
         rotate.setFillEnabled(true);
         rotate.setFillAfter(true);
         view.startAnimation(rotate);
-        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-
-            @Override
-            public void onCompletion(MediaPlayer mp) {
-                mp.reset();
-                mp.release();
-            }
-        });
 
         rotate.setAnimationListener(new Animation.AnimationListener() {
             @Override

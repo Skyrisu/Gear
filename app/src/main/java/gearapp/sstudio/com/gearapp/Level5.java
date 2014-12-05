@@ -98,6 +98,7 @@ public class Level5 extends MainActivity {
     }
 
     public void turnGear(View v){
+        playSound(v);
         ImageButton gear1 = (ImageButton) findViewById(R.id.Gear1);
         ImageButton gear2 = (ImageButton) findViewById(R.id.Gear2);
         ImageButton gear3 = (ImageButton) findViewById(R.id.Gear3);

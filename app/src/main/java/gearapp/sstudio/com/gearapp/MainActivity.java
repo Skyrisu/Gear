@@ -119,6 +119,20 @@ public class MainActivity extends Activity {
         }
     }
 
+    public void playSound(View view){
+
+        final MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.gearsound);
+        mp.start();
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                mp.reset();
+                mp.release();
+            }
+        });
+    }
+
     public void onBackPressed(){
         AlertDialog.Builder ExitWarningBuild = new AlertDialog.Builder(Warn);
         ExitWarningBuild.setTitle("You rly want to close the app?");
@@ -266,22 +280,12 @@ public class MainActivity extends Activity {
                 DegreesGear4 = DegreesGear4 + 90;
                 break;
         }
-        final MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.gearsound);
-        mp.start();
         RotateAnimation rotate = new RotateAnimation(DegreesGear , DegreesGear + 90, Animation.RELATIVE_TO_SELF, 0.5f ,Animation.RELATIVE_TO_SELF, 0.5f);
         rotate.setInterpolator(new LinearInterpolator());
         rotate.setDuration(400);
         rotate.setFillEnabled(true);
         rotate.setFillAfter(true);
         v.startAnimation(rotate);
-        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-
-            @Override
-            public void onCompletion(MediaPlayer mp) {
-                mp.reset();
-                mp.release();
-            }
-        });
         rotate.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {
