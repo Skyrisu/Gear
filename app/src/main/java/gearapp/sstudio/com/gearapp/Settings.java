@@ -1,10 +1,12 @@
 package gearapp.sstudio.com.gearapp;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 
 public class Settings extends MainActivity {
@@ -13,6 +15,16 @@ public class Settings extends MainActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
+
+
+        TextView t1 = (TextView) findViewById(R.id.scoretip);
+        Typeface myCustomFont=Typeface.createFromAsset(getAssets(),"fonts/fbsbltc.ttf");
+        t1.setTypeface(myCustomFont);
+        t1 = (TextView) findViewById(R.id.leveltip);
+        t1.setTypeface(myCustomFont);
+        t1.setTypeface(myCustomFont);
+        t1 = (TextView) findViewById(R.id.tiptext);
+        t1.setTypeface(myCustomFont);
     }
 
 

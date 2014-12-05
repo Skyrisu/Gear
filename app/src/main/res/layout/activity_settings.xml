@@ -26,5 +26,73 @@
         android:adjustViewBounds="false"
         android:background="@drawable/backarrow" />
 
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/resetscore"
+        android:src="@drawable/gearlvl"
+        android:background="@null"
+        android:onClick="turnGear"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/Level5Text"
+        android:layout_toStartOf="@+id/Level5Text"
+        android:layout_gravity="center"
+        android:layout_marginLeft="90dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/resetlevel"
+        android:src="@drawable/gearlvl"
+        android:background="@null"
+        android:onClick="turnGear"
+        android:layout_toEndOf="@+id/Level5Text"
+        android:layout_alignTop="@+id/Gear1"
+        android:layout_toRightOf="@+id/Level5Text"
+        android:layout_gravity="center"
+        android:layout_marginRight="90dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Turn Gears downward to reset"
+        android:id="@+id/tiptext"
+        android:layout_gravity="center_horizontal|top"
+        android:textColor="#ff000000"
+        android:layout_marginTop="70dp" />
+
+    <RelativeLayout
+        android:layout_width="400dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="level progress"
+            android:id="@+id/leveltip"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="false"
+            android:layout_marginLeft="0dp"
+            android:layout_marginBottom="70dp"
+            android:textColor="#ff000000" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Highscores"
+            android:id="@+id/scoretip"
+            android:layout_alignParentEnd="false"
+            android:layout_marginBottom="70dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:textColor="#ff000000"
+            android:layout_marginRight="35dp" />
+    </RelativeLayout>
+
 </FrameLayout>
 
