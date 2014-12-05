@@ -90,6 +90,14 @@ public class Settings extends MainActivity {
         rotate.setFillEnabled(true);
         rotate.setFillAfter(true);
         view.startAnimation(rotate);
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                mp.reset();
+                mp.release();
+            }
+        });
 
         rotate.setAnimationListener(new Animation.AnimationListener() {
             @Override
@@ -99,7 +107,6 @@ public class Settings extends MainActivity {
 
             @Override
             public void onAnimationEnd(Animation animation) {
-                mp.stop();
                 if (HighDegree == 180) {
                     SharedPreferences LevelSave = getSharedPreferences(MyPreferences, MODE_PRIVATE);
                     SharedPreferences.Editor editor = LevelSave.edit();

@@ -179,6 +179,14 @@ public class LevelSelect extends MainActivity implements View.OnClickListener{
         Animation anim = AnimationUtils.loadAnimation(LevelSelect.this, R.anim.rotate90);
         v.startAnimation(anim);
         anim.setFillAfter(true);
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                mp.reset();
+                mp.release();
+            }
+        });
         anim.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {
@@ -187,7 +195,6 @@ public class LevelSelect extends MainActivity implements View.OnClickListener{
 
             @Override
             public void onAnimationEnd(Animation animation) {
-                mp.stop();
                 switch(btid.getId()){
                     case R.id.Lvl1Btn:
                         Intent lvl1 = new Intent (LevelSelect.this, Level1.class);

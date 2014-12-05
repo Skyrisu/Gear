@@ -274,6 +274,14 @@ public class MainActivity extends Activity {
         rotate.setFillEnabled(true);
         rotate.setFillAfter(true);
         v.startAnimation(rotate);
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                mp.reset();
+                mp.release();
+            }
+        });
         rotate.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {
@@ -282,8 +290,6 @@ public class MainActivity extends Activity {
 
             @Override
             public void onAnimationEnd(Animation animation) {
-                mp.stop();
-
                 switch(GearCount){
                     case 1:
                         if (DegreesGear1 == 180) {
@@ -321,9 +327,6 @@ public class MainActivity extends Activity {
                             getGear.setEnabled(true);
                         }
                         break;
-
-
-
                 }
             }
 
