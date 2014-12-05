@@ -25,6 +25,7 @@ import android.widget.TextView;
 public class MainActivity extends Activity {
 
     final Context Warn = this;
+    public static int lvlcomplete;
     public static int currentLevel;
     public static int turnCounter;
     public static int DegreesGear1;
@@ -41,6 +42,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        lvlcomplete = 0;
 
         TextView t1 = (TextView) findViewById(R.id.highscoretext);
         TextView t2 = (TextView) findViewById(R.id.creditstext);
@@ -143,13 +145,12 @@ public class MainActivity extends Activity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         finish();
-                        System.exit(0);
                     }
                 })
                 .setNegativeButton("No", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        dialog.cancel();
+       dialog.cancel();
                     }
                 });
         AlertDialog ExitWarning = ExitWarningBuild.create();
@@ -249,7 +250,7 @@ public class MainActivity extends Activity {
 
     }
 
-    public void turn(View v,int gearCount){
+    public void turnLast(View v,int gearCount){
         final int GearCount = gearCount;
         final View getGear = v;
         getGear.setEnabled(false);
@@ -297,6 +298,7 @@ public class MainActivity extends Activity {
                 switch(GearCount){
                     case 1:
                         if (DegreesGear1 == 180) {
+                            //I want to call this once
                             Intent EndScreen = new Intent (MainActivity.this, EndScreen.class);
                             startActivity(EndScreen);
                             finish();
@@ -306,6 +308,7 @@ public class MainActivity extends Activity {
                         break;
                     case 2:
                         if (DegreesGear1 == 180 && DegreesGear1 == DegreesGear2) {
+                            //I want to call this once
                             Intent EndScreen = new Intent (MainActivity.this, EndScreen.class);
                             startActivity(EndScreen);
                             finish();
@@ -315,6 +318,7 @@ public class MainActivity extends Activity {
                         break;
                     case 3:
                         if (DegreesGear1 == 180 && DegreesGear1 == DegreesGear2 && DegreesGear1 == DegreesGear3) {
+                            //I want to call this once
                             Intent EndScreen = new Intent (MainActivity.this, EndScreen.class);
                             startActivity(EndScreen);
                             finish();
@@ -324,6 +328,7 @@ public class MainActivity extends Activity {
                         break;
                     case 4:
                         if (DegreesGear1 == 180 && DegreesGear1 == DegreesGear2 && DegreesGear1 == DegreesGear3 && DegreesGear1 == DegreesGear4) {
+                            //I want to call this once
                             Intent EndScreen = new Intent (MainActivity.this, EndScreen.class);
                             startActivity(EndScreen);
                             finish();
@@ -340,6 +345,59 @@ public class MainActivity extends Activity {
             }
         });
 
+    }
+    public void turn(View gear) {
+        final View getGear = gear;
+        gear.setEnabled(false);
+        if (DegreesGear1 == 360) {
+            DegreesGear1 = 0;
+        } else if (DegreesGear2 == 360) {
+            DegreesGear2 = 0;
+        } else if (DegreesGear3 == 360) {
+            DegreesGear3 = 0;
+        } else if (DegreesGear4 == 360) {
+            DegreesGear4 = 0;
+        }
+        switch (gear.getId()) {
+            case R.id.Gear1:
+                DegreesGear = DegreesGear1;
+                DegreesGear1 = DegreesGear1 + 90;
+                break;
+            case R.id.Gear2:
+                DegreesGear = DegreesGear2;
+                DegreesGear2 = DegreesGear2 + 90;
+                break;
+            case R.id.Gear3:
+                DegreesGear = DegreesGear3;
+                DegreesGear3 = DegreesGear3 + 90;
+                break;
+            case R.id.Gear4:
+                DegreesGear = DegreesGear4;
+                DegreesGear4 = DegreesGear4 + 90;
+                break;
+        }
+        RotateAnimation rotate = new RotateAnimation(DegreesGear, DegreesGear + 90, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+        rotate.setInterpolator(new LinearInterpolator());
+        rotate.setDuration(400);
+        rotate.setFillEnabled(true);
+        rotate.setFillAfter(true);
+        gear.startAnimation(rotate);
+        rotate.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                getGear.setEnabled(true);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
     }
 
 }

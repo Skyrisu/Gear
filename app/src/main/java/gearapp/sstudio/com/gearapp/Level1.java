@@ -38,8 +38,6 @@ public class Level1 extends MainActivity {
         t1 = (TextView) findViewById(R.id.TextViewBestNumber);
         t1.setTypeface(myCustomFont);
 
-
-
         turnCounter = 0;
         DegreesGear1 = 0;
         DegreesGear2 = 0;
@@ -106,7 +104,7 @@ public class Level1 extends MainActivity {
     public void turnGear(View v){
         playSound(v);
         ImageButton gear1 = (ImageButton) findViewById(R.id.Gear1);
-        turn(gear1, 1);
+        turnLast(gear1, 1);
         final TextView viewCounter = (TextView) findViewById(R.id.TextViewMoveNumber);
         turnCounter ++;
         viewCounter.setText (String.valueOf(turnCounter));

@@ -112,20 +112,20 @@ public class Level13 extends MainActivity {
         ImageButton gear4 = (ImageButton) findViewById(R.id.Gear4);
         switch (v.getId()){
             case R.id.Gear1:
-                turn(gear1, 4);
-                turn(gear2, 4);
+                turn(gear1);
+                turnLast(gear2, 4);
                 break;
             case R.id.Gear2:
-                turn(gear2, 4);
-                turn(gear4, 4);
+                turn(gear2);
+                turnLast(gear4, 4);
                 break;
             case R.id.Gear3:
-                turn(gear1, 4);
-                turn(gear3, 4);
+                turn(gear1);
+                turnLast(gear3, 4);
                 break;
             case R.id.Gear4:
-                turn(gear3, 4);
-                turn(gear4, 4);
+                turn(gear3);
+                turnLast(gear4, 4);
                 break;
         }
         final TextView viewCounter = (TextView) findViewById(R.id.TextViewMoveNumber);

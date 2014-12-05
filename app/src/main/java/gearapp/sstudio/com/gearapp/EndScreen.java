@@ -92,7 +92,7 @@ public class EndScreen extends MainActivity {
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        android.os.Process.killProcess(android.os.Process.myPid());
+                        finish();
                     }
                 })
                 .setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -109,7 +109,6 @@ public class EndScreen extends MainActivity {
         Intent intent = new Intent (this, LevelSelect.class);
         startActivity(intent);
         finish();
-        overridePendingTransition(R.anim.activity_in_reverse, R.anim.activity_out_reverse);
     }
 
     public void NextLevel(View v){
@@ -117,93 +116,76 @@ public class EndScreen extends MainActivity {
             case 1:
                 Intent nLvl1 = new Intent (this, Level2.class);
                 startActivity(nLvl1);
-                finish();
                 break;
             case 2:
                 Intent nLvl2 = new Intent (this, Level3.class);
                 startActivity(nLvl2);
-                finish();
                 break;
             case 3:
                 Intent nLvl3 = new Intent (this, Level4.class);
                 startActivity(nLvl3);
-                finish();
                 break;
             case 4:
                 Intent nLvl4 = new Intent (this, Level5.class);
                 startActivity(nLvl4);
-                finish();
                 break;
             case 5:
                 Intent nLvl5 = new Intent (this, Level6.class);
                 startActivity(nLvl5);
-                finish();
                 break;
             case 6:
                 Intent nLvl6 = new Intent (this, Level7.class);
                 startActivity(nLvl6);
-                finish ();
                 break;
             case 7:
                 Intent nLvl7 = new Intent (this, Level8.class);
                 startActivity(nLvl7);
-                finish ();
                 break;
             case 8:
                 Intent nLvl8 = new Intent (this, Level9.class);
                 startActivity(nLvl8);
-                finish ();
                 break;
             case 9:
                 Intent nLvl9 = new Intent (this, Level10.class);
                 startActivity(nLvl9);
-                finish ();
                 break;
             case 10:
                 Intent nLvl10 = new Intent (this, Level11.class);
                 startActivity(nLvl10);
-                finish ();
                 break;
             case 11:
                 Intent nLvl11 = new Intent (this, Level12.class);
                 startActivity(nLvl11);
-                finish ();
                 break;
             case 12:
                 Intent nLvl12 = new Intent (this, Level13.class);
                 startActivity(nLvl12);
-                finish ();
                 break;
             case 13:
                 Intent nLvl13 = new Intent (this, Level14.class);
                 startActivity(nLvl13);
-                finish ();
                 break;
             case 14:
                 Intent nLvl14 = new Intent (this, Level15.class);
                 startActivity(nLvl14);
-                finish ();
                 break;
             case 15:
                 Intent nLvl15 = new Intent (this, Level16.class);
                 startActivity(nLvl15);
-                finish ();
                 break;
             case 16:
                 Intent nLvl16 = new Intent (this, Level17.class);
                 startActivity(nLvl16);
-                finish ();
                 break;
             case 17:
                 Intent nLvl17 = new Intent (this, Level18.class);
                 startActivity(nLvl17);
-                finish ();
                 break;
             case 18:
                 Intent nLvl18 = new Intent (this, LevelSelect2.class);
                 startActivity(nLvl18);
-                finish ();
                 break;
         }
+        finish();
     }
 }
