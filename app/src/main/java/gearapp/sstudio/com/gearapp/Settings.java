@@ -99,6 +99,7 @@ public class Settings extends MainActivity {
             @Override
             public void onAnimationEnd(Animation animation) {
                 if (HighDegree == 180) {
+                    highreset.setEnabled(false);
                     SharedPreferences LevelSave = getSharedPreferences(MyPreferences, MODE_PRIVATE);
                     SharedPreferences.Editor editor = LevelSave.edit();
                     for (int i = 0; i < LvlBest.length; i++) {
@@ -108,6 +109,7 @@ public class Settings extends MainActivity {
                     HighDegree = 0;
                     highreset.setVisibility(View.VISIBLE);
                 } else if (LevelDegree == 180) {
+                    lvlreset.setEnabled(false);
                     SharedPreferences LevelSave = getSharedPreferences(MyPreferences, MODE_PRIVATE);
                     SharedPreferences.Editor editor = LevelSave.edit();
                     editor.putInt("LevelDone", 0);
