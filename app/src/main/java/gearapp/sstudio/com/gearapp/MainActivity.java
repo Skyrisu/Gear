@@ -3,6 +3,7 @@ package gearapp.sstudio.com.gearapp;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -118,6 +119,22 @@ public class MainActivity extends Activity {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("fb://pages/Aurora-Aeternum/314500878744848")));
         }catch (Exception e) {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/pages/Aurora-Aeternum/314500878744848")));
+        }
+    }
+
+    public void googleplus(View view){
+        openGPlus("107284151606336378022");
+    }
+
+    public void openGPlus(String profile) {
+        try {
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setClassName("com.google.android.apps.plus",
+                    "com.google.android.apps.plus.phone.UrlGatewayActivity");
+            intent.putExtra("customAppUri", profile);
+            startActivity(intent);
+        } catch(ActivityNotFoundException e) {
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://plus.google.com/"+profile+"/posts")));
         }
     }
 
