@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -173,6 +174,8 @@ public class LevelSelect extends MainActivity implements View.OnClickListener{
 
     public void onClick(View v) {
         final View btid = v;
+        final MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.gearsound);
+        mp.start();
         Animation anim = AnimationUtils.loadAnimation(LevelSelect.this, R.anim.rotate90);
         v.startAnimation(anim);
         anim.setFillAfter(true);
@@ -184,6 +187,7 @@ public class LevelSelect extends MainActivity implements View.OnClickListener{
 
             @Override
             public void onAnimationEnd(Animation animation) {
+                mp.stop();
                 switch(btid.getId()){
                     case R.id.Lvl1Btn:
                         Intent lvl1 = new Intent (LevelSelect.this, Level1.class);

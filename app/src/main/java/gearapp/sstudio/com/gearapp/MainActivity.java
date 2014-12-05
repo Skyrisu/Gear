@@ -6,7 +6,6 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -95,21 +94,6 @@ public class MainActivity extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    public void highreset(View view){
-        SharedPreferences LevelSave = getSharedPreferences(MyPreferences, MODE_PRIVATE);
-        SharedPreferences.Editor editor = LevelSave.edit();
-        for (int i=0; i < LvlBest.length; i++){
-            editor.putInt ("LevelBest"+(i+1), 0);
-            editor.commit();
-        }
-    }
-    public void lvldonereset(View view){
-        SharedPreferences LevelSave = getSharedPreferences(MyPreferences, MODE_PRIVATE);
-        SharedPreferences.Editor editor = LevelSave.edit();
-            editor.putInt ("LevelDone", 0);
-            editor.commit();
     }
 
     public void exit(View view){
@@ -252,6 +236,7 @@ public class MainActivity extends Activity {
     }
 
     public void turn(View v,int gearCount){
+        final int GearCount = gearCount;
         final View getGear = v;
         getGear.setEnabled(false);
         if (DegreesGear1 == 360) {
@@ -289,18 +274,18 @@ public class MainActivity extends Activity {
         rotate.setFillEnabled(true);
         rotate.setFillAfter(true);
         v.startAnimation(rotate);
+        rotate.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
 
-        switch(gearCount){
-            case 1:
-                rotate.setAnimationListener(new Animation.AnimationListener() {
-                    @Override
-                    public void onAnimationStart(Animation animation) {
+            }
 
-                    }
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                mp.stop();
 
-                    @Override
-                    public void onAnimationEnd(Animation animation) {
-                        mp.stop();
+                switch(GearCount){
+                    case 1:
                         if (DegreesGear1 == 180) {
                             Intent EndScreen = new Intent (MainActivity.this, EndScreen.class);
                             startActivity(EndScreen);
@@ -308,25 +293,8 @@ public class MainActivity extends Activity {
                         } else {
                             getGear.setEnabled(true);
                         }
-
-                    }
-
-                    @Override
-                    public void onAnimationRepeat(Animation animation) {
-
-                    }
-                });
-                break;
-            case 2:
-                rotate.setAnimationListener(new Animation.AnimationListener() {
-                    @Override
-                    public void onAnimationStart(Animation animation) {
-
-                    }
-
-                    @Override
-                    public void onAnimationEnd(Animation animation) {
-                        mp.stop();
+                        break;
+                    case 2:
                         if (DegreesGear1 == 180 && DegreesGear1 == DegreesGear2) {
                             Intent EndScreen = new Intent (MainActivity.this, EndScreen.class);
                             startActivity(EndScreen);
@@ -334,24 +302,8 @@ public class MainActivity extends Activity {
                         } else {
                             getGear.setEnabled(true);
                         }
-                    }
-
-                    @Override
-                    public void onAnimationRepeat(Animation animation) {
-
-                    }
-                });
-                break;
-            case 3:
-                rotate.setAnimationListener(new Animation.AnimationListener() {
-                    @Override
-                    public void onAnimationStart(Animation animation) {
-
-                    }
-
-                    @Override
-                    public void onAnimationEnd(Animation animation) {
-                        mp.stop();
+                        break;
+                    case 3:
                         if (DegreesGear1 == 180 && DegreesGear1 == DegreesGear2 && DegreesGear1 == DegreesGear3) {
                             Intent EndScreen = new Intent (MainActivity.this, EndScreen.class);
                             startActivity(EndScreen);
@@ -359,24 +311,8 @@ public class MainActivity extends Activity {
                         } else {
                             getGear.setEnabled(true);
                         }
-                    }
-
-                    @Override
-                    public void onAnimationRepeat(Animation animation) {
-
-                    }
-                });
-                break;
-            case 4:
-                rotate.setAnimationListener(new Animation.AnimationListener() {
-                    @Override
-                    public void onAnimationStart(Animation animation) {
-
-                    }
-
-                    @Override
-                    public void onAnimationEnd(Animation animation) {
-                        mp.stop();
+                        break;
+                    case 4:
                         if (DegreesGear1 == 180 && DegreesGear1 == DegreesGear2 && DegreesGear1 == DegreesGear3 && DegreesGear1 == DegreesGear4) {
                             Intent EndScreen = new Intent (MainActivity.this, EndScreen.class);
                             startActivity(EndScreen);
@@ -384,16 +320,19 @@ public class MainActivity extends Activity {
                         } else {
                             getGear.setEnabled(true);
                         }
-                    }
+                        break;
 
-                    @Override
-                    public void onAnimationRepeat(Animation animation) {
 
-                    }
-                });
-                break;
-        }
+
+                }
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+
     }
-
 
 }

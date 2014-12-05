@@ -32,7 +32,7 @@
         android:id="@+id/resetscore"
         android:src="@drawable/gearlvl"
         android:background="@null"
-        android:onClick="turnGear"
+        android:onClick="turnReset"
         android:layout_centerVertical="true"
         android:layout_toLeftOf="@+id/Level5Text"
         android:layout_toStartOf="@+id/Level5Text"
@@ -45,7 +45,7 @@
         android:id="@+id/resetlevel"
         android:src="@drawable/gearlvl"
         android:background="@null"
-        android:onClick="turnGear"
+        android:onClick="turnReset"
         android:layout_toEndOf="@+id/Level5Text"
         android:layout_alignTop="@+id/Gear1"
         android:layout_toRightOf="@+id/Level5Text"
@@ -71,14 +71,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="level progress"
+            android:text="Level Progress"
             android:id="@+id/leveltip"
-            android:layout_alignParentBottom="true"
+            android:textColor="#ff000000"
+            android:layout_marginLeft="21dp"
+            android:layout_alignTop="@+id/scoretip"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="false"
-            android:layout_marginLeft="0dp"
-            android:layout_marginBottom="70dp"
-            android:textColor="#ff000000" />
+            android:layout_alignParentStart="true" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -86,12 +85,33 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Highscores"
             android:id="@+id/scoretip"
-            android:layout_alignParentEnd="false"
-            android:layout_marginBottom="70dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
             android:textColor="#ff000000"
-            android:layout_marginRight="35dp" />
+            android:layout_toStartOf="@+id/HighResetView"
+            android:layout_marginTop="46dp"
+            android:layout_below="@+id/HighResetView"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="31dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reseted!"
+            android:id="@+id/HighResetView"
+            android:textColor="#ff000000"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reseted!"
+            android:id="@+id/LevelResetView"
+            android:textColor="#ff000000"
+            android:layout_alignTop="@+id/HighResetView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
     </RelativeLayout>
 
 </FrameLayout>
