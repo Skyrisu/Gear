@@ -109,115 +109,98 @@ public class EndScreen extends MainActivity {
         Intent intent = new Intent (this, LevelSelect.class);
         startActivity(intent);
         finish();
+        overridePendingTransition(R.anim.activity_in_reverse, R.anim.activity_out_reverse);
     }
 
     public void NextLevel(View v){
         switch(currentLevel){
             case 1:
                 Intent nLvl1 = new Intent (this, Level2.class);
-                nLvl1.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(nLvl1);
                 finish();
                 break;
             case 2:
                 Intent nLvl2 = new Intent (this, Level3.class);
-                nLvl2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(nLvl2);
                 finish();
                 break;
             case 3:
                 Intent nLvl3 = new Intent (this, Level4.class);
-                nLvl3.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(nLvl3);
                 finish();
                 break;
             case 4:
                 Intent nLvl4 = new Intent (this, Level5.class);
-                nLvl4.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(nLvl4);
                 finish();
                 break;
             case 5:
                 Intent nLvl5 = new Intent (this, Level6.class);
-                nLvl5.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(nLvl5);
                 finish();
                 break;
             case 6:
                 Intent nLvl6 = new Intent (this, Level7.class);
-                nLvl6.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(nLvl6);
                 finish ();
                 break;
             case 7:
                 Intent nLvl7 = new Intent (this, Level8.class);
-                nLvl7.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(nLvl7);
                 finish ();
                 break;
             case 8:
                 Intent nLvl8 = new Intent (this, Level9.class);
-                nLvl8.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(nLvl8);
                 finish ();
                 break;
             case 9:
                 Intent nLvl9 = new Intent (this, Level10.class);
-                nLvl9.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(nLvl9);
                 finish ();
                 break;
             case 10:
                 Intent nLvl10 = new Intent (this, Level11.class);
-                nLvl10.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(nLvl10);
                 finish ();
                 break;
             case 11:
                 Intent nLvl11 = new Intent (this, Level12.class);
-                nLvl11.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(nLvl11);
                 finish ();
                 break;
             case 12:
                 Intent nLvl12 = new Intent (this, Level13.class);
-                nLvl12.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(nLvl12);
                 finish ();
                 break;
             case 13:
                 Intent nLvl13 = new Intent (this, Level14.class);
-                nLvl13.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(nLvl13);
                 finish ();
                 break;
             case 14:
                 Intent nLvl14 = new Intent (this, Level15.class);
-                nLvl14.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(nLvl14);
                 finish ();
                 break;
             case 15:
                 Intent nLvl15 = new Intent (this, Level16.class);
-                nLvl15.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(nLvl15);
                 finish ();
                 break;
             case 16:
                 Intent nLvl16 = new Intent (this, Level17.class);
-                nLvl16.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(nLvl16);
                 finish ();
                 break;
             case 17:
                 Intent nLvl17 = new Intent (this, Level18.class);
-                nLvl17.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(nLvl17);
                 finish ();
                 break;
             case 18:
                 Intent nLvl18 = new Intent (this, LevelSelect2.class);
-                nLvl18.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(nLvl18);
                 finish ();
                 break;
