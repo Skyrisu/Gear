@@ -7,6 +7,7 @@ import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -52,6 +53,12 @@ public class MainActivity extends Activity {
         t1.setTypeface(myCustomFont);
         t2.setTypeface(myCustomFont);
         t3.setTypeface(myCustomFont);
+
+        SharedPreferences LevelSave = getSharedPreferences(MyPreferences, MODE_PRIVATE);
+        LvlDone = LevelSave.getInt("LevelDone", 0);
+        for (int i=0; i < LvlBest.length; i++){
+            LvlBest[i]= LevelSave.getInt("LevelBest"+i, 0);
+        }
 
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         if (getIntent().getBooleanExtra("LOGOUT", false))

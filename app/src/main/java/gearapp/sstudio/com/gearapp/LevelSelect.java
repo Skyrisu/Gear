@@ -4,7 +4,6 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Menu;
@@ -79,21 +78,13 @@ public class LevelSelect extends MainActivity implements View.OnClickListener{
         t1 = (TextView) findViewById(R.id.Lvl9Text);
         t1.setTypeface(myCustomFont);
 
-
-
-        SharedPreferences LevelSave = getSharedPreferences(MyPreferences, MODE_PRIVATE);
-        LvlDone = LevelSave.getInt("LevelDone", 0);
-        for (int i=0; i < LvlBest.length; i++){
-            LvlBest[i]= LevelSave.getInt("LevelBest"+i, 0);
-        }
-
-        buttons = new ArrayList<Button>(BUTTON_IDS.length);
+        buttons = new ArrayList<>(BUTTON_IDS.length);
         for(int id : BUTTON_IDS) {
             Button button = (Button)findViewById(id);
             buttons.add(button);
         }
 
-        textviews = new ArrayList<TextView>(TEXTVIEW_IDS.length);
+        textviews = new ArrayList<>(TEXTVIEW_IDS.length);
         for(int id : TEXTVIEW_IDS) {
             TextView textview = (TextView)findViewById(id);
             textviews.add(textview);

@@ -12,8 +12,37 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class Highscores extends MainActivity {
+
+    private List<TextView> TextViews;
+    private static final int[] TEXTVIEW_IDS = {
+            R.id.textView,
+            R.id.textView2,
+            R.id.textView3,
+            R.id.textView4,
+            R.id.textView5,
+            R.id.textView6,
+            R.id.textView7,
+            R.id.textView8,
+            R.id.textView9
+    };
+
+    private List<TextView> TextViewsScore;
+    private static final int[] TEXTVIEWSCORE_IDS = {
+            R.id.score1,
+            R.id.score2,
+            R.id.score3,
+            R.id.score4,
+            R.id.score5,
+            R.id.score6,
+            R.id.score7,
+            R.id.score8,
+            R.id.score9
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,43 +50,28 @@ public class Highscores extends MainActivity {
         setContentView(R.layout.activity_highscores);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
-        TextView t1 = (TextView) findViewById(R.id.textView);
+        TextViews = new ArrayList<>(TEXTVIEW_IDS.length);
+        for(int id : TEXTVIEW_IDS) {
+            TextView textview = (TextView)findViewById(id);
+            TextViews.add(textview);
+        }
+
+        TextViewsScore = new ArrayList<>(TEXTVIEWSCORE_IDS.length);
+        for(int id : TEXTVIEWSCORE_IDS) {
+            TextView textview = (TextView)findViewById(id);
+            TextViewsScore.add(textview);
+        }
+
         Typeface myCustomFont=Typeface.createFromAsset(getAssets(),"fonts/fbsbltc.ttf");
-        t1.setTypeface(myCustomFont);
-        t1 = (TextView) findViewById(R.id.textView2);
-        t1.setTypeface(myCustomFont);
-        t1 = (TextView) findViewById(R.id.textView3);
-        t1.setTypeface(myCustomFont);
-        t1 = (TextView) findViewById(R.id.textView4);
-        t1.setTypeface(myCustomFont);
-        t1 = (TextView) findViewById(R.id.textView5);
-        t1.setTypeface(myCustomFont);
-        t1 = (TextView) findViewById(R.id.textView6);
-        t1.setTypeface(myCustomFont);
-        t1 = (TextView) findViewById(R.id.textView7);
-        t1.setTypeface(myCustomFont);
-        t1 = (TextView) findViewById(R.id.textView8);
-        t1.setTypeface(myCustomFont);
-        t1 = (TextView) findViewById(R.id.textView9);
-        t1.setTypeface(myCustomFont);
-        t1 = (TextView) findViewById(R.id.score1);
-        t1.setTypeface(myCustomFont);
-        t1 = (TextView) findViewById(R.id.score2);
-        t1.setTypeface(myCustomFont);
-        t1 = (TextView) findViewById(R.id.score3);
-        t1.setTypeface(myCustomFont);
-        t1 = (TextView) findViewById(R.id.score4);
-        t1.setTypeface(myCustomFont);
-        t1 = (TextView) findViewById(R.id.score5);
-        t1.setTypeface(myCustomFont);
-        t1 = (TextView) findViewById(R.id.score6);
-        t1.setTypeface(myCustomFont);
-        t1 = (TextView) findViewById(R.id.score7);
-        t1.setTypeface(myCustomFont);
-        t1 = (TextView) findViewById(R.id.score8);
-        t1.setTypeface(myCustomFont);
-        t1 = (TextView) findViewById(R.id.score9);
-        t1.setTypeface(myCustomFont);
+        for (int i = 0 ; i < TextViews.size() ; i++) {
+            TextViews.get(i).setTypeface(myCustomFont);
+            TextViewsScore.get(i).setTypeface(myCustomFont);
+        }
+
+        for (int i = 0 ; i < TextViewsScore.size() ; i++) {
+                TextViewsScore.get(i).setText(String.valueOf(LvlBest[i+1])+ "    ");
+        }
+
 
 
         Animation gearanim = AnimationUtils.loadAnimation(Highscores.this, R.anim.rotateloop);
