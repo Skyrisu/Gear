@@ -66,13 +66,12 @@
         android:text="Move:"
         android:id="@+id/MoveText"
         android:textIsSelectable="true"
-        android:layout_alignParentStart="false"
-        android:layout_alignParentLeft="false"
-        android:layout_alignParentEnd="false"
-        android:layout_alignParentRight="false"
-        android:layout_marginLeft="450dp"
-        android:layout_marginTop="20dp"
-        android:textColor="#fa000000" />
+        android:textColor="#fa000000"
+        android:layout_alignTop="@+id/Level17Text"
+        android:layout_toRightOf="@+id/Level17Text"
+        android:layout_toEndOf="@+id/Level17Text"
+        android:layout_marginLeft="95dp"
+        android:layout_marginStart="95dp" />
 
     <ImageButton
         android:layout_width="45dp"

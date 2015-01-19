@@ -23,7 +23,7 @@ public class Level5 extends MainActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level5);
 
-        TextView t1 = (TextView) findViewById(R.id.Level5Text);
+        TextView t1 = (TextView) findViewById(R.id.Level2Text);
         Typeface myCustomFont=Typeface.createFromAsset(getAssets(),"fonts/fbsbltc.ttf");
         t1.setTypeface(myCustomFont);
         t1 = (TextView) findViewById(R.id.MoveText);

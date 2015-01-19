@@ -34,8 +34,8 @@
         android:background="@null"
         android:onClick="turnReset"
         android:layout_centerVertical="true"
-        android:layout_toLeftOf="@+id/Level5Text"
-        android:layout_toStartOf="@+id/Level5Text"
+        android:layout_toLeftOf="@+id/Level2Text"
+        android:layout_toStartOf="@+id/Level2Text"
         android:layout_gravity="center"
         android:layout_marginLeft="90dp" />
 
@@ -58,9 +58,9 @@
         android:src="@drawable/gearlvl"
         android:background="@null"
         android:onClick="turnReset"
-        android:layout_toEndOf="@+id/Level5Text"
+        android:layout_toEndOf="@+id/Level2Text"
         android:layout_alignTop="@+id/Gear1"
-        android:layout_toRightOf="@+id/Level5Text"
+        android:layout_toRightOf="@+id/Level2Text"
         android:layout_gravity="center"
         android:layout_marginRight="90dp" />
 
