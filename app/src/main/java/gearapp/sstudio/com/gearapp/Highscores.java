@@ -51,15 +51,15 @@ public class Highscores extends MainActivity {
             R.id.score7,
             R.id.score8,
             R.id.score9,
-            R.id.textView10,
-            R.id.textView11,
-            R.id.textView12,
-            R.id.textView13,
-            R.id.textView14,
-            R.id.textView15,
-            R.id.textView16,
-            R.id.textView17,
-            R.id.textView18
+            R.id.score10,
+            R.id.score11,
+            R.id.score12,
+            R.id.score13,
+            R.id.score14,
+            R.id.score15,
+            R.id.score16,
+            R.id.score17,
+            R.id.score18
     };
 
     @Override

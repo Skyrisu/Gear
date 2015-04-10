@@ -187,12 +187,6 @@ public class MainActivity extends Activity {
         finish();
     }
 
-    public void openCredits(View view) {
-        Intent intent = new Intent (this, Credits.class);
-        startActivity(intent);
-        finish();
-    }
-
     public void openHighscores(View view) {
         Intent intent = new Intent (this, Highscores.class);
         startActivity(intent);

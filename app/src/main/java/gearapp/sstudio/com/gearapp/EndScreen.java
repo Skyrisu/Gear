@@ -15,15 +15,30 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.*;
+
 
 public class EndScreen extends MainActivity {
 
     final Context Warn = this;
+    private InterstitialAd interstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_end_screen);
+
+        interstitialAd = new InterstitialAd(this);
+        interstitialAd.setAdUnitId("ca-app-pub-4154270865207644/5184115417");
+
+        AdRequest.Builder adRequestBuilder = new AdRequest.Builder();
+
+        interstitialAd.loadAd(adRequestBuilder.build());
+
+        if (interstitialAd.isLoaded()) {
+            interstitialAd.show();
+        }
+
         ImageView scoreusual  = (ImageView) findViewById(R.id.imagescoreusual);
         ImageView scorehigh = (ImageView) findViewById(R.id.imagescorehigh);
         TextView score = (TextView) findViewById(R.id.textviewscore);
@@ -31,7 +46,6 @@ public class EndScreen extends MainActivity {
         if (LvlBest[currentLevel] > turnCounter || LvlBest[currentLevel] == 0){
             LvlBest[currentLevel] = turnCounter;
             Animation pulse = AnimationUtils.loadAnimation(this, R.anim.pulse);
-            pulse.setRepeatCount(Animation.INFINITE);
             scorehigh.startAnimation(pulse);
             scoreusual.setVisibility(ImageView.INVISIBLE);
             score.setText(String.valueOf(turnCounter));

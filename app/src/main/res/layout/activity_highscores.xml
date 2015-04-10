@@ -262,7 +262,8 @@
                 android:text="Level 12"
                 android:id="@+id/textView12"
                 android:layout_below="@+id/textView11"
-                android:layout_marginTop="10dp" />
+                android:layout_marginTop="10dp"
+                android:textColor="#ff000000" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -281,7 +282,8 @@
                 android:text="Level 13"
                 android:id="@+id/textView13"
                 android:layout_below="@+id/textView12"
-                android:layout_marginTop="10dp" />
+                android:layout_marginTop="10dp"
+                android:textColor="#ff000000" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -300,7 +302,8 @@
                 android:text="Level 14"
                 android:id="@+id/textView14"
                 android:layout_below="@+id/textView13"
-                android:layout_marginTop="10dp" />
+                android:layout_marginTop="10dp"
+                android:textColor="#ff000000" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -319,7 +322,8 @@
                 android:text="Level 15"
                 android:id="@+id/textView15"
                 android:layout_below="@+id/textView14"
-                android:layout_marginTop="10dp" />
+                android:layout_marginTop="10dp"
+                android:textColor="#ff000000" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -338,7 +342,8 @@
                 android:text="Level 16"
                 android:id="@+id/textView16"
                 android:layout_below="@+id/textView15"
-                android:layout_marginTop="10dp" />
+                android:layout_marginTop="10dp"
+                android:textColor="#ff000000" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -357,7 +362,8 @@
                 android:text="Level 17"
                 android:id="@+id/textView17"
                 android:layout_below="@+id/textView16"
-                android:layout_marginTop="10dp" />
+                android:layout_marginTop="10dp"
+                android:textColor="#ff000000" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -376,7 +382,8 @@
                 android:text="Level 18"
                 android:id="@+id/textView18"
                 android:layout_below="@+id/textView17"
-                android:layout_marginTop="10dp" />
+                android:layout_marginTop="10dp"
+                android:textColor="#ff000000" />
 
             <TextView
                 android:layout_width="wrap_content"
