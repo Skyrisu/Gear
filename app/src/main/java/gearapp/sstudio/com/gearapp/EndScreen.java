@@ -21,7 +21,7 @@ import com.google.android.gms.ads.*;
 public class EndScreen extends MainActivity {
 
     final Context Warn = this;
-    private InterstitialAd interstitialAd;
+    public static InterstitialAd interstitialAd;
     private Intent nLvl;
 
     @Override
@@ -32,14 +32,16 @@ public class EndScreen extends MainActivity {
         interstitialAd = new InterstitialAd(this);
         interstitialAd.setAdUnitId("ca-app-pub-4154270865207644/7455937416");
 
-        requestNewInterstitial();
-
         interstitialAd.setAdListener(new AdListener() {
             @Override
             public void onAdClosed() {
                 startActivity(nLvl);
             }
         });
+
+        if (currentLevel % 3 == 0) {
+            requestNewInterstitial();
+        }
 
         ImageView scoreusual  = (ImageView) findViewById(R.id.imagescoreusual);
         ImageView scorehigh = (ImageView) findViewById(R.id.imagescorehigh);
@@ -66,14 +68,13 @@ public class EndScreen extends MainActivity {
         editor.putInt ("LevelBest"+currentLevel, LvlBest[currentLevel]);
         editor.commit();
 
-
+        // Setting Typefaces
         TextView t1 = (TextView) findViewById(R.id.backtext);
         Typeface myCustomFont=Typeface.createFromAsset(getAssets(),"fonts/fbsbltc.ttf");
         t1.setTypeface(myCustomFont);
         t1 = (TextView) findViewById(R.id.nexttext);
         t1.setTypeface(myCustomFont);
-        t1 = (TextView) findViewById(R.id.textviewscore);
-        t1.setTypeface(myCustomFont);
+        score.setTypeface(myCustomFont);
 
     }
 
@@ -123,6 +124,7 @@ public class EndScreen extends MainActivity {
 
     private void requestNewInterstitial() {
         AdRequest adRequest = new AdRequest.Builder()
+                .addTestDevice("F66BEEB3E72C78E76B0B2621C74D361B")
                 .build();
 
         interstitialAd.loadAd(adRequest);
@@ -138,19 +140,11 @@ public class EndScreen extends MainActivity {
         switch(currentLevel){
             case 1:
                 nLvl = new Intent (this, Level2.class);
-                if (interstitialAd.isLoaded()) {
-                    interstitialAd.show();
-                } else {
-                    startActivity(nLvl);
-                }
+                startActivity(nLvl);
                 break;
             case 2:
                 nLvl = new Intent (this, Level3.class);
-                if (interstitialAd.isLoaded()) {
-                    interstitialAd.show();
-                } else {
-                    startActivity(nLvl);
-                }
+                startActivity(nLvl);
                 break;
             case 3:
                 nLvl = new Intent (this, Level4.class);
@@ -162,19 +156,11 @@ public class EndScreen extends MainActivity {
                 break;
             case 4:
                 nLvl = new Intent (this, Level5.class);
-                if (interstitialAd.isLoaded()) {
-                    interstitialAd.show();
-                } else {
-                    startActivity(nLvl);
-                }
+                startActivity(nLvl);
                 break;
             case 5:
                 nLvl = new Intent (this, Level6.class);
-                if (interstitialAd.isLoaded()) {
-                    interstitialAd.show();
-                } else {
-                    startActivity(nLvl);
-                }
+                startActivity(nLvl);
                 break;
             case 6:
                 nLvl = new Intent (this, Level7.class);
@@ -186,19 +172,11 @@ public class EndScreen extends MainActivity {
                 break;
             case 7:
                 nLvl = new Intent (this, Level8.class);
-                if (interstitialAd.isLoaded()) {
-                    interstitialAd.show();
-                } else {
-                    startActivity(nLvl);
-                }
+                startActivity(nLvl);
                 break;
             case 8:
                 nLvl = new Intent (this, Level9.class);
-                if (interstitialAd.isLoaded()) {
-                    interstitialAd.show();
-                } else {
-                    startActivity(nLvl);
-                }
+                startActivity(nLvl);
                 break;
             case 9:
                 nLvl = new Intent (this, Level10.class);
@@ -210,19 +188,11 @@ public class EndScreen extends MainActivity {
                 break;
             case 10:
                 nLvl = new Intent (this, Level11.class);
-                if (interstitialAd.isLoaded()) {
-                    interstitialAd.show();
-                } else {
-                    startActivity(nLvl);
-                }
+                startActivity(nLvl);
                 break;
             case 11:
                 nLvl = new Intent (this, Level12.class);
-                if (interstitialAd.isLoaded()) {
-                    interstitialAd.show();
-                } else {
-                    startActivity(nLvl);
-                }
+                startActivity(nLvl);
                 break;
             case 12:
                 nLvl = new Intent (this, Level13.class);
@@ -234,19 +204,11 @@ public class EndScreen extends MainActivity {
                 break;
             case 13:
                 nLvl = new Intent (this, Level14.class);
-                if (interstitialAd.isLoaded()) {
-                    interstitialAd.show();
-                } else {
-                    startActivity(nLvl);
-                }
+                startActivity(nLvl);
                 break;
             case 14:
                 nLvl = new Intent (this, Level15.class);
-                if (interstitialAd.isLoaded()) {
-                    interstitialAd.show();
-                } else {
-                    startActivity(nLvl);
-                }
+                startActivity(nLvl);
                 break;
             case 15:
                 nLvl = new Intent (this, Level16.class);
@@ -258,19 +220,11 @@ public class EndScreen extends MainActivity {
                 break;
             case 16:
                 nLvl = new Intent (this, Level17.class);
-                if (interstitialAd.isLoaded()) {
-                    interstitialAd.show();
-                } else {
-                    startActivity(nLvl);
-                }
+                startActivity(nLvl);
                 break;
             case 17:
                 nLvl = new Intent (this, Level18.class);
-                if (interstitialAd.isLoaded()) {
-                    interstitialAd.show();
-                } else {
-                    startActivity(nLvl);
-                }
+                startActivity(nLvl);
                 break;
             case 18:
                 nLvl = new Intent (this, LevelSelect2.class);
