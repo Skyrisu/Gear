@@ -12,6 +12,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -29,19 +31,32 @@ public class EndScreen extends MainActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_end_screen);
 
+        final ImageButton nextButton = (ImageButton) findViewById(R.id.NextLevel);
+
         interstitialAd = new InterstitialAd(this);
         interstitialAd.setAdUnitId("ca-app-pub-4154270865207644/7455937416");
+
+        if (currentLevel % 3 == 0) {
+            nextButton.setEnabled(false);
+            requestNewInterstitial();
+        }
 
         interstitialAd.setAdListener(new AdListener() {
             @Override
             public void onAdClosed() {
                 startActivity(nLvl);
             }
-        });
 
-        if (currentLevel % 3 == 0) {
-            requestNewInterstitial();
-        }
+            @Override
+            public void onAdLoaded() {
+                nextButton.setEnabled(true);
+            }
+
+            @Override
+            public void onAdFailedToLoad (int errorCode) {
+                nextButton.setEnabled(true);
+            }
+        });
 
         ImageView scoreusual  = (ImageView) findViewById(R.id.imagescoreusual);
         ImageView scorehigh = (ImageView) findViewById(R.id.imagescorehigh);
