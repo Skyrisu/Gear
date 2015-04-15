@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="gearapp.sstudio.com.gearapp">
+    package="com.aurora.gears">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -11,7 +11,7 @@
         android:label="@string/app_name"
         android:theme="@style/ActivityTheme" >
         <activity
-            android:name="gearapp.sstudio.com.gearapp.MainActivity"
+            android:name="com.aurora.gears.MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="landscape" >
             <intent-filter>
@@ -24,119 +24,119 @@
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
 
         <meta-data android:name="com.google.android.gms.version"
-                   android:value="@integer/google_play_services_version" />
+            android:value="@integer/google_play_services_version" />
         <activity
-            android:name="gearapp.sstudio.com.gearapp.Highscores"
+            android:name="com.aurora.gears.Highscores"
             android:label="@string/title_activity_highscores"
             android:screenOrientation="landscape" >
         </activity>
         <activity
-            android:name="gearapp.sstudio.com.gearapp.LevelSelect"
+            android:name="com.aurora.gears.LevelSelect"
             android:label="@string/title_activity_level_select"
             android:screenOrientation="landscape" >
         </activity>
         <activity
-            android:name="gearapp.sstudio.com.gearapp.Level1"
+            android:name="com.aurora.gears.Level1"
             android:label="@string/title_activity_level1"
             android:screenOrientation="landscape" >
         </activity>
         <activity
-            android:name="gearapp.sstudio.com.gearapp.Level2"
+            android:name="com.aurora.gears.Level2"
             android:label="@string/title_activity_level2"
             android:screenOrientation="landscape" >
         </activity>
         <activity
-            android:name="gearapp.sstudio.com.gearapp.Level3"
+            android:name="com.aurora.gears.Level3"
             android:label="@string/title_activity_level3"
             android:screenOrientation="landscape" >
         </activity>
         <activity
-            android:name="gearapp.sstudio.com.gearapp.EndScreen"
+            android:name="com.aurora.gears.EndScreen"
             android:label="@string/title_activity_end_screen"
             android:screenOrientation="landscape" >
         </activity>
         <activity
-            android:name="gearapp.sstudio.com.gearapp.Level4"
+            android:name="com.aurora.gears.Level4"
             android:label="@string/title_activity_level4"
             android:screenOrientation="landscape" >
         </activity>
         <activity
-            android:name="gearapp.sstudio.com.gearapp.Level5"
+            android:name="com.aurora.gears.Level5"
             android:label="@string/title_activity_level5"
             android:screenOrientation="landscape" >
         </activity>
         <activity
-            android:name="gearapp.sstudio.com.gearapp.Level6"
+            android:name="com.aurora.gears.Level6"
             android:label="@string/title_activity_level6"
             android:screenOrientation="landscape" >
         </activity>
         <activity
-            android:name="gearapp.sstudio.com.gearapp.Level7"
+            android:name="com.aurora.gears.Level7"
             android:label="@string/title_activity_level7"
             android:screenOrientation="landscape" >
         </activity>
         <activity
-            android:name="gearapp.sstudio.com.gearapp.Level8"
+            android:name="com.aurora.gears.Level8"
             android:label="@string/title_activity_level8"
             android:screenOrientation="landscape" >
         </activity>
         <activity
-            android:name="gearapp.sstudio.com.gearapp.Level9"
+            android:name="com.aurora.gears.Level9"
             android:label="@string/title_activity_level9"
             android:screenOrientation="landscape" >
         </activity>
         <activity
-            android:name="gearapp.sstudio.com.gearapp.LevelSelect2"
+            android:name="com.aurora.gears.LevelSelect2"
             android:label="@string/title_activity_level_select2"
             android:screenOrientation="landscape" >
         </activity>
         <activity
-            android:name="gearapp.sstudio.com.gearapp.Level10"
+            android:name="com.aurora.gears.Level10"
             android:label="@string/title_activity_level10"
             android:screenOrientation="landscape" >
         </activity>
         <activity
-            android:name="gearapp.sstudio.com.gearapp.Level11"
+            android:name="com.aurora.gears.Level11"
             android:label="@string/title_activity_level11"
             android:screenOrientation="landscape" >
         </activity>
         <activity
-            android:name="gearapp.sstudio.com.gearapp.Level12"
+            android:name="com.aurora.gears.Level12"
             android:label="@string/title_activity_level12"
             android:screenOrientation="landscape" >
         </activity>
         <activity
-            android:name="gearapp.sstudio.com.gearapp.Level13"
+            android:name="com.aurora.gears.Level13"
             android:label="@string/title_activity_level13"
             android:screenOrientation="landscape" >
         </activity>
         <activity
-            android:name="gearapp.sstudio.com.gearapp.Level14"
+            android:name="com.aurora.gears.Level14"
             android:label="@string/title_activity_level14"
             android:screenOrientation="landscape" >
         </activity>
         <activity
-            android:name="gearapp.sstudio.com.gearapp.Level15"
+            android:name="com.aurora.gears.Level15"
             android:label="@string/title_activity_level15"
             android:screenOrientation="landscape" >
         </activity>
         <activity
-            android:name="gearapp.sstudio.com.gearapp.Level16"
+            android:name="com.aurora.gears.Level16"
             android:label="@string/title_activity_level16"
             android:screenOrientation="landscape" >
         </activity>
         <activity
-            android:name="gearapp.sstudio.com.gearapp.Level17"
+            android:name="com.aurora.gears.Level17"
             android:label="@string/title_activity_level17"
             android:screenOrientation="landscape" >
         </activity>
         <activity
-            android:name="gearapp.sstudio.com.gearapp.Level18"
+            android:name="com.aurora.gears.Level18"
             android:label="@string/title_activity_level18"
             android:screenOrientation="landscape" >
         </activity>
         <activity
-            android:name="gearapp.sstudio.com.gearapp.Settings"
+            android:name="com.aurora.gears.Settings"
             android:label="@string/title_activity_settings"
             android:screenOrientation="landscape">
         </activity>

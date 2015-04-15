@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    tools:context="gearapp.sstudio.com.gearapp.Settings"
+    tools:context="gearapp.com.aurora.gears.Settings"
     android:clickable="false"
     android:background="@drawable/backgroundv2">
 

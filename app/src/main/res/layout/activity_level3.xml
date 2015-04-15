@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="fill_parent"
     android:layout_width="fill_parent"
-    tools:context="gearapp.sstudio.com.gearapp.Level3"
+    tools:context="gearapp.com.aurora.gears.Level3"
     android:background="@drawable/backgroundv2">
 
     <TextView

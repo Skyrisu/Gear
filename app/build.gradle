@@ -4,11 +4,11 @@ android {
     compileSdkVersion 21
     buildToolsVersion "20.0.0"
     defaultConfig {
-        applicationId "gearapp.sstudio.com.gearapp"
+        applicationId 'com.aurora.gears'
         minSdkVersion 16
         targetSdkVersion 21
-        versionName '1.0.2'
-        versionCode 3
+        versionName '1.0.0'
+        versionCode 1
     }
     buildTypes {
         release {
