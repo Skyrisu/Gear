@@ -139,6 +139,7 @@ public class EndScreen extends MainActivity {
 
     private void requestNewInterstitial() {
         AdRequest adRequest = new AdRequest.Builder()
+                // .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
                 .build();
 
         interstitialAd.loadAd(adRequest);
