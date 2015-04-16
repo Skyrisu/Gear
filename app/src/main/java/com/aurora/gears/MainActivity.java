@@ -23,8 +23,6 @@ import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.aurora.gears.R;
-
 
 public class MainActivity extends Activity {
 
