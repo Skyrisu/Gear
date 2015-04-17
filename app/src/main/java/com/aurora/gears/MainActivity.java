@@ -20,8 +20,12 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.RotateAnimation;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
 
 
 public class MainActivity extends Activity {
@@ -38,6 +42,7 @@ public class MainActivity extends Activity {
     public static int LvlDone;
     public static int[] LvlBest = new int[19];
     public static final String MyPreferences = "LevelDone" ;
+    static InterstitialAd interstitialAd;
 
 
     @Override
@@ -104,6 +109,22 @@ public class MainActivity extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void createAd() {
+        // Create an ad.
+        interstitialAd = new InterstitialAd(this);
+        interstitialAd.setAdUnitId("ca-app-pub-4154270865207644/7455937416");
+
+        AdRequest adRequest = new AdRequest.Builder()
+                .build();
+
+        // Load the interstitial ad.
+        interstitialAd.loadAd(adRequest);
+    }
+
+    public static InterstitialAd getAd() {
+        return interstitialAd;
     }
 
     public void exit(View view){
@@ -301,9 +322,9 @@ public class MainActivity extends Activity {
         }
         RotateAnimation rotate = new RotateAnimation(DegreesGear , DegreesGear + 90, Animation.RELATIVE_TO_SELF, 0.5f ,Animation.RELATIVE_TO_SELF, 0.5f);
         rotate.setInterpolator(new LinearInterpolator());
-        rotate.setDuration(400);
         rotate.setFillEnabled(true);
         rotate.setFillAfter(true);
+        rotate.setDuration(400);
         v.startAnimation(rotate);
         rotate.setAnimationListener(new Animation.AnimationListener() {
             @Override
@@ -317,9 +338,7 @@ public class MainActivity extends Activity {
                     case 1:
                         if (DegreesGear1 == 180) {
                             //I want to call this once
-                            Intent EndScreen = new Intent (MainActivity.this, EndScreen.class);
-                            startActivity(EndScreen);
-                            finish();
+                            levelClearOneGear();
                         } else {
                             getGear.setEnabled(true);
                         }
@@ -327,9 +346,7 @@ public class MainActivity extends Activity {
                     case 2:
                         if (DegreesGear1 == 180 && DegreesGear1 == DegreesGear2) {
                             //I want to call this once
-                            Intent EndScreen = new Intent (MainActivity.this, EndScreen.class);
-                            startActivity(EndScreen);
-                            finish();
+                            levelClearTwoGear();
                         } else {
                             getGear.setEnabled(true);
                         }
@@ -337,9 +354,7 @@ public class MainActivity extends Activity {
                     case 3:
                         if (DegreesGear1 == 180 && DegreesGear1 == DegreesGear2 && DegreesGear1 == DegreesGear3) {
                             //I want to call this once
-                            Intent EndScreen = new Intent (MainActivity.this, EndScreen.class);
-                            startActivity(EndScreen);
-                            finish();
+                            levelClearThreeGear();
                         } else {
                             getGear.setEnabled(true);
                         }
@@ -347,9 +362,7 @@ public class MainActivity extends Activity {
                     case 4:
                         if (DegreesGear1 == 180 && DegreesGear1 == DegreesGear2 && DegreesGear1 == DegreesGear3 && DegreesGear1 == DegreesGear4) {
                             //I want to call this once
-                            Intent EndScreen = new Intent (MainActivity.this, EndScreen.class);
-                            startActivity(EndScreen);
-                            finish();
+                            levelClearFourGear();
                         } else {
                             getGear.setEnabled(true);
                         }
@@ -364,6 +377,175 @@ public class MainActivity extends Activity {
         });
 
     }
+
+    public void levelClearOneGear() {
+        ImageButton Gear1 = (ImageButton) findViewById(R.id.Gear1);
+        RotateAnimation endRotate = new RotateAnimation(180 , 180 + 720, Animation.RELATIVE_TO_SELF, 0.5f ,Animation.RELATIVE_TO_SELF, 0.5f);
+        endRotate.setInterpolator(new LinearInterpolator());
+        endRotate.setFillEnabled(true);
+        endRotate.setFillAfter(true);
+        endRotate.setRepeatCount(Animation.INFINITE);
+        endRotate.setDuration(1600);
+
+        Gear1.startAnimation(endRotate);
+        endRotate.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+                if (currentLevel % 3 == 0) {
+                    createAd();
+                }
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+                if (currentLevel % 3 == 0) {
+                    if (interstitialAd.isLoaded()) {
+                        Intent EndScreen = new Intent (MainActivity.this, EndScreen.class);
+                        startActivity(EndScreen);
+                        finish();
+                    }
+                } else {
+                    Intent EndScreen = new Intent (MainActivity.this, EndScreen.class);
+                    startActivity(EndScreen);
+                    finish();
+                }
+            }
+        });
+    }
+
+    public void levelClearTwoGear() {
+        final ImageButton Gear1 = (ImageButton) findViewById(R.id.Gear1);
+        final ImageButton Gear2 = (ImageButton) findViewById(R.id.Gear2);
+        RotateAnimation endRotate = new RotateAnimation(180 , 180 + 720, Animation.RELATIVE_TO_SELF, 0.5f ,Animation.RELATIVE_TO_SELF, 0.5f);
+        endRotate.setInterpolator(new LinearInterpolator());
+        endRotate.setFillEnabled(true);
+        endRotate.setFillAfter(true);
+        endRotate.setRepeatCount(Animation.INFINITE);
+        endRotate.setDuration(1600);
+
+        Gear1.startAnimation(endRotate);
+        Gear2.startAnimation(endRotate);
+        endRotate.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+                if (currentLevel % 3 == 0) {
+                    createAd();
+                }
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+                if (currentLevel % 3 == 0) {
+                    if (interstitialAd.isLoaded()) {
+                        Intent EndScreen = new Intent (MainActivity.this, EndScreen.class);
+                        startActivity(EndScreen);
+                        finish();
+                    }
+                } else {
+                    Intent EndScreen = new Intent (MainActivity.this, EndScreen.class);
+                    startActivity(EndScreen);
+                    finish();
+                }
+            }
+        });
+    }
+
+    public void levelClearThreeGear() {
+        ImageButton Gear1 = (ImageButton) findViewById(R.id.Gear1);
+        ImageButton Gear2 = (ImageButton) findViewById(R.id.Gear2);
+        ImageButton Gear3 = (ImageButton) findViewById(R.id.Gear3);
+        RotateAnimation endRotate = new RotateAnimation(180 , 180 + 720, Animation.RELATIVE_TO_SELF, 0.5f ,Animation.RELATIVE_TO_SELF, 0.5f);
+        endRotate.setInterpolator(new LinearInterpolator());
+        endRotate.setFillEnabled(true);
+        endRotate.setFillAfter(true);
+        endRotate.setRepeatCount(Animation.INFINITE);
+        endRotate.setDuration(1600);
+
+        Gear1.startAnimation(endRotate);
+        Gear2.startAnimation(endRotate);
+        Gear3.startAnimation(endRotate);
+        endRotate.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+                if (currentLevel % 3 == 0) {
+                    createAd();
+                }
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+                if (currentLevel % 3 == 0) {
+                    if (interstitialAd.isLoaded()) {
+                        Intent EndScreen = new Intent (MainActivity.this, EndScreen.class);
+                        startActivity(EndScreen);
+                        finish();
+                    }
+                } else {
+                    Intent EndScreen = new Intent (MainActivity.this, EndScreen.class);
+                    startActivity(EndScreen);
+                    finish();
+                }
+            }
+        });
+    }
+
+    public void levelClearFourGear() {
+        ImageButton Gear1 = (ImageButton) findViewById(R.id.Gear1);
+        ImageButton Gear2 = (ImageButton) findViewById(R.id.Gear2);
+        ImageButton Gear3 = (ImageButton) findViewById(R.id.Gear3);
+        ImageButton Gear4 = (ImageButton) findViewById(R.id.Gear4);
+        final RotateAnimation endRotate = new RotateAnimation(180 , 180 + 720, Animation.RELATIVE_TO_SELF, 0.5f ,Animation.RELATIVE_TO_SELF, 0.5f);
+        endRotate.setInterpolator(new LinearInterpolator());
+        endRotate.setFillEnabled(true);
+        endRotate.setFillAfter(true);
+        endRotate.setRepeatCount(Animation.INFINITE);
+        endRotate.setDuration(1600);
+
+        Gear1.startAnimation(endRotate);
+        Gear2.startAnimation(endRotate);
+        Gear3.startAnimation(endRotate);
+        Gear4.startAnimation(endRotate);
+        endRotate.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+                if (currentLevel % 3 == 0) {
+                    createAd();
+                }
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+                if (currentLevel % 3 == 0) {
+                    if (interstitialAd.isLoaded()) {
+                        Intent EndScreen = new Intent (MainActivity.this, EndScreen.class);
+                        startActivity(EndScreen);
+                        finish();
+                    }
+                } else {
+                    Intent EndScreen = new Intent (MainActivity.this, EndScreen.class);
+                    startActivity(EndScreen);
+                    finish();
+                }
+            }
+        });
+    }
+
     public void turn(View gear) {
         final View getGear = gear;
         gear.setEnabled(false);

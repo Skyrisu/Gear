@@ -12,8 +12,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -23,40 +21,23 @@ import com.google.android.gms.ads.*;
 public class EndScreen extends MainActivity {
 
     final Context Warn = this;
-    public static InterstitialAd interstitialAd;
     private Intent nLvl;
+    static InterstitialAd interstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_end_screen);
 
-        final ImageButton nextButton = (ImageButton) findViewById(R.id.NextLevel);
-
-        interstitialAd = new InterstitialAd(this);
-        interstitialAd.setAdUnitId("ca-app-pub-4154270865207644/7455937416");
-
         if (currentLevel % 3 == 0) {
-            nextButton.setEnabled(false);
-            requestNewInterstitial();
+            interstitialAd = MainActivity.getAd();
+            interstitialAd.setAdListener(new AdListener() {
+                @Override
+                public void onAdClosed() {
+                    startActivity(nLvl);
+                }
+            });
         }
-
-        interstitialAd.setAdListener(new AdListener() {
-            @Override
-            public void onAdClosed() {
-                startActivity(nLvl);
-            }
-
-            @Override
-            public void onAdLoaded() {
-                nextButton.setEnabled(true);
-            }
-
-            @Override
-            public void onAdFailedToLoad (int errorCode) {
-                nextButton.setEnabled(true);
-            }
-        });
 
         ImageView scoreusual  = (ImageView) findViewById(R.id.imagescoreusual);
         ImageView scorehigh = (ImageView) findViewById(R.id.imagescorehigh);
@@ -135,14 +116,6 @@ public class EndScreen extends MainActivity {
                 });
         AlertDialog ExitWarning = ExitWarningBuild.create();
         ExitWarning.show();
-    }
-
-    private void requestNewInterstitial() {
-        AdRequest adRequest = new AdRequest.Builder()
-                // .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-                .build();
-
-        interstitialAd.loadAd(adRequest);
     }
 
     public void EndScreenBack (View v){
