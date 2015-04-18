@@ -69,27 +69,26 @@ public class Highscores extends MainActivity {
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         TextViews = new ArrayList<>(TEXTVIEW_IDS.length);
-        for(int id : TEXTVIEW_IDS) {
-            TextView textview = (TextView)findViewById(id);
+        for (int id : TEXTVIEW_IDS) {
+            TextView textview = (TextView) findViewById(id);
             TextViews.add(textview);
         }
 
         TextViewsScore = new ArrayList<>(TEXTVIEWSCORE_IDS.length);
-        for(int id : TEXTVIEWSCORE_IDS) {
-            TextView textview = (TextView)findViewById(id);
+        for (int id : TEXTVIEWSCORE_IDS) {
+            TextView textview = (TextView) findViewById(id);
             TextViewsScore.add(textview);
         }
 
-        Typeface myCustomFont=Typeface.createFromAsset(getAssets(),"fonts/fbsbltc.ttf");
-        for (int i = 0 ; i < TextViews.size() ; i++) {
+        Typeface myCustomFont = Typeface.createFromAsset(getAssets(), "fonts/fbsbltc.ttf");
+        for (int i = 0; i < TextViews.size(); i++) {
             TextViews.get(i).setTypeface(myCustomFont);
             TextViewsScore.get(i).setTypeface(myCustomFont);
         }
 
-        for (int i = 0 ; i < TextViewsScore.size() ; i++) {
-                TextViewsScore.get(i).setText(String.valueOf(LvlBest[i+1])+ "    ");
+        for (int i = 0; i < TextViewsScore.size(); i++) {
+            TextViewsScore.get(i).setText(String.valueOf(LvlBest[i + 1]) + "    ");
         }
-
 
 
         Animation gearanim = AnimationUtils.loadAnimation(Highscores.this, R.anim.rotateloop);
@@ -121,7 +120,7 @@ public class Highscores extends MainActivity {
     }
 
     public void Back(View view) {
-        Intent intent = new Intent (this, MainActivity.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         finish();
     }

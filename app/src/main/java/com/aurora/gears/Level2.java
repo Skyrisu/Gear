@@ -25,7 +25,7 @@ public class Level2 extends GameMain {
 
 
         TextView t1 = (TextView) findViewById(R.id.Level2Text);
-        Typeface myCustomFont=Typeface.createFromAsset(getAssets(),"fonts/fbsbltc.ttf");
+        Typeface myCustomFont = Typeface.createFromAsset(getAssets(), "fonts/fbsbltc.ttf");
         t1.setTypeface(myCustomFont);
         t1 = (TextView) findViewById(R.id.MoveText);
         t1.setTypeface(myCustomFont);
@@ -37,7 +37,7 @@ public class Level2 extends GameMain {
         t1.setTypeface(myCustomFont);
         t1 = (TextView) findViewById(R.id.hinttext);
         t1.setTypeface(myCustomFont);
-        
+
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         turnCounter = 0;
@@ -75,14 +75,16 @@ public class Level2 extends GameMain {
 
         return super.onOptionsItemSelected(item);
     }
+
     public void openLvlSelect(View view) {
-        Intent intent = new Intent (this, LevelSelect.class);
+        Intent intent = new Intent(this, LevelSelect.class);
         startActivity(intent);
         finish();
     }
-    public void onBackPressed(){
+
+    public void onBackPressed() {
         AlertDialog.Builder ExitWarningBuild = new AlertDialog.Builder(Warn);
-        ExitWarningBuild.setTitle("You rly want to close the app?");
+        ExitWarningBuild.setTitle("Do you really want to close the app?");
         ExitWarningBuild
                 .setMessage("Click yes to exit")
                 .setCancelable(false)
@@ -103,11 +105,11 @@ public class Level2 extends GameMain {
         ExitWarning.show();
     }
 
-    public void turnGear(View v){
+    public void turnGear(View v) {
         playSound(v);
         ImageButton gear1 = (ImageButton) findViewById(R.id.Gear1);
         ImageButton gear2 = (ImageButton) findViewById(R.id.Gear2);
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.Gear1:
                 turnLast(gear1, 2);
                 break;
@@ -116,12 +118,12 @@ public class Level2 extends GameMain {
                 break;
         }
         final TextView viewCounter = (TextView) findViewById(R.id.TextViewMoveNumber);
-        turnCounter ++;
-        viewCounter.setText (String.valueOf(turnCounter));
+        turnCounter++;
+        viewCounter.setText(String.valueOf(turnCounter));
     }
 
-    public void reload(View v){
-        Intent reload = new Intent (this, Level2.class);
+    public void reload(View v) {
+        Intent reload = new Intent(this, Level2.class);
         finish();
         startActivity(reload);
     }

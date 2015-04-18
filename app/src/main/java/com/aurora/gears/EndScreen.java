@@ -39,11 +39,11 @@ public class EndScreen extends GameMain {
             });
         }
 
-        ImageView scoreusual  = (ImageView) findViewById(R.id.imagescoreusual);
+        ImageView scoreusual = (ImageView) findViewById(R.id.imagescoreusual);
         ImageView scorehigh = (ImageView) findViewById(R.id.imagescorehigh);
         TextView score = (TextView) findViewById(R.id.textviewscore);
 
-        if (LvlBest[currentLevel] > turnCounter || LvlBest[currentLevel] == 0){
+        if (LvlBest[currentLevel] > turnCounter || LvlBest[currentLevel] == 0) {
             LvlBest[currentLevel] = turnCounter;
             Animation pulse = AnimationUtils.loadAnimation(this, R.anim.pulse);
             scorehigh.startAnimation(pulse);
@@ -54,19 +54,19 @@ public class EndScreen extends GameMain {
             score.setText(String.valueOf(turnCounter));
         }
 
-        if (currentLevel > LvlDone){
+        if (currentLevel > LvlDone) {
             LvlDone = currentLevel;
         }
 
         SharedPreferences LevelSave = getSharedPreferences(MyPreferences, MODE_PRIVATE);
         SharedPreferences.Editor editor = LevelSave.edit();
-        editor.putInt ("LevelDone", LvlDone);
-        editor.putInt ("LevelBest"+currentLevel, LvlBest[currentLevel]);
+        editor.putInt("LevelDone", LvlDone);
+        editor.putInt("LevelBest" + currentLevel, LvlBest[currentLevel]);
         editor.commit();
 
         // Setting Typefaces
         TextView t1 = (TextView) findViewById(R.id.backtext);
-        Typeface myCustomFont=Typeface.createFromAsset(getAssets(),"fonts/fbsbltc.ttf");
+        Typeface myCustomFont = Typeface.createFromAsset(getAssets(), "fonts/fbsbltc.ttf");
         t1.setTypeface(myCustomFont);
         t1 = (TextView) findViewById(R.id.nexttext);
         t1.setTypeface(myCustomFont);
@@ -96,9 +96,9 @@ public class EndScreen extends GameMain {
         return super.onOptionsItemSelected(item);
     }
 
-    public void onBackPressed(){
+    public void onBackPressed() {
         AlertDialog.Builder ExitWarningBuild = new AlertDialog.Builder(Warn);
-        ExitWarningBuild.setTitle("You rly want to close the app?");
+        ExitWarningBuild.setTitle("Do you really want to close the app?");
         ExitWarningBuild
                 .setMessage("Click yes to exit")
                 .setCancelable(false)
@@ -118,24 +118,24 @@ public class EndScreen extends GameMain {
         ExitWarning.show();
     }
 
-    public void EndScreenBack (View v){
-        Intent intent = new Intent (this, LevelSelect.class);
+    public void EndScreenBack(View v) {
+        Intent intent = new Intent(this, LevelSelect.class);
         startActivity(intent);
         finish();
     }
 
-    public void NextLevel(View v){
-        switch(currentLevel){
+    public void NextLevel(View v) {
+        switch (currentLevel) {
             case 1:
-                nLvl = new Intent (this, Level2.class);
+                nLvl = new Intent(this, Level2.class);
                 startActivity(nLvl);
                 break;
             case 2:
-                nLvl = new Intent (this, Level3.class);
+                nLvl = new Intent(this, Level3.class);
                 startActivity(nLvl);
                 break;
             case 3:
-                nLvl = new Intent (this, Level4.class);
+                nLvl = new Intent(this, Level4.class);
                 if (interstitialAd.isLoaded()) {
                     interstitialAd.show();
                 } else {
@@ -143,15 +143,15 @@ public class EndScreen extends GameMain {
                 }
                 break;
             case 4:
-                nLvl = new Intent (this, Level5.class);
+                nLvl = new Intent(this, Level5.class);
                 startActivity(nLvl);
                 break;
             case 5:
-                nLvl = new Intent (this, Level6.class);
+                nLvl = new Intent(this, Level6.class);
                 startActivity(nLvl);
                 break;
             case 6:
-                nLvl = new Intent (this, Level7.class);
+                nLvl = new Intent(this, Level7.class);
                 if (interstitialAd.isLoaded()) {
                     interstitialAd.show();
                 } else {
@@ -159,15 +159,15 @@ public class EndScreen extends GameMain {
                 }
                 break;
             case 7:
-                nLvl = new Intent (this, Level8.class);
+                nLvl = new Intent(this, Level8.class);
                 startActivity(nLvl);
                 break;
             case 8:
-                nLvl = new Intent (this, Level9.class);
+                nLvl = new Intent(this, Level9.class);
                 startActivity(nLvl);
                 break;
             case 9:
-                nLvl = new Intent (this, Level10.class);
+                nLvl = new Intent(this, Level10.class);
                 if (interstitialAd.isLoaded()) {
                     interstitialAd.show();
                 } else {
@@ -175,15 +175,15 @@ public class EndScreen extends GameMain {
                 }
                 break;
             case 10:
-                nLvl = new Intent (this, Level11.class);
+                nLvl = new Intent(this, Level11.class);
                 startActivity(nLvl);
                 break;
             case 11:
-                nLvl = new Intent (this, Level12.class);
+                nLvl = new Intent(this, Level12.class);
                 startActivity(nLvl);
                 break;
             case 12:
-                nLvl = new Intent (this, Level13.class);
+                nLvl = new Intent(this, Level13.class);
                 if (interstitialAd.isLoaded()) {
                     interstitialAd.show();
                 } else {
@@ -191,15 +191,15 @@ public class EndScreen extends GameMain {
                 }
                 break;
             case 13:
-                nLvl = new Intent (this, Level14.class);
+                nLvl = new Intent(this, Level14.class);
                 startActivity(nLvl);
                 break;
             case 14:
-                nLvl = new Intent (this, Level15.class);
+                nLvl = new Intent(this, Level15.class);
                 startActivity(nLvl);
                 break;
             case 15:
-                nLvl = new Intent (this, Level16.class);
+                nLvl = new Intent(this, Level16.class);
                 if (interstitialAd.isLoaded()) {
                     interstitialAd.show();
                 } else {
@@ -207,15 +207,15 @@ public class EndScreen extends GameMain {
                 }
                 break;
             case 16:
-                nLvl = new Intent (this, Level17.class);
+                nLvl = new Intent(this, Level17.class);
                 startActivity(nLvl);
                 break;
             case 17:
-                nLvl = new Intent (this, Level18.class);
+                nLvl = new Intent(this, Level18.class);
                 startActivity(nLvl);
                 break;
             case 18:
-                nLvl = new Intent (this, LevelSelect2.class);
+                nLvl = new Intent(this, LevelSelect2.class);
                 if (interstitialAd.isLoaded()) {
                     interstitialAd.show();
                 } else {

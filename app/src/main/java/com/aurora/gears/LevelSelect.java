@@ -15,11 +15,12 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class LevelSelect extends MainActivity implements View.OnClickListener{
+public class LevelSelect extends MainActivity implements View.OnClickListener {
 
     final Context Warn = this;
 
@@ -56,8 +57,7 @@ public class LevelSelect extends MainActivity implements View.OnClickListener{
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
 
-
-        Typeface myCustomFont=Typeface.createFromAsset(getAssets(),"fonts/fbsbltc.ttf");
+        Typeface myCustomFont = Typeface.createFromAsset(getAssets(), "fonts/fbsbltc.ttf");
 
         TextView t1 = (TextView) findViewById(R.id.Lvl1Text);
         t1.setTypeface(myCustomFont);
@@ -79,19 +79,19 @@ public class LevelSelect extends MainActivity implements View.OnClickListener{
         t1.setTypeface(myCustomFont);
 
         buttons = new ArrayList<>(BUTTON_IDS.length);
-        for(int id : BUTTON_IDS) {
-            Button button = (Button)findViewById(id);
+        for (int id : BUTTON_IDS) {
+            Button button = (Button) findViewById(id);
             buttons.add(button);
         }
 
         textviews = new ArrayList<>(TEXTVIEW_IDS.length);
-        for(int id : TEXTVIEW_IDS) {
-            TextView textview = (TextView)findViewById(id);
+        for (int id : TEXTVIEW_IDS) {
+            TextView textview = (TextView) findViewById(id);
             textviews.add(textview);
         }
 
-        for (int i = 0 ; i < buttons.size() ; i++) {
-            if (i < LvlDone+1) {
+        for (int i = 0; i < buttons.size(); i++) {
+            if (i < LvlDone + 1) {
                 buttons.get(i).setEnabled(true);
                 buttons.get(i).setBackgroundResource(R.drawable.levelgear);
                 buttons.get(i).setText(" ");
@@ -133,15 +133,15 @@ public class LevelSelect extends MainActivity implements View.OnClickListener{
         return super.onOptionsItemSelected(item);
     }
 
-    public void openLvlSelect2(View v){
-        Intent  intent = new Intent (this, LevelSelect2.class);
+    public void openLvlSelect2(View v) {
+        Intent intent = new Intent(this, LevelSelect2.class);
         startActivity(intent);
         finish();
     }
 
-    public void onBackPressed(){
+    public void onBackPressed() {
         AlertDialog.Builder ExitWarningBuild = new AlertDialog.Builder(Warn);
-        ExitWarningBuild.setTitle("You rly want to close the app?");
+        ExitWarningBuild.setTitle("Do you really want to close the app?");
         ExitWarningBuild
                 .setMessage("Click yes to exit")
                 .setCancelable(false)
@@ -177,49 +177,49 @@ public class LevelSelect extends MainActivity implements View.OnClickListener{
 
             @Override
             public void onAnimationEnd(Animation animation) {
-                switch(btid.getId()){
+                switch (btid.getId()) {
                     case R.id.Lvl1Btn:
-                        Intent lvl1 = new Intent (LevelSelect.this, Level1.class);
+                        Intent lvl1 = new Intent(LevelSelect.this, Level1.class);
                         startActivity(lvl1);
                         finish();
                         break;
                     case R.id.Lvl2Btn:
-                        Intent lvl2 = new Intent (LevelSelect.this, Level2.class);
+                        Intent lvl2 = new Intent(LevelSelect.this, Level2.class);
                         startActivity(lvl2);
                         finish();
                         break;
                     case R.id.Lvl3Btn:
-                        Intent lvl3 = new Intent (LevelSelect.this, Level3.class);
+                        Intent lvl3 = new Intent(LevelSelect.this, Level3.class);
                         startActivity(lvl3);
                         finish();
                         break;
                     case R.id.Lvl4Btn:
-                        Intent lvl4 = new Intent (LevelSelect.this, Level4.class);
+                        Intent lvl4 = new Intent(LevelSelect.this, Level4.class);
                         startActivity(lvl4);
                         finish();
                         break;
                     case R.id.Lvl5Btn:
-                        Intent lvl5 = new Intent (LevelSelect.this, Level5.class);
+                        Intent lvl5 = new Intent(LevelSelect.this, Level5.class);
                         startActivity(lvl5);
                         finish();
                         break;
                     case R.id.Lvl6Btn:
-                        Intent lvl6 = new Intent (LevelSelect.this, Level6.class);
+                        Intent lvl6 = new Intent(LevelSelect.this, Level6.class);
                         startActivity(lvl6);
                         finish();
                         break;
                     case R.id.Lvl7Btn:
-                        Intent lvl7 = new Intent (LevelSelect.this, Level7.class);
+                        Intent lvl7 = new Intent(LevelSelect.this, Level7.class);
                         startActivity(lvl7);
                         finish();
                         break;
                     case R.id.Lvl8Btn:
-                        Intent lvl8 = new Intent (LevelSelect.this, Level8.class);
+                        Intent lvl8 = new Intent(LevelSelect.this, Level8.class);
                         startActivity(lvl8);
                         finish();
                         break;
                     case R.id.Lvl9Btn:
-                        Intent lvl9 = new Intent (LevelSelect.this, Level9.class);
+                        Intent lvl9 = new Intent(LevelSelect.this, Level9.class);
                         startActivity(lvl9);
                         finish();
                         break;
@@ -233,8 +233,9 @@ public class LevelSelect extends MainActivity implements View.OnClickListener{
             }
         });
     }
+
     public void Back(View view) {
-        Intent  intent = new Intent (this, MainActivity.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         finish();
     }

@@ -16,38 +16,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp" />
 
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Gear1"
-        android:src="@drawable/gearlvl"
-        android:background="@null"
-        android:onClick="turnGear"
-        android:layout_marginRight="30dp"
-        android:layout_centerVertical="true"
-        android:layout_toLeftOf="@+id/Gear2" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Gear2"
-        android:src="@drawable/gearlvl"
-        android:background="@null"
-        android:onClick="turnGear"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Gear3"
-        android:src="@drawable/gearlvl"
-        android:background="@null"
-        android:onClick="turnGear"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="30dp"
-        android:layout_toRightOf="@+id/Gear2" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -116,6 +84,46 @@
         android:layout_alignParentStart="false"
         android:layout_alignLeft="@+id/TextViewMoveNumber"
         android:layout_alignTop="@+id/BestText" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Gear1"
+            android:src="@drawable/gearlvl"
+            android:background="@null"
+            android:onClick="turnGear"
+            android:layout_marginRight="30dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/Gear2" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Gear2"
+            android:src="@drawable/gearlvl"
+            android:background="@null"
+            android:onClick="turnGear"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Gear3"
+            android:src="@drawable/gearlvl"
+            android:background="@null"
+            android:onClick="turnGear"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@+id/Gear2" />
+    </LinearLayout>
 
 
 </RelativeLayout>

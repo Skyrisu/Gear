@@ -11,13 +11,13 @@ import android.widget.ImageButton;
 
 public class GameMain extends MainActivity {
 
-    public void turn90(View startBtn){
-        RotateAnimation rotate = new RotateAnimation(0 , 90, Animation.RELATIVE_TO_SELF, 0.5f ,Animation.RELATIVE_TO_SELF, 0.5f);
+    public void turn90(View startBtn) {
+        RotateAnimation rotate = new RotateAnimation(0, 90, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
         rotate.setDuration(0);
         rotate.setFillEnabled(true);
         rotate.setFillAfter(true);
         startBtn.startAnimation(rotate);
-        switch(startBtn.getId()){
+        switch (startBtn.getId()) {
             case R.id.Gear1:
                 DegreesGear1 = 90;
                 break;
@@ -34,13 +34,13 @@ public class GameMain extends MainActivity {
 
     }
 
-    public void turn180(View startBtn){
-        RotateAnimation rotate = new RotateAnimation(0 , 180, Animation.RELATIVE_TO_SELF, 0.5f ,Animation.RELATIVE_TO_SELF, 0.5f);
+    public void turn180(View startBtn) {
+        RotateAnimation rotate = new RotateAnimation(0, 180, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
         rotate.setDuration(0);
         rotate.setFillEnabled(true);
         rotate.setFillAfter(true);
         startBtn.startAnimation(rotate);
-        switch(startBtn.getId()){
+        switch (startBtn.getId()) {
             case R.id.Gear1:
                 DegreesGear1 = 180;
                 break;
@@ -57,13 +57,13 @@ public class GameMain extends MainActivity {
 
     }
 
-    public void turn270(View startBtn){
-        RotateAnimation rotate = new RotateAnimation(0 , 270, Animation.RELATIVE_TO_SELF, 0.5f ,Animation.RELATIVE_TO_SELF, 0.5f);
+    public void turn270(View startBtn) {
+        RotateAnimation rotate = new RotateAnimation(0, 270, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
         rotate.setDuration(0);
         rotate.setFillEnabled(true);
         rotate.setFillAfter(true);
         startBtn.startAnimation(rotate);
-        switch(startBtn.getId()){
+        switch (startBtn.getId()) {
             case R.id.Gear1:
                 DegreesGear1 = 270;
                 break;
@@ -80,7 +80,7 @@ public class GameMain extends MainActivity {
 
     }
 
-    public void turnLast(View v,int gearCount){
+    public void turnLast(View v, int gearCount) {
         final int GearCount = gearCount;
         final View getGear = v;
         getGear.setEnabled(false);
@@ -93,25 +93,25 @@ public class GameMain extends MainActivity {
         } else if (DegreesGear4 == 360) {
             DegreesGear4 = 0;
         }
-        switch(getGear.getId()){
+        switch (getGear.getId()) {
             case R.id.Gear1:
                 DegreesGear = DegreesGear1;
-                DegreesGear1 = DegreesGear1 +90;
+                DegreesGear1 = DegreesGear1 + 90;
                 break;
             case R.id.Gear2:
                 DegreesGear = DegreesGear2;
-                DegreesGear2 = DegreesGear2 +90;
+                DegreesGear2 = DegreesGear2 + 90;
                 break;
             case R.id.Gear3:
                 DegreesGear = DegreesGear3;
-                DegreesGear3 = DegreesGear3 +90;
+                DegreesGear3 = DegreesGear3 + 90;
                 break;
             case R.id.Gear4:
                 DegreesGear = DegreesGear4;
                 DegreesGear4 = DegreesGear4 + 90;
                 break;
         }
-        RotateAnimation rotate = new RotateAnimation(DegreesGear , DegreesGear + 90, Animation.RELATIVE_TO_SELF, 0.5f ,Animation.RELATIVE_TO_SELF, 0.5f);
+        RotateAnimation rotate = new RotateAnimation(DegreesGear, DegreesGear + 90, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
         rotate.setInterpolator(new LinearInterpolator());
         rotate.setFillEnabled(true);
         rotate.setFillAfter(true);
@@ -125,7 +125,7 @@ public class GameMain extends MainActivity {
 
             @Override
             public void onAnimationEnd(Animation animation) {
-                switch(GearCount){
+                switch (GearCount) {
                     case 1:
                         if (DegreesGear1 == 180) {
                             //I want to call this once
@@ -177,36 +177,36 @@ public class GameMain extends MainActivity {
         Gear1.startAnimation(endRotate);
         for (Animation a : endRotate.getAnimations())
             a.setAnimationListener(new Animation.AnimationListener() {
-            @Override
-            public void onAnimationStart(Animation animation) {
-                if (currentLevel % 3 == 0) {
-                    createAd();
+                @Override
+                public void onAnimationStart(Animation animation) {
+                    if (currentLevel % 3 == 0) {
+                        createAd();
+                    }
                 }
-            }
 
-            @Override
-            public void onAnimationEnd(Animation animation) {
-            }
+                @Override
+                public void onAnimationEnd(Animation animation) {
+                }
 
-            @Override
-            public void onAnimationRepeat(Animation animation) {
-                if (currentLevel % 3 == 0) {
-                    if (interstitialAd.isLoaded()) {
-                        Intent EndScreen = new Intent (GameMain.this, EndScreen.class);
-                        startActivity(EndScreen);
-                        finish();
+                @Override
+                public void onAnimationRepeat(Animation animation) {
+                    if (currentLevel % 3 == 0) {
+                        if (interstitialAd.isLoaded()) {
+                            Intent EndScreen = new Intent(GameMain.this, EndScreen.class);
+                            startActivity(EndScreen);
+                            finish();
+                        } else {
+                            Intent EndScreen = new Intent(GameMain.this, EndScreen.class);
+                            startActivity(EndScreen);
+                            finish();
+                        }
                     } else {
-                        Intent EndScreen = new Intent (GameMain.this, EndScreen.class);
+                        Intent EndScreen = new Intent(GameMain.this, EndScreen.class);
                         startActivity(EndScreen);
                         finish();
                     }
-                } else {
-                    Intent EndScreen = new Intent (GameMain.this, EndScreen.class);
-                    startActivity(EndScreen);
-                    finish();
                 }
-            }
-        });
+            });
     }
 
     public void levelClearTwoGear() {
@@ -219,36 +219,36 @@ public class GameMain extends MainActivity {
         Gear2.startAnimation(endRotate);
         for (Animation a : endRotate.getAnimations())
             a.setAnimationListener(new Animation.AnimationListener() {
-            @Override
-            public void onAnimationStart(Animation animation) {
-                if (currentLevel % 3 == 0) {
-                    createAd();
+                @Override
+                public void onAnimationStart(Animation animation) {
+                    if (currentLevel % 3 == 0) {
+                        createAd();
+                    }
                 }
-            }
 
-            @Override
-            public void onAnimationEnd(Animation animation) {
-            }
+                @Override
+                public void onAnimationEnd(Animation animation) {
+                }
 
-            @Override
-            public void onAnimationRepeat(Animation animation) {
-                if (currentLevel % 3 == 0) {
-                    if (interstitialAd.isLoaded()) {
-                        Intent EndScreen = new Intent (GameMain.this, EndScreen.class);
-                        startActivity(EndScreen);
-                        finish();
+                @Override
+                public void onAnimationRepeat(Animation animation) {
+                    if (currentLevel % 3 == 0) {
+                        if (interstitialAd.isLoaded()) {
+                            Intent EndScreen = new Intent(GameMain.this, EndScreen.class);
+                            startActivity(EndScreen);
+                            finish();
+                        } else {
+                            Intent EndScreen = new Intent(GameMain.this, EndScreen.class);
+                            startActivity(EndScreen);
+                            finish();
+                        }
                     } else {
-                        Intent EndScreen = new Intent (GameMain.this, EndScreen.class);
+                        Intent EndScreen = new Intent(GameMain.this, EndScreen.class);
                         startActivity(EndScreen);
                         finish();
                     }
-                } else {
-                    Intent EndScreen = new Intent (GameMain.this, EndScreen.class);
-                    startActivity(EndScreen);
-                    finish();
                 }
-            }
-        });
+            });
     }
 
     public void levelClearThreeGear() {
@@ -263,36 +263,36 @@ public class GameMain extends MainActivity {
         Gear3.startAnimation(endRotate);
         for (Animation a : endRotate.getAnimations())
             a.setAnimationListener(new Animation.AnimationListener() {
-            @Override
-            public void onAnimationStart(Animation animation) {
-                if (currentLevel % 3 == 0) {
-                    createAd();
+                @Override
+                public void onAnimationStart(Animation animation) {
+                    if (currentLevel % 3 == 0) {
+                        createAd();
+                    }
                 }
-            }
 
-            @Override
-            public void onAnimationEnd(Animation animation) {
-            }
+                @Override
+                public void onAnimationEnd(Animation animation) {
+                }
 
-            @Override
-            public void onAnimationRepeat(Animation animation) {
-                if (currentLevel % 3 == 0) {
-                    if (interstitialAd.isLoaded()) {
-                        Intent EndScreen = new Intent (GameMain.this, EndScreen.class);
-                        startActivity(EndScreen);
-                        finish();
+                @Override
+                public void onAnimationRepeat(Animation animation) {
+                    if (currentLevel % 3 == 0) {
+                        if (interstitialAd.isLoaded()) {
+                            Intent EndScreen = new Intent(GameMain.this, EndScreen.class);
+                            startActivity(EndScreen);
+                            finish();
+                        } else {
+                            Intent EndScreen = new Intent(GameMain.this, EndScreen.class);
+                            startActivity(EndScreen);
+                            finish();
+                        }
                     } else {
-                        Intent EndScreen = new Intent (GameMain.this, EndScreen.class);
+                        Intent EndScreen = new Intent(GameMain.this, EndScreen.class);
                         startActivity(EndScreen);
                         finish();
                     }
-                } else {
-                    Intent EndScreen = new Intent (GameMain.this, EndScreen.class);
-                    startActivity(EndScreen);
-                    finish();
                 }
-            }
-        });
+            });
     }
 
     public void levelClearFourGear() {
@@ -309,36 +309,36 @@ public class GameMain extends MainActivity {
         Gear4.startAnimation(endRotate);
         for (Animation a : endRotate.getAnimations())
             a.setAnimationListener(new Animation.AnimationListener() {
-            @Override
-            public void onAnimationStart(Animation animation) {
-                if (currentLevel % 3 == 0) {
-                    createAd();
+                @Override
+                public void onAnimationStart(Animation animation) {
+                    if (currentLevel % 3 == 0) {
+                        createAd();
+                    }
                 }
-            }
 
-            @Override
-            public void onAnimationEnd(Animation animation) {
-            }
+                @Override
+                public void onAnimationEnd(Animation animation) {
+                }
 
-            @Override
-            public void onAnimationRepeat(Animation animation) {
-                if (currentLevel % 3 == 0) {
-                    if (interstitialAd.isLoaded()) {
-                        Intent EndScreen = new Intent (GameMain.this, EndScreen.class);
-                        startActivity(EndScreen);
-                        finish();
+                @Override
+                public void onAnimationRepeat(Animation animation) {
+                    if (currentLevel % 3 == 0) {
+                        if (interstitialAd.isLoaded()) {
+                            Intent EndScreen = new Intent(GameMain.this, EndScreen.class);
+                            startActivity(EndScreen);
+                            finish();
+                        } else {
+                            Intent EndScreen = new Intent(GameMain.this, EndScreen.class);
+                            startActivity(EndScreen);
+                            finish();
+                        }
                     } else {
-                        Intent EndScreen = new Intent (GameMain.this, EndScreen.class);
+                        Intent EndScreen = new Intent(GameMain.this, EndScreen.class);
                         startActivity(EndScreen);
                         finish();
                     }
-                } else {
-                    Intent EndScreen = new Intent (GameMain.this, EndScreen.class);
-                    startActivity(EndScreen);
-                    finish();
                 }
-            }
-        });
+            });
     }
 
     public void turn(View gear) {

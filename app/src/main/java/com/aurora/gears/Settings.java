@@ -26,13 +26,13 @@ public class Settings extends MainActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
-        HighDegree=0;
-        LevelDegree=0;
-        ResetDegree=0;
+        HighDegree = 0;
+        LevelDegree = 0;
+        ResetDegree = 0;
 
 
         TextView t1 = (TextView) findViewById(R.id.scoretip);
-        Typeface myCustomFont=Typeface.createFromAsset(getAssets(),"fonts/fbsbltc.ttf");
+        Typeface myCustomFont = Typeface.createFromAsset(getAssets(), "fonts/fbsbltc.ttf");
         t1.setTypeface(myCustomFont);
         t1 = (TextView) findViewById(R.id.leveltip);
         t1.setTypeface(myCustomFont);
@@ -75,17 +75,17 @@ public class Settings extends MainActivity {
         final ImageButton highreset = (ImageButton) findViewById(R.id.resetscore);
         final ImageView checkHighReset = (ImageView) findViewById(R.id.checkscorereset);
         final ImageView checkLvlReset = (ImageView) findViewById(R.id.checklevelreset);
-        switch(view.getId()){
+        switch (view.getId()) {
             case R.id.resetlevel:
                 ResetDegree = LevelDegree;
-                LevelDegree = LevelDegree +90;
+                LevelDegree = LevelDegree + 90;
                 break;
             case R.id.resetscore:
                 ResetDegree = HighDegree;
-                HighDegree = HighDegree +90;
+                HighDegree = HighDegree + 90;
                 break;
         }
-        RotateAnimation rotate = new RotateAnimation(ResetDegree , ResetDegree + 90, Animation.RELATIVE_TO_SELF, 0.5f ,Animation.RELATIVE_TO_SELF, 0.5f);
+        RotateAnimation rotate = new RotateAnimation(ResetDegree, ResetDegree + 90, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
         rotate.setInterpolator(new LinearInterpolator());
         rotate.setDuration(400);
         rotate.setFillEnabled(true);
@@ -129,7 +129,7 @@ public class Settings extends MainActivity {
     }
 
     public void Back(View view) {
-        Intent intent = new Intent (this, MainActivity.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         finish();
     }
