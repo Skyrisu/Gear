@@ -14,7 +14,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 
-public class Level5 extends MainActivity {
+public class Level5 extends GameMain {
 
     final Context Warn = this;
 

@@ -18,7 +18,7 @@ import android.widget.TextView;
 import com.google.android.gms.ads.*;
 
 
-public class EndScreen extends MainActivity {
+public class EndScreen extends GameMain {
 
     final Context Warn = this;
     private Intent nLvl;
