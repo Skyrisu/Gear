@@ -23,31 +23,29 @@ public class Level2 extends GameMain {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level2);
 
-
         TextView t1 = (TextView) findViewById(R.id.Level2Text);
         Typeface myCustomFont = Typeface.createFromAsset(getAssets(), "fonts/fbsbltc.ttf");
         t1.setTypeface(myCustomFont);
-        t1 = (TextView) findViewById(R.id.MoveText);
-        t1.setTypeface(myCustomFont);
-        t1 = (TextView) findViewById(R.id.TextViewMoveNumber);
-        t1.setTypeface(myCustomFont);
-        t1 = (TextView) findViewById(R.id.BestText);
-        t1.setTypeface(myCustomFont);
-        t1 = (TextView) findViewById(R.id.TextViewBestNumber);
-        t1.setTypeface(myCustomFont);
+        turnCounter = 0;
+        currentLevel = 2;
+
+        TextView viewTurn = (TextView) findViewById(R.id.TextViewMoveNumber);
+        viewTurn.setTypeface(myCustomFont);
+        viewTurn.setText("Turn: " + String.valueOf(turnCounter));
+
+        TextView viewBest = (TextView) findViewById(R.id.TextViewBestNumber);
+        viewBest.setTypeface(myCustomFont);
+        viewBest.setText("Best: " + String.valueOf(LvlBest[currentLevel]));
+
         t1 = (TextView) findViewById(R.id.hinttext);
         t1.setTypeface(myCustomFont);
 
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
-        turnCounter = 0;
+
         DegreesGear1 = 0;
         DegreesGear2 = 0;
         DegreesGear3 = 0;
-        currentLevel = 2;
-
-        final TextView viewBest = (TextView) findViewById(R.id.TextViewBestNumber);
-        viewBest.setText(String.valueOf(LvlBest[currentLevel]));
 
         ImageButton gStart2 = (ImageButton) findViewById(R.id.Gear2);
         turn270(gStart2);
@@ -117,9 +115,9 @@ public class Level2 extends GameMain {
                 turnLast(gear2, 2);
                 break;
         }
-        final TextView viewCounter = (TextView) findViewById(R.id.TextViewMoveNumber);
+        TextView viewCounter = (TextView) findViewById(R.id.TextViewMoveNumber);
         turnCounter++;
-        viewCounter.setText(String.valueOf(turnCounter));
+        viewCounter.setText("Turn: " + String.valueOf(turnCounter));
     }
 
     public void reload(View v) {

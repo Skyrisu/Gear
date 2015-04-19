@@ -26,25 +26,24 @@ public class Level15 extends GameMain {
         TextView t1 = (TextView) findViewById(R.id.Level15Text);
         Typeface myCustomFont = Typeface.createFromAsset(getAssets(), "fonts/fbsbltc.ttf");
         t1.setTypeface(myCustomFont);
-        t1 = (TextView) findViewById(R.id.MoveText);
-        t1.setTypeface(myCustomFont);
-        t1 = (TextView) findViewById(R.id.TextViewMoveNumber);
-        t1.setTypeface(myCustomFont);
-        t1 = (TextView) findViewById(R.id.BestText);
-        t1.setTypeface(myCustomFont);
-        t1 = (TextView) findViewById(R.id.TextViewBestNumber);
-        t1.setTypeface(myCustomFont);
+        turnCounter = 0;
+        currentLevel = 15;
+
+        TextView viewTurn = (TextView) findViewById(R.id.TextViewMoveNumber);
+        viewTurn.setTypeface(myCustomFont);
+        viewTurn.setText("Turn: " + String.valueOf(turnCounter));
+
+        TextView viewBest = (TextView) findViewById(R.id.TextViewBestNumber);
+        viewBest.setTypeface(myCustomFont);
+        viewBest.setText("Best: " + String.valueOf(LvlBest[currentLevel]));
 
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-        turnCounter = 0;
+
         DegreesGear1 = 0;
         DegreesGear2 = 0;
         DegreesGear3 = 0;
         DegreesGear4 = 0;
-        currentLevel = 15;
 
-        final TextView viewBest = (TextView) findViewById(R.id.TextViewBestNumber);
-        viewBest.setText(String.valueOf(LvlBest[currentLevel]));
 
         ImageButton gStart3 = (ImageButton) findViewById(R.id.Gear3);
         turn180(gStart3);
@@ -126,9 +125,9 @@ public class Level15 extends GameMain {
                 turnLast(gear4, 4);
                 break;
         }
-        final TextView viewCounter = (TextView) findViewById(R.id.TextViewMoveNumber);
+        TextView viewCounter = (TextView) findViewById(R.id.TextViewMoveNumber);
         turnCounter++;
-        viewCounter.setText(String.valueOf(turnCounter));
+        viewCounter.setText("Turn: " + String.valueOf(turnCounter));
     }
 
     public void reload(View v) {

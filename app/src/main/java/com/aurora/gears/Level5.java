@@ -26,25 +26,25 @@ public class Level5 extends GameMain {
         TextView t1 = (TextView) findViewById(R.id.Level2Text);
         Typeface myCustomFont = Typeface.createFromAsset(getAssets(), "fonts/fbsbltc.ttf");
         t1.setTypeface(myCustomFont);
-        t1 = (TextView) findViewById(R.id.MoveText);
-        t1.setTypeface(myCustomFont);
-        t1 = (TextView) findViewById(R.id.TextViewMoveNumber);
-        t1.setTypeface(myCustomFont);
-        t1 = (TextView) findViewById(R.id.BestText);
-        t1.setTypeface(myCustomFont);
-        t1 = (TextView) findViewById(R.id.TextViewBestNumber);
-        t1.setTypeface(myCustomFont);
+        turnCounter = 0;
+        currentLevel = 5;
+
+        TextView viewTurn = (TextView) findViewById(R.id.TextViewMoveNumber);
+        viewTurn.setTypeface(myCustomFont);
+        viewTurn.setText("Turn: " + String.valueOf(turnCounter));
+
+        TextView viewBest = (TextView) findViewById(R.id.TextViewBestNumber);
+        viewBest.setTypeface(myCustomFont);
+        viewBest.setText("Best: " + String.valueOf(LvlBest[currentLevel]));
 
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
-        turnCounter = 0;
+
         DegreesGear1 = 0;
         DegreesGear2 = 0;
         DegreesGear3 = 0;
-        currentLevel = 5;
 
-        final TextView viewBest = (TextView) findViewById(R.id.TextViewBestNumber);
-        viewBest.setText(String.valueOf(LvlBest[currentLevel]));
+
     }
 
 
@@ -118,9 +118,9 @@ public class Level5 extends GameMain {
                 turnLast(gear3, 3);
                 break;
         }
-        final TextView viewCounter = (TextView) findViewById(R.id.TextViewMoveNumber);
+        TextView viewCounter = (TextView) findViewById(R.id.TextViewMoveNumber);
         turnCounter++;
-        viewCounter.setText(String.valueOf(turnCounter));
+        viewCounter.setText("Turn: " + String.valueOf(turnCounter));
     }
 
     public void reload(View v) {

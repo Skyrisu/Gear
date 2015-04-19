@@ -65,11 +65,7 @@ public class EndScreen extends GameMain {
         editor.commit();
 
         // Setting Typefaces
-        TextView t1 = (TextView) findViewById(R.id.backtext);
         Typeface myCustomFont = Typeface.createFromAsset(getAssets(), "fonts/fbsbltc.ttf");
-        t1.setTypeface(myCustomFont);
-        t1 = (TextView) findViewById(R.id.nexttext);
-        t1.setTypeface(myCustomFont);
         score.setTypeface(myCustomFont);
 
     }

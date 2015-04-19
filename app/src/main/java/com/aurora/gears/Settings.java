@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.RotateAnimation;
 import android.widget.ImageButton;
@@ -36,13 +37,12 @@ public class Settings extends MainActivity {
         t1.setTypeface(myCustomFont);
         t1 = (TextView) findViewById(R.id.leveltip);
         t1.setTypeface(myCustomFont);
-        t1.setTypeface(myCustomFont);
         t1 = (TextView) findViewById(R.id.tiptext);
         t1.setTypeface(myCustomFont);
-        final ImageView checkHighReset = (ImageView) findViewById(R.id.checkscorereset);
-        final ImageView checkLvlReset = (ImageView) findViewById(R.id.checklevelreset);
-        checkHighReset.setVisibility(View.INVISIBLE);
-        checkLvlReset.setVisibility(View.INVISIBLE);
+
+        Animation gearAnim = AnimationUtils.loadAnimation(Settings.this, R.anim.rotateloop);
+        final ImageView gear = (ImageView) findViewById(R.id.BackGear);
+        gear.startAnimation(gearAnim);
     }
 
 
@@ -73,8 +73,6 @@ public class Settings extends MainActivity {
         playSound(view);
         final ImageButton lvlreset = (ImageButton) findViewById(R.id.resetlevel);
         final ImageButton highreset = (ImageButton) findViewById(R.id.resetscore);
-        final ImageView checkHighReset = (ImageView) findViewById(R.id.checkscorereset);
-        final ImageView checkLvlReset = (ImageView) findViewById(R.id.checklevelreset);
         switch (view.getId()) {
             case R.id.resetlevel:
                 ResetDegree = LevelDegree;
@@ -109,7 +107,8 @@ public class Settings extends MainActivity {
                         editor.commit();
                     }
                     HighDegree = 0;
-                    checkHighReset.setVisibility(View.VISIBLE);
+                    highreset.setRotation(180);
+                    highreset.setImageResource(R.drawable.check);
                 } else if (LevelDegree == 180) {
                     lvlreset.setEnabled(false);
                     SharedPreferences LevelSave = getSharedPreferences(MyPreferences, MODE_PRIVATE);
@@ -117,7 +116,8 @@ public class Settings extends MainActivity {
                     editor.putInt("LevelDone", 0);
                     editor.commit();
                     LevelDegree = 0;
-                    checkLvlReset.setVisibility(View.VISIBLE);
+                    lvlreset.setRotation(180);
+                    lvlreset.setImageResource(R.drawable.check);
                 }
             }
 

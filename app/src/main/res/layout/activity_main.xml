@@ -6,169 +6,98 @@
     tools:context=".MainActivity"
     android:background="@drawable/backgroundv2">
 
-    <ImageButton
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:text="Credits"
-        android:id="@+id/CreditsButton"
-        android:longClickable="true"
-        android:layout_gravity="center"
-        android:background="@drawable/blankbuttonwide"
-        android:layout_marginLeft="20dp"
-        android:layout_toRightOf="@+id/PlayButton"
-        android:layout_alignBottom="@+id/PlayButton" />
-
-    <ImageButton
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:text="Play"
-        android:id="@+id/PlayButton"
-        android:onClick="openPlay"
-        android:background="@drawable/blankbuttonwide"
-        android:adjustViewBounds="false"
-        android:layout_gravity="left|center_vertical"
-        android:layout_centerInParent="true" />
-
-    <ImageButton
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:text="Highscores"
-        android:id="@+id/HighscoresButton"
-        android:onClick="openHighscores"
-        android:background="@drawable/blankbuttonwide"
-        android:layout_gravity="right|center_vertical"
-        android:layout_toLeftOf="@+id/PlayButton"
-        android:layout_alignBottom="@+id/PlayButton"
-        android:layout_marginRight="20dp" />
-
-    <FrameLayout
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_centerInParent="true"
-        android:id="@+id/playlayout">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Play"
-            android:id="@+id/playtext"
-            android:autoText="false"
-            android:layout_alignParentEnd="false"
-            android:layout_gravity="center"
-            android:textSize="16dp" />
-
-    </FrameLayout>
-
-    <FrameLayout
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:id="@+id/creditlayout"
-        android:layout_toRightOf="@+id/PlayButton"
-        android:layout_alignBottom="@+id/PlayButton"
-        android:layout_marginLeft="20dp" >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="More Soon..."
-            android:id="@+id/creditstext"
-            android:autoText="false"
-            android:layout_gravity="center"
-            android:textSize="16dp" />
-    </FrameLayout>
-
-    <FrameLayout
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_alignBottom="@+id/PlayButton"
-        android:layout_toLeftOf="@+id/PlayButton"
-        android:layout_marginRight="20dp"
-        android:id="@+id/highscorelayout" >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Highscore"
-            android:id="@+id/highscoretext"
-            android:autoText="false"
-            android:layout_gravity="center"
-            android:layout_toStartOf="@+id/frameLayout"
-            android:layout_above="@+id/highscorelayout"
-            android:layout_toLeftOf="@+id/frameLayout"
-            android:textSize="16dp" />
-    </FrameLayout>
-
-    <FrameLayout
-        android:layout_width="300dp"
-        android:layout_height="150dp"
-        android:layout_alignParentBottom="true"
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:id="@+id/frameLayout">
+        android:id="@+id/linearLayout3">
 
-        <ImageView
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            android:id="@+id/NonFunctionGear"
-            android:background="@null"
-            android:layout_gravity="center_horizontal|bottom"
-            android:src="@drawable/gear"
-            android:layout_marginBottom="-150dp" />
-    </FrameLayout>
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="Highscores"
+            android:id="@+id/HighscoresButton"
+            android:onClick="openHighscores"
+            android:background="@drawable/highscoresbutton"
+            android:layout_margin="10dp" />
 
-    <FrameLayout
-        android:layout_width="200dp"
-        android:layout_height="100dp"
-        android:layout_alignBottom="@+id/frameLayout"
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="Play"
+            android:id="@+id/PlayButton"
+            android:onClick="openPlay"
+            android:background="@drawable/playbutton"
+            android:adjustViewBounds="false"
+            android:layout_margin="10dp" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="Credits"
+            android:id="@+id/CreditsButton"
+            android:longClickable="true"
+            android:background="@drawable/moresoonbutton"
+            android:layout_margin="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="false"
-        android:layout_alignParentEnd="false"
-        android:id="@+id/frameLayout2">
+        android:layout_alignParentStart="true">
 
         <ImageButton
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:id="@+id/facebookbutton"
-            android:layout_gravity="bottom|right"
             android:background="@drawable/facebook"
-            android:layout_marginBottom="10dp"
-            android:layout_marginRight="40dp"
-            android:onClick="facebook" />
+            android:onClick="facebook"
+            android:layout_margin="5dp" />
 
         <ImageButton
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:id="@+id/twitterbutton"
-            android:layout_gravity="left|bottom"
             android:background="@drawable/twitter"
-            android:layout_marginLeft="5dp"
-            android:layout_marginBottom="10dp"
-            android:onClick="twitter" />
+            android:onClick="twitter"
+            android:layout_margin="5dp" />
 
         <ImageButton
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:id="@+id/googlebutton"
-            android:layout_gravity="center_horizontal|bottom"
             android:background="@drawable/googleplus"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="-15dp"
-            android:onClick="googleplus" />
-
-    </FrameLayout>
+            android:onClick="googleplus"
+            android:layout_margin="5dp" />
+    </LinearLayout>
 
     <ImageButton
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:id="@+id/settings"
-        android:layout_alignBottom="@+id/frameLayout"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
         android:background="@drawable/settings"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"
-        android:onClick="openSettings" />
+        android:onClick="openSettings"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="false"
+        android:layout_margin="10dp" />
+
+    <ImageView
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:id="@+id/NonFunctionGear"
+        android:background="@null"
+        android:layout_gravity="center_horizontal|bottom"
+        android:src="@drawable/gear"
+        android:layout_below="@+id/linearLayout3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-150dp"
+        android:layout_marginTop="15dp" />
 
 </RelativeLayout>

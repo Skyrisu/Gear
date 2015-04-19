@@ -55,14 +55,6 @@ public class MainActivity extends Activity {
 
         lvlcomplete = 0;
 
-        TextView t1 = (TextView) findViewById(R.id.highscoretext);
-        TextView t2 = (TextView) findViewById(R.id.creditstext);
-        TextView t3 = (TextView) findViewById(R.id.playtext);
-        Typeface myCustomFont = Typeface.createFromAsset(getAssets(), "fonts/fbsbltc.ttf");
-        t1.setTypeface(myCustomFont);
-        t2.setTypeface(myCustomFont);
-        t3.setTypeface(myCustomFont);
-
         SharedPreferences LevelSave = getSharedPreferences(MyPreferences, MODE_PRIVATE);
         LvlDone = LevelSave.getInt("LevelDone", 0);
         for (int i = 0; i < LvlBest.length; i++) {
