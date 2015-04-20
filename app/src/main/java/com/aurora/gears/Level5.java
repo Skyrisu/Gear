@@ -23,9 +23,10 @@ public class Level5 extends GameMain {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level5);
 
-        TextView t1 = (TextView) findViewById(R.id.Level2Text);
         Typeface myCustomFont = Typeface.createFromAsset(getAssets(), "fonts/fbsbltc.ttf");
+        TextView t1 = (TextView) findViewById(R.id.Level5Text);
         t1.setTypeface(myCustomFont);
+
         turnCounter = 0;
         currentLevel = 5;
 
