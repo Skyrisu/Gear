@@ -1,4 +1,4 @@
-package com.aurora.gears;
+package com.auroa.level;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -13,21 +13,25 @@ import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.aurora.gears.GameMain;
+import com.aurora.gears.LevelSelect;
+import com.aurora.gears.R;
 
-public class Level2 extends GameMain {
+
+public class Level6 extends GameMain {
 
     final Context Warn = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_level2);
+        setContentView(R.layout.activity_level6);
 
-        TextView t1 = (TextView) findViewById(R.id.Level2Text);
+        TextView t1 = (TextView) findViewById(R.id.Level6Text);
         Typeface myCustomFont = Typeface.createFromAsset(getAssets(), "fonts/fbsbltc.ttf");
         t1.setTypeface(myCustomFont);
         turnCounter = 0;
-        currentLevel = 2;
+        currentLevel = 6;
 
         TextView viewTurn = (TextView) findViewById(R.id.TextViewMoveNumber);
         viewTurn.setTypeface(myCustomFont);
@@ -37,25 +41,24 @@ public class Level2 extends GameMain {
         viewBest.setTypeface(myCustomFont);
         viewBest.setText("Best: " + String.valueOf(LvlBest[currentLevel]));
 
-        t1 = (TextView) findViewById(R.id.hinttext);
-        t1.setTypeface(myCustomFont);
-
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-
 
         DegreesGear1 = 0;
         DegreesGear2 = 0;
         DegreesGear3 = 0;
 
-        ImageButton gStart2 = (ImageButton) findViewById(R.id.Gear2);
-        turn270(gStart2);
+
+        ImageButton gStart1 = (ImageButton) findViewById(R.id.Gear1);
+        turn180(gStart1);
+        ImageButton gStart3 = (ImageButton) findViewById(R.id.Gear3);
+        turn270(gStart3);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_level2, menu);
+        getMenuInflater().inflate(R.menu.menu_level6, menu);
         return true;
     }
 
@@ -107,12 +110,19 @@ public class Level2 extends GameMain {
         playSound(v);
         ImageButton gear1 = (ImageButton) findViewById(R.id.Gear1);
         ImageButton gear2 = (ImageButton) findViewById(R.id.Gear2);
+        ImageButton gear3 = (ImageButton) findViewById(R.id.Gear3);
         switch (v.getId()) {
             case R.id.Gear1:
-                turnLast(gear1, 2);
+                turnLast(gear1, 3);
                 break;
             case R.id.Gear2:
-                turnLast(gear2, 2);
+                turn(gear1);
+                turn(gear2);
+                turnLast(gear3, 3);
+                break;
+            case R.id.Gear3:
+                turn(gear1);
+                turnLast(gear3, 3);
                 break;
         }
         TextView viewCounter = (TextView) findViewById(R.id.TextViewMoveNumber);
@@ -121,7 +131,7 @@ public class Level2 extends GameMain {
     }
 
     public void reload(View v) {
-        Intent reload = new Intent(this, Level2.class);
+        Intent reload = new Intent(this, Level6.class);
         finish();
         startActivity(reload);
     }

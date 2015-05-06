@@ -41,7 +41,7 @@ public class MainActivity extends Activity {
     public static int DegreesGear4;
     public static int DegreesGear = 0;
     public static int LvlDone;
-    public static int[] LvlBest = new int[19];
+    public static int[] LvlBest = new int[28];
     public static final String MyPreferences = "LevelDone";
     static InterstitialAd interstitialAd;
 

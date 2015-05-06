@@ -1,4 +1,4 @@
-package com.aurora.gears;
+package com.auroa.level;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -13,21 +13,25 @@ import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.aurora.gears.GameMain;
+import com.aurora.gears.LevelSelect;
+import com.aurora.gears.R;
 
-public class Level4 extends GameMain {
+
+public class Level9 extends GameMain {
 
     final Context Warn = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_level4);
+        setContentView(R.layout.activity_level9);
 
-        TextView t1 = (TextView) findViewById(R.id.Level4Text);
+        TextView t1 = (TextView) findViewById(R.id.Level9Text);
         Typeface myCustomFont = Typeface.createFromAsset(getAssets(), "fonts/fbsbltc.ttf");
         t1.setTypeface(myCustomFont);
         turnCounter = 0;
-        currentLevel = 4;
+        currentLevel = 9;
 
         TextView viewTurn = (TextView) findViewById(R.id.TextViewMoveNumber);
         viewTurn.setTypeface(myCustomFont);
@@ -39,23 +43,24 @@ public class Level4 extends GameMain {
 
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
-
         DegreesGear1 = 0;
         DegreesGear2 = 0;
         DegreesGear3 = 0;
 
 
         ImageButton gStart1 = (ImageButton) findViewById(R.id.Gear1);
-        turn270(gStart1);
+        turn180(gStart1);
+        ImageButton gStart2 = (ImageButton) findViewById(R.id.Gear2);
+        turn270(gStart2);
         ImageButton gStart3 = (ImageButton) findViewById(R.id.Gear3);
-        turn180(gStart3);
+        turn270(gStart3);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_level4, menu);
+        getMenuInflater().inflate(R.menu.menu_level9, menu);
         return true;
     }
 
@@ -111,13 +116,15 @@ public class Level4 extends GameMain {
         switch (v.getId()) {
             case R.id.Gear1:
                 turn(gear1);
-                turnLast(gear2, 3);
-                break;
-            case R.id.Gear2:
                 turn(gear2);
                 turnLast(gear3, 3);
                 break;
+            case R.id.Gear2:
+                turn(gear1);
+                turnLast(gear2, 3);
+                break;
             case R.id.Gear3:
+                turn(gear1);
                 turnLast(gear3, 3);
                 break;
         }
@@ -127,7 +134,7 @@ public class Level4 extends GameMain {
     }
 
     public void reload(View v) {
-        Intent reload = new Intent(this, Level4.class);
+        Intent reload = new Intent(this, Level9.class);
         finish();
         startActivity(reload);
     }

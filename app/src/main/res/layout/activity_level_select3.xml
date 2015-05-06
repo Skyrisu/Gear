@@ -1,0 +1,338 @@
+
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="gearapp.com.aurora.gears.LevelSelect3"
+    android:clickable="false"
+    android:background="@drawable/backgroundv2">
+
+    <ImageView
+        android:id="@+id/BackGear"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/gear"
+        android:layout_gravity="left|bottom"
+        android:layout_marginLeft="-150dp"
+        android:layout_marginBottom="-150dp" />
+
+    <ImageButton
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:id="@+id/BackButton"
+        android:onClick="Back"
+        android:nestedScrollingEnabled="false"
+        android:layout_gravity="left|bottom"
+        android:adjustViewBounds="false"
+        android:background="@drawable/backarrow" />
+
+    <FrameLayout
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/imageView"
+            android:layout_gravity="left|top"
+            android:background="@drawable/levelselectback" />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/imageView2"
+            android:layout_gravity="center_horizontal|top"
+            android:background="@drawable/levelselectback" />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/imageView3"
+            android:layout_gravity="right|top"
+            android:background="@drawable/levelselectback" />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/imageView4"
+            android:layout_gravity="left|center_vertical"
+            android:background="@drawable/levelselectback" />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/imageView5"
+            android:layout_gravity="center"
+            android:background="@drawable/levelselectback" />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/imageView6"
+            android:layout_gravity="right|center_vertical"
+            android:background="@drawable/levelselectback" />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/imageView7"
+            android:layout_gravity="left|bottom"
+            android:background="@drawable/levelselectback" />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/imageView8"
+            android:layout_gravity="center_horizontal|bottom"
+            android:background="@drawable/levelselectback" />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/imageView9"
+            android:layout_gravity="right|bottom"
+            android:background="@drawable/levelselectback" />
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/Lvl19Btn"
+            android:onClick="onClick"
+            android:layout_gravity="left"
+            android:background="@drawable/levelgear"
+            android:singleLine="false" />
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/Lvl20Btn"
+            android:onClick="onClick"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/levelgear"
+            android:singleLine="false" />
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/Lvl21Btn"
+            android:onClick="onClick"
+            android:layout_marginLeft="55dp"
+            android:layout_gravity="right"
+            android:background="@drawable/levelgear"
+            android:singleLine="false" />
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/Lvl22Btn"
+            android:onClick="onClick"
+            android:layout_gravity="left|center_vertical"
+            android:background="@drawable/levelgear"
+            android:singleLine="false" />
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/Lvl23Btn"
+            android:onClick="onClick"
+            android:layout_gravity="center"
+            android:background="@drawable/levelgear"
+            android:singleLine="false" />
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/Lvl24Btn"
+            android:onClick="onClick"
+            android:layout_gravity="center_vertical|right"
+            android:background="@drawable/levelgear"
+            android:singleLine="false" />
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/Lvl25Btn"
+            android:onClick="onClick"
+            android:layout_gravity="left|bottom"
+            android:background="@drawable/levelgear"
+            android:singleLine="false" />
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/Lvl26Btn"
+            android:onClick="onClick"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@drawable/levelgear"
+            android:singleLine="false" />
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/Lvl27Btn"
+            android:onClick="onClick"
+            android:layout_gravity="bottom|right"
+            android:background="@drawable/levelgear"
+            android:singleLine="false" />
+
+        <RelativeLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="top|left"
+            android:id="@+id/frame1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="19"
+                android:id="@+id/Lvl19Text"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal|top"
+            android:id="@+id/frame2" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="20"
+                android:id="@+id/Lvl20Text"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="right|top"
+            android:id="@+id/frame3" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="21"
+                android:id="@+id/Lvl21Text"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="left|center_vertical"
+            android:id="@+id/frame4" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="22"
+                android:id="@+id/Lvl22Text"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:id="@+id/frame5" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="23"
+                android:id="@+id/Lvl23Text"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="right|center_vertical"
+            android:id="@+id/frame6" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="24"
+                android:id="@+id/Lvl24Text"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="left|bottom"
+            android:id="@+id/frame7" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="25"
+                android:id="@+id/Lvl25Text"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:id="@+id/frame8" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="26"
+                android:id="@+id/Lvl26Text"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="right|bottom"
+            android:id="@+id/frame9" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="27"
+                android:id="@+id/Lvl27Text"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+
+    </FrameLayout>
+
+    <ImageButton
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/morelevels"
+        android:layout_gravity="right|center_vertical"
+        android:background="@drawable/arrow"
+        android:layout_marginRight="80dp" />
+
+    <ImageButton
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/backlevels"
+        android:layout_gravity="left|center_vertical"
+        android:background="@drawable/navigationarrow"
+        android:layout_marginLeft="80dp"
+        android:longClickable="false"
+        android:onClick="backToLvlSelect2" />
+
+</FrameLayout>
+

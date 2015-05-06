@@ -17,6 +17,16 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.auroa.level.Level10;
+import com.auroa.level.Level11;
+import com.auroa.level.Level12;
+import com.auroa.level.Level13;
+import com.auroa.level.Level14;
+import com.auroa.level.Level15;
+import com.auroa.level.Level16;
+import com.auroa.level.Level17;
+import com.auroa.level.Level18;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -146,6 +156,12 @@ public class LevelSelect2 extends MainActivity implements View.OnClickListener {
         startActivity(intent);
         finish();
         overridePendingTransition(R.anim.activity_in_reverse, R.anim.activity_out_reverse);
+    }
+
+    public void openLvlSelect3(View v) {
+        Intent intent = new Intent(this, LevelSelect3.class);
+        startActivity(intent);
+        finish();
     }
 
     public void onBackPressed() {

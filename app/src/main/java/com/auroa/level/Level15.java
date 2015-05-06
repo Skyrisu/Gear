@@ -1,4 +1,4 @@
-package com.aurora.gears;
+package com.auroa.level;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -13,21 +13,25 @@ import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.aurora.gears.GameMain;
+import com.aurora.gears.LevelSelect2;
+import com.aurora.gears.R;
 
-public class Level14 extends GameMain {
+
+public class Level15 extends GameMain {
 
     final Context Warn = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_level14);
+        setContentView(R.layout.activity_level15);
 
-        TextView t1 = (TextView) findViewById(R.id.Level14Text);
+        TextView t1 = (TextView) findViewById(R.id.Level15Text);
         Typeface myCustomFont = Typeface.createFromAsset(getAssets(), "fonts/fbsbltc.ttf");
         t1.setTypeface(myCustomFont);
         turnCounter = 0;
-        currentLevel = 14;
+        currentLevel = 15;
 
         TextView viewTurn = (TextView) findViewById(R.id.TextViewMoveNumber);
         viewTurn.setTypeface(myCustomFont);
@@ -45,13 +49,15 @@ public class Level14 extends GameMain {
         DegreesGear4 = 0;
 
 
+        ImageButton gStart3 = (ImageButton) findViewById(R.id.Gear3);
+        turn180(gStart3);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_level14, menu);
+        getMenuInflater().inflate(R.menu.menu_level12, menu);
         return true;
     }
 
@@ -112,14 +118,14 @@ public class Level14 extends GameMain {
             case R.id.Gear2:
                 turn(gear1);
                 turn(gear2);
-                turnLast(gear4, 4);
-                break;
-            case R.id.Gear3:
-                turn(gear2);
                 turnLast(gear3, 4);
                 break;
-            case R.id.Gear4:
+            case R.id.Gear3:
+                turn(gear1);
                 turn(gear3);
+                turnLast(gear4, 4);
+                break;
+            case R.id.Gear4:
                 turnLast(gear4, 4);
                 break;
         }
@@ -129,7 +135,7 @@ public class Level14 extends GameMain {
     }
 
     public void reload(View v) {
-        Intent reload = new Intent(this, Level14.class);
+        Intent reload = new Intent(this, Level15.class);
         finish();
         startActivity(reload);
     }

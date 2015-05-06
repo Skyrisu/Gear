@@ -322,7 +322,8 @@
         android:id="@+id/morelevels"
         android:layout_gravity="right|center_vertical"
         android:background="@drawable/arrow"
-        android:layout_marginRight="80dp" />
+        android:layout_marginRight="80dp"
+        android:onClick="openLvlSelect3" />
 
     <ImageButton
         android:layout_width="60dp"

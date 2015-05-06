@@ -1,4 +1,4 @@
-package com.aurora.gears;
+package com.auroa.level;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -13,22 +13,25 @@ import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.aurora.gears.GameMain;
+import com.aurora.gears.LevelSelect3;
+import com.aurora.gears.R;
 
-public class Level5 extends GameMain {
+
+public class Level22 extends GameMain {
 
     final Context Warn = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_level5);
+        setContentView(R.layout.activity_level22);
 
+        TextView t1 = (TextView) findViewById(R.id.Level22Text);
         Typeface myCustomFont = Typeface.createFromAsset(getAssets(), "fonts/fbsbltc.ttf");
-        TextView t1 = (TextView) findViewById(R.id.Level5Text);
         t1.setTypeface(myCustomFont);
-
         turnCounter = 0;
-        currentLevel = 5;
+        currentLevel = 22;
 
         TextView viewTurn = (TextView) findViewById(R.id.TextViewMoveNumber);
         viewTurn.setTypeface(myCustomFont);
@@ -40,19 +43,21 @@ public class Level5 extends GameMain {
 
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
-
         DegreesGear1 = 0;
         DegreesGear2 = 0;
         DegreesGear3 = 0;
+        DegreesGear4 = 0;
 
 
+        ImageButton gStart1 = (ImageButton) findViewById(R.id.Gear1);
+        turn270(gStart1);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_level5, menu);
+        getMenuInflater().inflate(R.menu.menu_level22, menu);
         return true;
     }
 
@@ -72,7 +77,7 @@ public class Level5 extends GameMain {
     }
 
     public void openLvlSelect(View view) {
-        Intent intent = new Intent(this, LevelSelect.class);
+        Intent intent = new Intent(this, LevelSelect3.class);
         startActivity(intent);
         finish();
     }
@@ -105,18 +110,24 @@ public class Level5 extends GameMain {
         ImageButton gear1 = (ImageButton) findViewById(R.id.Gear1);
         ImageButton gear2 = (ImageButton) findViewById(R.id.Gear2);
         ImageButton gear3 = (ImageButton) findViewById(R.id.Gear3);
+        ImageButton gear4 = (ImageButton) findViewById(R.id.Gear4);
         switch (v.getId()) {
             case R.id.Gear1:
                 turn(gear1);
-                turnLast(gear3, 3);
+                turn(gear2);
+                turn(gear3);
+                turnLast(gear4, 4);
                 break;
             case R.id.Gear2:
                 turn(gear1);
-                turnLast(gear2, 3);
+                turnLast(gear2, 4);
                 break;
             case R.id.Gear3:
-                turn(gear2);
-                turnLast(gear3, 3);
+                turnLast(gear3, 4);
+                break;
+            case R.id.Gear4:
+                turn(gear1);
+                turnLast(gear4, 4);
                 break;
         }
         TextView viewCounter = (TextView) findViewById(R.id.TextViewMoveNumber);
@@ -125,7 +136,7 @@ public class Level5 extends GameMain {
     }
 
     public void reload(View v) {
-        Intent reload = new Intent(this, Level5.class);
+        Intent reload = new Intent(this, Level22.class);
         finish();
         startActivity(reload);
     }
