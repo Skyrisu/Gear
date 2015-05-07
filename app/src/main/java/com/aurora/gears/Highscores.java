@@ -37,7 +37,16 @@ public class Highscores extends MainActivity {
             R.id.textView15,
             R.id.textView16,
             R.id.textView17,
-            R.id.textView18
+            R.id.textView18,
+            R.id.textView19,
+            R.id.textView20,
+            R.id.textView21,
+            R.id.textView22,
+            R.id.textView23,
+            R.id.textView24,
+            R.id.textView25,
+            R.id.textView26,
+            R.id.textView27
     };
 
     private List<TextView> TextViewsScore;
@@ -59,7 +68,16 @@ public class Highscores extends MainActivity {
             R.id.score15,
             R.id.score16,
             R.id.score17,
-            R.id.score18
+            R.id.score18,
+            R.id.score19,
+            R.id.score20,
+            R.id.score21,
+            R.id.score22,
+            R.id.score23,
+            R.id.score24,
+            R.id.score25,
+            R.id.score26,
+            R.id.score27
     };
 
     @Override
