@@ -112,5 +112,15 @@
         android:layout_toLeftOf="@+id/linearLayout"
         android:layout_toStartOf="@+id/linearLayout" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="the three dots have to face downward"
+        android:id="@+id/tip"
+        android:textColor="#ff000000"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_centerHorizontal="true" />
+
 
 </RelativeLayout>

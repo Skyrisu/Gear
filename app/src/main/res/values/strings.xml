@@ -2,7 +2,6 @@
 <resources>
 
     <string name="app_name">GearApp</string>
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="Menu1">Menu1</string>
     <string name="title_activity_credits">Credits</string>
@@ -18,7 +17,6 @@
     <string name="title_activity_level7">Level7</string>
     <string name="title_activity_level8">Level8</string>
     <string name="title_activity_level9">Level9</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_level_select2">LevelSelect2</string>
     <string name="title_activity_level_select3">LevelSelect3</string>
     <string name="title_activity_level10">Level10</string>
@@ -31,14 +29,14 @@
     <string name="title_activity_level17">Level17</string>
     <string name="title_activity_level18">Level18</string>
     <string name="title_activity_settings">Settings</string>
-    <string name="title_activity_level19">Level18</string>
-    <string name="title_activity_level20">Level18</string>
-    <string name="title_activity_level21">Level18</string>
-    <string name="title_activity_level22">Level18</string>
-    <string name="title_activity_level23">Level18</string>
-    <string name="title_activity_level24">Level18</string>
-    <string name="title_activity_level25">Level18</string>
-    <string name="title_activity_level26">Level18</string>
-    <string name="title_activity_level27">Level18</string>
+    <string name="title_activity_level19">Level19</string>
+    <string name="title_activity_level20">Level20</string>
+    <string name="title_activity_level21">Level21</string>
+    <string name="title_activity_level22">Level22</string>
+    <string name="title_activity_level23">Level23</string>
+    <string name="title_activity_level24">Level24</string>
+    <string name="title_activity_level25">Level25</string>
+    <string name="title_activity_level26">Level26</string>
+    <string name="title_activity_level27">Level27</string>
 
 </resources>

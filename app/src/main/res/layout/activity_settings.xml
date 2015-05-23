@@ -101,5 +101,17 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Music"
+        android:id="@+id/musicCheck"
+        android:textColor="#ff000000"
+        android:layout_weight="1"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_alignTop="@+id/BackButton"
+        android:layout_centerHorizontal="true"
+        android:checked="false" />
+
 </RelativeLayout>
 

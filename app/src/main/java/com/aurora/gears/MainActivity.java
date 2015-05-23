@@ -4,26 +4,27 @@ package com.aurora.gears;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
+import android.content.BroadcastReceiver;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.ServiceConnection;
 import android.content.SharedPreferences;
-import android.graphics.Typeface;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.IBinder;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.view.animation.LinearInterpolator;
-import android.view.animation.RotateAnimation;
-import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
@@ -44,16 +45,25 @@ public class MainActivity extends Activity {
     public static int[] LvlBest = new int[28];
     public static final String MyPreferences = "LevelDone";
     static InterstitialAd interstitialAd;
-
+    public static boolean focus = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Log.d("Wat soll der Muell", "OnCreate");
+
         setVolumeControlStream(AudioManager.STREAM_MUSIC);
 
+        doBindService();
+
         lvlcomplete = 0;
+
+        Intent music = new Intent();
+        music.setClass(this,MusicService.class);
+        startService(music);
 
         SharedPreferences LevelSave = getSharedPreferences(MyPreferences, MODE_PRIVATE);
         LvlDone = LevelSave.getInt("LevelDone", 0);
@@ -83,6 +93,34 @@ public class MainActivity extends Activity {
         }
     }
 
+    private boolean mIsBound = false;
+    private MusicService mServ;
+    private ServiceConnection Scon =new ServiceConnection(){
+
+        public void onServiceConnected(ComponentName name, IBinder
+                binder) {
+            mServ = ((MusicService.ServiceBinder)binder).getService();
+        }
+
+        public void onServiceDisconnected(ComponentName name) {
+            mServ = null;
+        }
+    };
+
+    void doBindService(){
+        bindService(new Intent(this,MusicService.class),
+                Scon,Context.BIND_AUTO_CREATE);
+        mIsBound = true;
+    }
+
+    void doUnbindService()
+    {
+        if(mIsBound)
+        {
+            unbindService(Scon);
+            mIsBound = false;
+        }
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -106,6 +144,37 @@ public class MainActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        doUnbindService();
+        //Log.d("Wat soll der Muell", "OnDestroy");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        //Log.d("Wat soll der Muell", "OnPause");
+        if(mServ != null) {
+            mServ.pauseMusic();
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        //Log.d("Wat soll der Muell", "OnResume");
+        if(mServ != null) {
+            mServ.resumeMusic();
+        }
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        //Log.d("Wat soll der Muell", "OnStop");
+    }
+
     public void createAd() {
         // Create an ad.
         interstitialAd = new InterstitialAd(this);
@@ -122,12 +191,6 @@ public class MainActivity extends Activity {
         return interstitialAd;
     }
 
-    public void exit(View view) {
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        intent.putExtra("LOGOUT", true);
-        startActivity(intent);
-    }
 
     public void twitter(View view) {
         try {

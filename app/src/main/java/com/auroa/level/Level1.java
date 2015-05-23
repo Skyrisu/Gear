@@ -31,6 +31,8 @@ public class Level1 extends GameMain {
         TextView t1 = (TextView) findViewById(R.id.Level1Text);
         Typeface myCustomFont = Typeface.createFromAsset(getAssets(), "fonts/fbsbltc.ttf");
         t1.setTypeface(myCustomFont);
+        TextView tip = (TextView) findViewById(R.id.tip);
+        tip.setTypeface(myCustomFont);
         turnCounter = 0;
         currentLevel = 1;
 
