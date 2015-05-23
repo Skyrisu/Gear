@@ -34,7 +34,6 @@ public class Settings extends MainActivity {
         LevelDegree = 0;
         ResetDegree = 0;
 
-
         TextView t1 = (TextView) findViewById(R.id.scoretip);
         Typeface myCustomFont = Typeface.createFromAsset(getAssets(), "fonts/fbsbltc.ttf");
         t1.setTypeface(myCustomFont);
@@ -107,7 +106,7 @@ public class Settings extends MainActivity {
                     SharedPreferences.Editor editor = LevelSave.edit();
                     for (int i = 0; i < LvlBest.length; i++) {
                         editor.putInt("LevelBest" + (i + 1), 0);
-                        editor.commit();
+                        editor.apply();
                     }
                     HighDegree = 0;
                     highreset.setRotation(180);
@@ -117,7 +116,7 @@ public class Settings extends MainActivity {
                     SharedPreferences LevelSave = getSharedPreferences(MyPreferences, MODE_PRIVATE);
                     SharedPreferences.Editor editor = LevelSave.edit();
                     editor.putInt("LevelDone", 0);
-                    editor.commit();
+                    editor.apply();
                     LevelDegree = 0;
                     lvlreset.setRotation(180);
                     lvlreset.setImageResource(R.drawable.check);

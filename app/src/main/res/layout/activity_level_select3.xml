@@ -190,7 +190,8 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="19"
                 android:id="@+id/Lvl19Text"
-                android:layout_centerInParent="true" />
+                android:layout_centerInParent="true"
+                android:textColor="#ffffffff" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -205,7 +206,8 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="20"
                 android:id="@+id/Lvl20Text"
-                android:layout_centerInParent="true" />
+                android:layout_centerInParent="true"
+                android:textColor="#ffffffff" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -220,7 +222,8 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="21"
                 android:id="@+id/Lvl21Text"
-                android:layout_centerInParent="true" />
+                android:layout_centerInParent="true"
+                android:textColor="#ffffffff" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -235,7 +238,8 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="22"
                 android:id="@+id/Lvl22Text"
-                android:layout_centerInParent="true" />
+                android:layout_centerInParent="true"
+                android:textColor="#ffffffff" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -250,7 +254,8 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="23"
                 android:id="@+id/Lvl23Text"
-                android:layout_centerInParent="true" />
+                android:layout_centerInParent="true"
+                android:textColor="#ffffffff" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -265,7 +270,8 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="24"
                 android:id="@+id/Lvl24Text"
-                android:layout_centerInParent="true" />
+                android:layout_centerInParent="true"
+                android:textColor="#ffffffff" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -280,7 +286,8 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="25"
                 android:id="@+id/Lvl25Text"
-                android:layout_centerInParent="true" />
+                android:layout_centerInParent="true"
+                android:textColor="#ffffffff" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -295,7 +302,8 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="26"
                 android:id="@+id/Lvl26Text"
-                android:layout_centerInParent="true" />
+                android:layout_centerInParent="true"
+                android:textColor="#ffffffff" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -310,7 +318,8 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="27"
                 android:id="@+id/Lvl27Text"
-                android:layout_centerInParent="true" />
+                android:layout_centerInParent="true"
+                android:textColor="#ffffffff" />
         </RelativeLayout>
 
 

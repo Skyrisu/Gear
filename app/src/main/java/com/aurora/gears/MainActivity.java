@@ -45,7 +45,7 @@ public class MainActivity extends Activity {
     public static int[] LvlBest = new int[28];
     public static final String MyPreferences = "LevelDone";
     static InterstitialAd interstitialAd;
-    public static boolean focus = true;
+    private static int sessionDepth = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,12 +58,11 @@ public class MainActivity extends Activity {
         setVolumeControlStream(AudioManager.STREAM_MUSIC);
 
         doBindService();
+        Intent music = new Intent();
+        music.setClass(this, MusicService.class);
+        startService(music);
 
         lvlcomplete = 0;
-
-        Intent music = new Intent();
-        music.setClass(this,MusicService.class);
-        startService(music);
 
         SharedPreferences LevelSave = getSharedPreferences(MyPreferences, MODE_PRIVATE);
         LvlDone = LevelSave.getInt("LevelDone", 0);
@@ -94,7 +93,7 @@ public class MainActivity extends Activity {
     }
 
     private boolean mIsBound = false;
-    private MusicService mServ;
+    public MusicService mServ;
     private ServiceConnection Scon =new ServiceConnection(){
 
         public void onServiceConnected(ComponentName name, IBinder
@@ -155,9 +154,6 @@ public class MainActivity extends Activity {
     protected void onPause() {
         super.onPause();
         //Log.d("Wat soll der Muell", "OnPause");
-        if(mServ != null) {
-            mServ.pauseMusic();
-        }
     }
 
     @Override
@@ -170,9 +166,23 @@ public class MainActivity extends Activity {
     }
 
     @Override
+    protected void onStart() {
+        super.onStart();
+        //Log.d("Wat soll der Muell", "OnStart");
+        sessionDepth++;
+    }
+
+    @Override
     public void onStop() {
         super.onStop();
         //Log.d("Wat soll der Muell", "OnStop");
+        if (sessionDepth > 0)
+            sessionDepth--;
+        if (sessionDepth == 0) {
+            if(mServ != null) {
+                mServ.pauseMusic();
+            }
+        }
     }
 
     public void createAd() {
