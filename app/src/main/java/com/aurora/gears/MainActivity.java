@@ -40,9 +40,10 @@ public class MainActivity extends Activity {
     public static int DegreesGear2;
     public static int DegreesGear3;
     public static int DegreesGear4;
+    public static int DegreesGear5;
     public static int DegreesGear = 0;
     public static int LvlDone;
-    public static int[] LvlBest = new int[28];
+    public static int[] LvlBest = new int[37];
     public static final String MyPreferences = "LevelDone";
     static InterstitialAd interstitialAd;
     private static int sessionDepth = 0;

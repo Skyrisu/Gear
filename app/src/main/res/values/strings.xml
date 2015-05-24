@@ -7,18 +7,20 @@
     <string name="title_activity_credits">Credits</string>
     <string name="title_activity_highscores">Highscores</string>
     <string name="title_activity_level_select">LevelSelect</string>
+    <string name="title_activity_level_select2">LevelSelect2</string>
+    <string name="title_activity_level_select3">LevelSelect3</string>
+    <string name="title_activity_level_select4">LevelSelect4</string>
+    <string name="title_activity_end_screen">EndScreen</string>
+    <string name="title_activity_settings">Settings</string>
     <string name="title_activity_level1">Level1</string>
     <string name="title_activity_level2">Level2</string>
     <string name="title_activity_level3">Level3</string>
-    <string name="title_activity_end_screen">EndScreen</string>
     <string name="title_activity_level4">Level4</string>
     <string name="title_activity_level5">Level5</string>
     <string name="title_activity_level6">Level6</string>
     <string name="title_activity_level7">Level7</string>
     <string name="title_activity_level8">Level8</string>
     <string name="title_activity_level9">Level9</string>
-    <string name="title_activity_level_select2">LevelSelect2</string>
-    <string name="title_activity_level_select3">LevelSelect3</string>
     <string name="title_activity_level10">Level10</string>
     <string name="title_activity_level11">Level11</string>
     <string name="title_activity_level12">Level12</string>
@@ -28,7 +30,6 @@
     <string name="title_activity_level16">Level16</string>
     <string name="title_activity_level17">Level17</string>
     <string name="title_activity_level18">Level18</string>
-    <string name="title_activity_settings">Settings</string>
     <string name="title_activity_level19">Level19</string>
     <string name="title_activity_level20">Level20</string>
     <string name="title_activity_level21">Level21</string>
@@ -38,5 +39,14 @@
     <string name="title_activity_level25">Level25</string>
     <string name="title_activity_level26">Level26</string>
     <string name="title_activity_level27">Level27</string>
+    <string name="title_activity_level28">Level28</string>
+    <string name="title_activity_level29">Level29</string>
+    <string name="title_activity_level30">Level30</string>
+    <string name="title_activity_level31">Level31</string>
+    <string name="title_activity_level32">Level32</string>
+    <string name="title_activity_level33">Level33</string>
+    <string name="title_activity_level34">Level34</string>
+    <string name="title_activity_level35">Level35</string>
+    <string name="title_activity_level36">Level36</string>
 
 </resources>

@@ -30,6 +30,9 @@ public class GameMain extends MainActivity {
             case R.id.Gear4:
                 DegreesGear4 = 90;
                 break;
+            case R.id.Gear5:
+                DegreesGear5 = 90;
+                break;
         }
 
     }
@@ -52,6 +55,9 @@ public class GameMain extends MainActivity {
                 break;
             case R.id.Gear4:
                 DegreesGear4 = 180;
+                break;
+            case R.id.Gear5:
+                DegreesGear5 = 180;
                 break;
         }
 
@@ -76,6 +82,9 @@ public class GameMain extends MainActivity {
             case R.id.Gear4:
                 DegreesGear4 = 270;
                 break;
+            case R.id.Gear5:
+                DegreesGear5 = 270;
+                break;
         }
 
     }
@@ -92,6 +101,8 @@ public class GameMain extends MainActivity {
             DegreesGear3 = 0;
         } else if (DegreesGear4 == 360) {
             DegreesGear4 = 0;
+        } else if (DegreesGear5 == 360) {
+            DegreesGear5 = 0;
         }
         switch (getGear.getId()) {
             case R.id.Gear1:
@@ -109,6 +120,10 @@ public class GameMain extends MainActivity {
             case R.id.Gear4:
                 DegreesGear = DegreesGear4;
                 DegreesGear4 = DegreesGear4 + 90;
+                break;
+            case R.id.Gear5:
+                DegreesGear = DegreesGear5;
+                DegreesGear5 = DegreesGear5 + 90;
                 break;
         }
         RotateAnimation rotate = new RotateAnimation(DegreesGear, DegreesGear + 90, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
@@ -154,6 +169,14 @@ public class GameMain extends MainActivity {
                         if (DegreesGear1 == 180 && DegreesGear1 == DegreesGear2 && DegreesGear1 == DegreesGear3 && DegreesGear1 == DegreesGear4) {
                             //I want to call this once
                             levelClearFourGear();
+                        } else {
+                            getGear.setEnabled(true);
+                        }
+                        break;
+                    case 5:
+                        if (DegreesGear1 == 180 && DegreesGear1 == DegreesGear2 && DegreesGear1 == DegreesGear3 && DegreesGear1 == DegreesGear4 && DegreesGear1 == DegreesGear5) {
+                            //I want to call this once
+                            levelClearFiveGear();
                         } else {
                             getGear.setEnabled(true);
                         }
@@ -341,6 +364,54 @@ public class GameMain extends MainActivity {
             });
     }
 
+    public void levelClearFiveGear() {
+        ImageButton Gear1 = (ImageButton) findViewById(R.id.Gear1);
+        ImageButton Gear2 = (ImageButton) findViewById(R.id.Gear2);
+        ImageButton Gear3 = (ImageButton) findViewById(R.id.Gear3);
+        ImageButton Gear4 = (ImageButton) findViewById(R.id.Gear4);
+        ImageButton Gear5 = (ImageButton) findViewById(R.id.Gear5);
+
+        AnimationSet endRotate = (AnimationSet) AnimationUtils.loadAnimation(this, R.anim.endrotate);
+
+        Gear1.startAnimation(endRotate);
+        Gear2.startAnimation(endRotate);
+        Gear3.startAnimation(endRotate);
+        Gear4.startAnimation(endRotate);
+        Gear5.startAnimation(endRotate);
+        for (Animation a : endRotate.getAnimations())
+            a.setAnimationListener(new Animation.AnimationListener() {
+                @Override
+                public void onAnimationStart(Animation animation) {
+                    if (currentLevel % 3 == 0) {
+                        createAd();
+                    }
+                }
+
+                @Override
+                public void onAnimationEnd(Animation animation) {
+                }
+
+                @Override
+                public void onAnimationRepeat(Animation animation) {
+                    if (currentLevel % 3 == 0) {
+                        if (interstitialAd.isLoaded()) {
+                            Intent EndScreen = new Intent(GameMain.this, EndScreen.class);
+                            startActivity(EndScreen);
+                            finish();
+                        } else {
+                            Intent EndScreen = new Intent(GameMain.this, EndScreen.class);
+                            startActivity(EndScreen);
+                            finish();
+                        }
+                    } else {
+                        Intent EndScreen = new Intent(GameMain.this, EndScreen.class);
+                        startActivity(EndScreen);
+                        finish();
+                    }
+                }
+            });
+    }
+
     public void turn(View gear) {
         final View getGear = gear;
         gear.setEnabled(false);
@@ -352,6 +423,8 @@ public class GameMain extends MainActivity {
             DegreesGear3 = 0;
         } else if (DegreesGear4 == 360) {
             DegreesGear4 = 0;
+        } else if (DegreesGear5 == 360) {
+            DegreesGear5 = 0;
         }
         switch (gear.getId()) {
             case R.id.Gear1:
@@ -369,6 +442,10 @@ public class GameMain extends MainActivity {
             case R.id.Gear4:
                 DegreesGear = DegreesGear4;
                 DegreesGear4 = DegreesGear4 + 90;
+                break;
+            case R.id.Gear5:
+                DegreesGear = DegreesGear5;
+                DegreesGear5 = DegreesGear5 + 90;
                 break;
         }
         RotateAnimation rotate = new RotateAnimation(DegreesGear, DegreesGear + 90, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);

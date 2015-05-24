@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    tools:context="gearapp.com.aurora.gears.LevelSelect3"
+    tools:context="gearapp.com.aurora.gears.LevelSelect4"
     android:clickable="false"
     android:background="@drawable/backgroundv2">
 
@@ -99,7 +99,7 @@
         <Button
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:id="@+id/Lvl19Btn"
+            android:id="@+id/Lvl28Btn"
             android:onClick="onClick"
             android:layout_gravity="left"
             android:background="@drawable/levelgear"
@@ -108,7 +108,7 @@
         <Button
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:id="@+id/Lvl20Btn"
+            android:id="@+id/Lvl29Btn"
             android:onClick="onClick"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/levelgear"
@@ -117,7 +117,7 @@
         <Button
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:id="@+id/Lvl21Btn"
+            android:id="@+id/Lvl30Btn"
             android:onClick="onClick"
             android:layout_marginLeft="55dp"
             android:layout_gravity="right"
@@ -127,7 +127,7 @@
         <Button
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:id="@+id/Lvl22Btn"
+            android:id="@+id/Lvl31Btn"
             android:onClick="onClick"
             android:layout_gravity="left|center_vertical"
             android:background="@drawable/levelgear"
@@ -136,7 +136,7 @@
         <Button
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:id="@+id/Lvl23Btn"
+            android:id="@+id/Lvl32Btn"
             android:onClick="onClick"
             android:layout_gravity="center"
             android:background="@drawable/levelgear"
@@ -145,7 +145,7 @@
         <Button
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:id="@+id/Lvl24Btn"
+            android:id="@+id/Lvl33Btn"
             android:onClick="onClick"
             android:layout_gravity="center_vertical|right"
             android:background="@drawable/levelgear"
@@ -154,7 +154,7 @@
         <Button
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:id="@+id/Lvl25Btn"
+            android:id="@+id/Lvl34Btn"
             android:onClick="onClick"
             android:layout_gravity="left|bottom"
             android:background="@drawable/levelgear"
@@ -163,7 +163,7 @@
         <Button
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:id="@+id/Lvl26Btn"
+            android:id="@+id/Lvl35Btn"
             android:onClick="onClick"
             android:layout_gravity="bottom|center_horizontal"
             android:background="@drawable/levelgear"
@@ -172,7 +172,7 @@
         <Button
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:id="@+id/Lvl27Btn"
+            android:id="@+id/Lvl36Btn"
             android:onClick="onClick"
             android:layout_gravity="bottom|right"
             android:background="@drawable/levelgear"
@@ -188,8 +188,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="19"
-                android:id="@+id/Lvl19Text"
+                android:text="28"
+                android:id="@+id/Lvl28Text"
                 android:layout_centerInParent="true"
                 android:textColor="#ffffffff" />
         </RelativeLayout>
@@ -204,8 +204,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="20"
-                android:id="@+id/Lvl20Text"
+                android:text="29"
+                android:id="@+id/Lvl29Text"
                 android:layout_centerInParent="true"
                 android:textColor="#ffffffff" />
         </RelativeLayout>
@@ -220,8 +220,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="21"
-                android:id="@+id/Lvl21Text"
+                android:text="30"
+                android:id="@+id/Lvl30Text"
                 android:layout_centerInParent="true"
                 android:textColor="#ffffffff" />
         </RelativeLayout>
@@ -236,8 +236,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="22"
-                android:id="@+id/Lvl22Text"
+                android:text="31"
+                android:id="@+id/Lvl31Text"
                 android:layout_centerInParent="true"
                 android:textColor="#ffffffff" />
         </RelativeLayout>
@@ -252,8 +252,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="23"
-                android:id="@+id/Lvl23Text"
+                android:text="32"
+                android:id="@+id/Lvl32Text"
                 android:layout_centerInParent="true"
                 android:textColor="#ffffffff" />
         </RelativeLayout>
@@ -268,8 +268,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="24"
-                android:id="@+id/Lvl24Text"
+                android:text="33"
+                android:id="@+id/Lvl33Text"
                 android:layout_centerInParent="true"
                 android:textColor="#ffffffff" />
         </RelativeLayout>
@@ -284,8 +284,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="25"
-                android:id="@+id/Lvl25Text"
+                android:text="34"
+                android:id="@+id/Lvl34Text"
                 android:layout_centerInParent="true"
                 android:textColor="#ffffffff" />
         </RelativeLayout>
@@ -300,8 +300,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="26"
-                android:id="@+id/Lvl26Text"
+                android:text="35"
+                android:id="@+id/Lvl35Text"
                 android:layout_centerInParent="true"
                 android:textColor="#ffffffff" />
         </RelativeLayout>
@@ -316,8 +316,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="27"
-                android:id="@+id/Lvl27Text"
+                android:text="36"
+                android:id="@+id/Lvl36Text"
                 android:layout_centerInParent="true"
                 android:textColor="#ffffffff" />
         </RelativeLayout>
@@ -328,21 +328,13 @@
     <ImageButton
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:id="@+id/morelevels"
-        android:layout_gravity="right|center_vertical"
-        android:background="@drawable/arrow"
-        android:layout_marginRight="80dp"
-        android:onClick="openLvlSelect4" />
-
-    <ImageButton
-        android:layout_width="60dp"
-        android:layout_height="60dp"
         android:id="@+id/backlevels"
         android:layout_gravity="left|center_vertical"
         android:background="@drawable/navigationarrow"
         android:layout_marginLeft="80dp"
         android:longClickable="false"
-        android:onClick="backToLvlSelect2" />
+        android:onClick="backToLvlSelect3"
+        android:nestedScrollingEnabled="false" />
 
 </FrameLayout>
 

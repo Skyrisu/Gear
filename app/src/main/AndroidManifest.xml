@@ -38,6 +38,24 @@
             android:screenOrientation="landscape" >
         </activity>
         <activity
+            android:name="com.aurora.gears.LevelSelect2"
+            android:label="@string/title_activity_level_select2"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.aurora.gears.LevelSelect3"
+            android:label="@string/title_activity_level_select3"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.aurora.gears.LevelSelect4"
+            android:label="@string/title_activity_level_select4"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
             android:name="com.auroa.level.Level1"
             android:label="@string/title_activity_level1"
             android:configChanges="orientation|keyboardHidden|screenSize"
@@ -94,18 +112,6 @@
         <activity
             android:name="com.auroa.level.Level9"
             android:label="@string/title_activity_level9"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:screenOrientation="landscape" >
-        </activity>
-        <activity
-            android:name="com.aurora.gears.LevelSelect2"
-            android:label="@string/title_activity_level_select2"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:screenOrientation="landscape" >
-        </activity>
-        <activity
-            android:name="com.aurora.gears.LevelSelect3"
-            android:label="@string/title_activity_level_select3"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="landscape" >
         </activity>
@@ -214,6 +220,60 @@
         <activity
             android:name="com.auroa.level.Level27"
             android:label="@string/title_activity_level27"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.auroa.level.Level28"
+            android:label="@string/title_activity_level28"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.auroa.level.Level29"
+            android:label="@string/title_activity_level29"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.auroa.level.Level30"
+            android:label="@string/title_activity_level30"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.auroa.level.Level31"
+            android:label="@string/title_activity_level31"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.auroa.level.Level32"
+            android:label="@string/title_activity_level32"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.auroa.level.Level33"
+            android:label="@string/title_activity_level33"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.auroa.level.Level34"
+            android:label="@string/title_activity_level34"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.auroa.level.Level35"
+            android:label="@string/title_activity_level35"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.auroa.level.Level36"
+            android:label="@string/title_activity_level36"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="landscape" >
         </activity>

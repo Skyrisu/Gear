@@ -17,76 +17,76 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.auroa.level.Level19;
-import com.auroa.level.Level20;
-import com.auroa.level.Level21;
-import com.auroa.level.Level22;
-import com.auroa.level.Level23;
-import com.auroa.level.Level24;
-import com.auroa.level.Level25;
-import com.auroa.level.Level26;
-import com.auroa.level.Level27;
+import com.auroa.level.Level28;
+import com.auroa.level.Level29;
+import com.auroa.level.Level30;
+import com.auroa.level.Level31;
+import com.auroa.level.Level32;
+import com.auroa.level.Level33;
+import com.auroa.level.Level34;
+import com.auroa.level.Level35;
+import com.auroa.level.Level36;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class LevelSelect3 extends MainActivity implements View.OnClickListener {
+public class LevelSelect4 extends MainActivity implements View.OnClickListener {
 
     final Context Warn = this;
 
     private List<Button> buttons;
     private static final int[] BUTTON_IDS = {
-            R.id.Lvl19Btn,
-            R.id.Lvl20Btn,
-            R.id.Lvl21Btn,
-            R.id.Lvl22Btn,
-            R.id.Lvl23Btn,
-            R.id.Lvl24Btn,
-            R.id.Lvl25Btn,
-            R.id.Lvl26Btn,
-            R.id.Lvl27Btn,
+            R.id.Lvl28Btn,
+            R.id.Lvl29Btn,
+            R.id.Lvl30Btn,
+            R.id.Lvl31Btn,
+            R.id.Lvl32Btn,
+            R.id.Lvl33Btn,
+            R.id.Lvl34Btn,
+            R.id.Lvl35Btn,
+            R.id.Lvl36Btn,
     };
 
     private List<TextView> textviews;
     private static final int[] TEXTVIEW_IDS = {
-            R.id.Lvl19Text,
-            R.id.Lvl20Text,
-            R.id.Lvl21Text,
-            R.id.Lvl22Text,
-            R.id.Lvl23Text,
-            R.id.Lvl24Text,
-            R.id.Lvl25Text,
-            R.id.Lvl26Text,
-            R.id.Lvl27Text,
+            R.id.Lvl28Text,
+            R.id.Lvl29Text,
+            R.id.Lvl30Text,
+            R.id.Lvl31Text,
+            R.id.Lvl32Text,
+            R.id.Lvl33Text,
+            R.id.Lvl34Text,
+            R.id.Lvl35Text,
+            R.id.Lvl36Text,
     };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_level_select3);
+        setContentView(R.layout.activity_level_select4);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
 
         Typeface myCustomFont = Typeface.createFromAsset(getAssets(), "fonts/fbsbltc.ttf");
 
-        TextView t1 = (TextView) findViewById(R.id.Lvl19Text);
+        TextView t1 = (TextView) findViewById(R.id.Lvl28Text);
         t1.setTypeface(myCustomFont);
-        t1 = (TextView) findViewById(R.id.Lvl20Text);
+        t1 = (TextView) findViewById(R.id.Lvl29Text);
         t1.setTypeface(myCustomFont);
-        t1 = (TextView) findViewById(R.id.Lvl21Text);
+        t1 = (TextView) findViewById(R.id.Lvl30Text);
         t1.setTypeface(myCustomFont);
-        t1 = (TextView) findViewById(R.id.Lvl22Text);
+        t1 = (TextView) findViewById(R.id.Lvl31Text);
         t1.setTypeface(myCustomFont);
-        t1 = (TextView) findViewById(R.id.Lvl23Text);
+        t1 = (TextView) findViewById(R.id.Lvl32Text);
         t1.setTypeface(myCustomFont);
-        t1 = (TextView) findViewById(R.id.Lvl24Text);
+        t1 = (TextView) findViewById(R.id.Lvl33Text);
         t1.setTypeface(myCustomFont);
-        t1 = (TextView) findViewById(R.id.Lvl25Text);
+        t1 = (TextView) findViewById(R.id.Lvl34Text);
         t1.setTypeface(myCustomFont);
-        t1 = (TextView) findViewById(R.id.Lvl26Text);
+        t1 = (TextView) findViewById(R.id.Lvl35Text);
         t1.setTypeface(myCustomFont);
-        t1 = (TextView) findViewById(R.id.Lvl27Text);
+        t1 = (TextView) findViewById(R.id.Lvl36Text);
         t1.setTypeface(myCustomFont);
 
 
@@ -109,7 +109,7 @@ public class LevelSelect3 extends MainActivity implements View.OnClickListener {
         }
 
         for (int i = 0; i < buttons.size(); i++) {
-            if ((i + 18) < LvlDone + 1) {
+            if ((i + 27) < LvlDone + 1) {
                 buttons.get((i)).setEnabled(true);
                 buttons.get(i).setBackgroundResource(R.drawable.levelgear);
                 buttons.get(i).setText(" ");
@@ -122,7 +122,7 @@ public class LevelSelect3 extends MainActivity implements View.OnClickListener {
             }
         }
 
-        Animation gearanim = AnimationUtils.loadAnimation(LevelSelect3.this, R.anim.rotateloop);
+        Animation gearanim = AnimationUtils.loadAnimation(LevelSelect4.this, R.anim.rotateloop);
         final ImageView gear = (ImageView) findViewById(R.id.BackGear);
         gear.startAnimation(gearanim);
 
@@ -132,7 +132,7 @@ public class LevelSelect3 extends MainActivity implements View.OnClickListener {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_level_select3, menu);
+        getMenuInflater().inflate(R.menu.menu_level_select4, menu);
         return true;
     }
 
@@ -151,17 +151,11 @@ public class LevelSelect3 extends MainActivity implements View.OnClickListener {
         return super.onOptionsItemSelected(item);
     }
 
-    public void backToLvlSelect2(View v) {
-        Intent intent = new Intent(this, LevelSelect2.class);
+    public void backToLvlSelect3(View v) {
+        Intent intent = new Intent(this, LevelSelect3.class);
         startActivity(intent);
         finish();
         overridePendingTransition(R.anim.activity_in_reverse, R.anim.activity_out_reverse);
-    }
-
-    public void openLvlSelect4(View v) {
-        Intent intent = new Intent(this, LevelSelect4.class);
-        startActivity(intent);
-        finish();
     }
 
     public void onBackPressed() {
@@ -191,7 +185,7 @@ public class LevelSelect3 extends MainActivity implements View.OnClickListener {
         final View btid = v;
 
         playSound(v);
-        Animation anim = AnimationUtils.loadAnimation(LevelSelect3.this, R.anim.rotate90);
+        Animation anim = AnimationUtils.loadAnimation(LevelSelect4.this, R.anim.rotate90);
         v.startAnimation(anim);
         anim.setFillAfter(true);
         anim.setAnimationListener(new Animation.AnimationListener() {
@@ -203,49 +197,49 @@ public class LevelSelect3 extends MainActivity implements View.OnClickListener {
             @Override
             public void onAnimationEnd(Animation animation) {
                 switch (btid.getId()) {
-                    case R.id.Lvl19Btn:
-                        Intent lvl19 = new Intent(LevelSelect3.this, Level19.class);
-                        startActivity(lvl19);
+                    case R.id.Lvl28Btn:
+                        Intent lvl28 = new Intent(LevelSelect4.this, Level28.class);
+                        startActivity(lvl28);
                         finish();
                         break;
-                    case R.id.Lvl20Btn:
-                        Intent lvl20 = new Intent(LevelSelect3.this, Level20.class);
-                        startActivity(lvl20);
+                    case R.id.Lvl29Btn:
+                        Intent lvl29 = new Intent(LevelSelect4.this, Level29.class);
+                        startActivity(lvl29);
                         finish();
                         break;
-                    case R.id.Lvl21Btn:
-                        Intent lvl21 = new Intent(LevelSelect3.this, Level21.class);
-                        startActivity(lvl21);
+                    case R.id.Lvl30Btn:
+                        Intent lvl30 = new Intent(LevelSelect4.this, Level30.class);
+                        startActivity(lvl30);
                         finish();
                         break;
-                    case R.id.Lvl22Btn:
-                        Intent lvl22 = new Intent(LevelSelect3.this, Level22.class);
-                        startActivity(lvl22);
+                    case R.id.Lvl31Btn:
+                        Intent lvl31 = new Intent(LevelSelect4.this, Level31.class);
+                        startActivity(lvl31);
                         finish();
                         break;
-                    case R.id.Lvl23Btn:
-                        Intent lvl23 = new Intent(LevelSelect3.this, Level23.class);
-                        startActivity(lvl23);
+                    case R.id.Lvl32Btn:
+                        Intent lvl32 = new Intent(LevelSelect4.this, Level32.class);
+                        startActivity(lvl32);
                         finish();
                         break;
-                    case R.id.Lvl24Btn:
-                        Intent lvl24 = new Intent(LevelSelect3.this, Level24.class);
-                        startActivity(lvl24);
+                    case R.id.Lvl33Btn:
+                        Intent lvl33 = new Intent(LevelSelect4.this, Level33.class);
+                        startActivity(lvl33);
                         finish();
                         break;
-                    case R.id.Lvl25Btn:
-                        Intent lvl25 = new Intent(LevelSelect3.this, Level25.class);
-                        startActivity(lvl25);
+                    case R.id.Lvl34Btn:
+                        Intent lvl34 = new Intent(LevelSelect4.this, Level34.class);
+                        startActivity(lvl34);
                         finish();
                         break;
-                    case R.id.Lvl26Btn:
-                        Intent lvl26 = new Intent(LevelSelect3.this, Level26.class);
-                        startActivity(lvl26);
+                    case R.id.Lvl35Btn:
+                        Intent lvl35 = new Intent(LevelSelect4.this, Level35.class);
+                        startActivity(lvl35);
                         finish();
                         break;
-                    case R.id.Lvl27Btn:
-                        Intent lvl27 = new Intent(LevelSelect3.this, Level27.class);
-                        startActivity(lvl27);
+                    case R.id.Lvl36Btn:
+                        Intent lvl36 = new Intent(LevelSelect4.this, Level36.class);
+                        startActivity(lvl36);
                         finish();
                         break;
                 }

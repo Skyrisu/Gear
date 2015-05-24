@@ -89,7 +89,6 @@ public class LevelSelect2 extends MainActivity implements View.OnClickListener {
         t1 = (TextView) findViewById(R.id.Lvl18Text);
         t1.setTypeface(myCustomFont);
 
-
         SharedPreferences LevelSave = getSharedPreferences(MyPreferences, MODE_PRIVATE);
         LvlDone = LevelSave.getInt("LevelDone", 0);
         for (int i = 0; i < LvlBest.length; i++) {
