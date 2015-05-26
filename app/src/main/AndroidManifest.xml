@@ -283,7 +283,10 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="landscape">
         </activity>
-        <service android:name=".MusicService" android:enabled="true" />
+        <service
+            android:name=".MusicService"
+            android:enabled="true"
+            android:stopWithTask="true"/>
     </application>
 
 </manifest>

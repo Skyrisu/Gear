@@ -34,7 +34,16 @@ import com.auroa.level.Level24;
 import com.auroa.level.Level25;
 import com.auroa.level.Level26;
 import com.auroa.level.Level27;
+import com.auroa.level.Level28;
+import com.auroa.level.Level29;
 import com.auroa.level.Level3;
+import com.auroa.level.Level30;
+import com.auroa.level.Level31;
+import com.auroa.level.Level32;
+import com.auroa.level.Level33;
+import com.auroa.level.Level34;
+import com.auroa.level.Level35;
+import com.auroa.level.Level36;
 import com.auroa.level.Level4;
 import com.auroa.level.Level5;
 import com.auroa.level.Level6;
@@ -285,13 +294,59 @@ public class EndScreen extends GameMain {
                 startActivity(nLvl);
                 break;
             case 27:
-                nLvl = new Intent(this, LevelSelect3.class);
+                nLvl = new Intent(this, Level28.class);
                 if (interstitialAd.isLoaded()) {
                     interstitialAd.show();
                 } else {
                     startActivity(nLvl);
                 }
                 break;
+            case 28:
+                nLvl = new Intent(this, Level29.class);
+                startActivity(nLvl);
+                break;
+            case 29:
+                nLvl = new Intent(this, Level30.class);
+                startActivity(nLvl);
+                break;
+            case 30:
+                nLvl = new Intent(this, Level31.class);
+                if (interstitialAd.isLoaded()) {
+                    interstitialAd.show();
+                } else {
+                    startActivity(nLvl);
+                }
+                break;
+            case 31:
+                nLvl = new Intent(this, Level32.class);
+                startActivity(nLvl);
+                break;
+            case 32:
+                nLvl = new Intent(this, Level33.class);
+                startActivity(nLvl);
+                break;
+            case 33:
+                nLvl = new Intent(this, Level34.class);
+                if (interstitialAd.isLoaded()) {
+                    interstitialAd.show();
+                } else {
+                    startActivity(nLvl);
+                }
+            case 34:
+                nLvl = new Intent(this, Level35.class);
+                startActivity(nLvl);
+                break;
+            case 35:
+                nLvl = new Intent(this, Level36.class);
+                startActivity(nLvl);
+                break;
+            case 36:
+                nLvl = new Intent(this, LevelSelect4.class);
+                if (interstitialAd.isLoaded()) {
+                    interstitialAd.show();
+                } else {
+                    startActivity(nLvl);
+                }
         }
         finish();
     }
